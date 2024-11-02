@@ -21,9 +21,9 @@ install(DIRECTORY include/ DESTINATION include)
 # Enable testing
 enable_testing()
 
-# Add tests (you can replace these with actual tests as you develop)
+# Add tests
 # This will look for .cpp files in tests/ and create executable tests automatically.
-file(GLOB TEST_SOURCES "tests/*.cpp")
+file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")  # Recursively find test files in subdirectories
 foreach(TEST_SOURCE ${TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_SOURCE})
@@ -32,7 +32,7 @@ foreach(TEST_SOURCE ${TEST_SOURCES})
 endforeach()
 
 # Example executables
-file(GLOB EXAMPLE_SOURCES "examples/*.cpp")
+file(GLOB_RECURSE EXAMPLE_SOURCES "examples/*.cpp")
 foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
     add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})

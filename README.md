@@ -3,7 +3,8 @@
 **cpp-ml-library** is a C++ library implementing foundational machine learning algorithms from scratch. This project aims to provide reusable implementations for a variety of machine learning models, useful for educational purposes or embedding in larger C++ applications.
 
 ![C++ CI](https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/ci.yml/badge.svg)
-
+![Release CI](https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/release.yml/badge.svg)
+![Doxygen CI](https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/doxygen.yml/badge.svg)
 
 ## Project Structure
 

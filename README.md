@@ -1,6 +1,6 @@
 # C++ Machine Learning Library
 
-**cpp-ml-library** is a C++ library implementing foundational machine learning algorithms from scratch. This project aims to provide reusable implementations for a variety of machine learning models, useful for educational purposes or embedding in larger C++ applications.
+**cpp-ml-library** is a C++ library implementing foundational machine learning algorithms inspired by the Udemy course **"Machine Learning A-Z: AI, Python & R"** taught by **Kirill Eremenko** and **Hadelin de Ponteves**. This project aims to reimplement key algorithms from the course in C++ to provide reusable implementations for educational purposes, experimentation, and practical applications in larger C++ projects.
 
 ![C++ CI](https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/ci.yml/badge.svg)
 ![Release CI](https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/release.yml/badge.svg)
@@ -55,7 +55,7 @@ To use this library in your C++ project, include the master header file:
 
 ## Implemented Algorithms
 
-Below is a list of algorithms, which will be updated as they are implemented:
+The following machine learning algorithms are planned, inspired by concepts and techniques taught in the Udemy course:
 
 1. **Regression**
    - [ ] Polynomial Regression
@@ -103,6 +103,10 @@ int main() {
     return 0;
 }
 ```
+
+## Documentation
+
+The documentation for this project is generated using Doxygen and is available online at [GitHub Pages](https://jideoyelayo1.github.io/cpp-ml-library/). The documentation provides details on each class, function, and algorithm.
 
 ## Contributing
 

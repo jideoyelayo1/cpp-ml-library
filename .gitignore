@@ -1,0 +1,37 @@
+# Visual Studio solution and project files
+*.sln
+*.vcxproj
+*.vcxproj.*
+*.user
+*.filters
+
+# Visual Studio folders
+.vs/
+.vscode/
+
+# CMake
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Doxygen Output
+docs/doxygen/
+
+# Generated binaries and object files
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.so
+*.a
+*.out
+*.log
+
+# IDE-specific files
+.idea/
+.DS_Store
+Thumbs.db
+.cache/

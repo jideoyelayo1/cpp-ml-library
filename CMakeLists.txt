@@ -4,6 +4,9 @@ project(CppMLLibrary VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Option to build examples
+option(BUILD_EXAMPLES "Build examples" ON)
+
 # Source files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
@@ -20,24 +23,33 @@ install(DIRECTORY ml_library_include/ DESTINATION include)
 # Enable testing
 enable_testing()
 
-# Add tests (if applicable)
-enable_testing()
+# Add Catch2 for testing
+include(FetchContent)
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v2.13.4  # You can adjust to a newer stable version if needed
+)
+FetchContent_MakeAvailable(Catch2)
 
-# Add tests
+# Add tests with Catch2
 file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")
 foreach(TEST_SOURCE ${TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} cpp_ml_library)
-    target_include_directories(${TEST_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
+    target_link_libraries(${TEST_NAME} cpp_ml_library Catch2::Catch2)
+    target_include_directories(${TEST_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/ml_library_include)
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endforeach()
 
-# Example executables
-file(GLOB_RECURSE EXAMPLE_SOURCES "examples/*.cpp")
-foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
-    get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
-    add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-    target_link_libraries(${EXAMPLE_NAME} cpp_ml_library)
-    target_include_directories(${EXAMPLE_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-endforeach()
+# Add example executables if BUILD_EXAMPLES is ON
+if(BUILD_EXAMPLES)
+    file(GLOB_RECURSE EXAMPLE_SOURCES "examples/*.cpp")
+    foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
+        get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
+        set(EXAMPLE_TARGET "example_${EXAMPLE_NAME}") # Add a prefix to the executable name
+        add_executable(${EXAMPLE_TARGET} ${EXAMPLE_SOURCE}) # Use prefixed name for executable
+        target_link_libraries(${EXAMPLE_TARGET} cpp_ml_library)
+        target_include_directories(${EXAMPLE_TARGET} PUBLIC ${PROJECT_SOURCE_DIR}/ml_library_include)
+    endforeach()
+endif()

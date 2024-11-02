@@ -32,9 +32,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 
-# Ensure that Catch2 is built with the required C++ standard if needed
-set_property(TARGET Catch2::Catch2WithMain PROPERTY CXX_STANDARD 20)
-
 # Add tests with Catch2 v3
 file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")
 foreach(TEST_SOURCE ${TEST_SOURCES})

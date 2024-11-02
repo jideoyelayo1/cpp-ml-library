@@ -108,6 +108,13 @@ public:
      */
     void updateInputWeights(vector<Neuron>& prevLayer);
 
+    /**
+     * @brief Generates a random weight.
+     * @param The Output is a random double.
+     */
+    static double randomWeight(); // Random weight initializer function
+
+
 private:
     static double eta;    ///< Learning rate [0.0..1.0].
     static double alpha;  ///< Momentum factor [0.0..1.0].

@@ -7,12 +7,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/include/ml)
 
 # Source files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 # Library target
 add_library(cpp_ml_library STATIC ${SOURCES})
+target_include_directories(cpp_ml_library PUBLIC ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/include/ml)
 
 # Installation
 install(TARGETS cpp_ml_library DESTINATION lib)
@@ -22,12 +24,12 @@ install(DIRECTORY include/ DESTINATION include)
 enable_testing()
 
 # Add tests
-# This will look for .cpp files in tests/ and create executable tests automatically.
-file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")  # Recursively find test files in subdirectories
+file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")
 foreach(TEST_SOURCE ${TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_SOURCE})
     target_link_libraries(${TEST_NAME} cpp_ml_library)
+    target_include_directories(${TEST_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/include/ml)
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endforeach()
 
@@ -37,4 +39,5 @@ foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
     get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
     add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
     target_link_libraries(${EXAMPLE_NAME} cpp_ml_library)
+    target_include_directories(${EXAMPLE_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include ${PROJECT_SOURCE_DIR}/include/ml)
 endforeach()

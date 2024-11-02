@@ -1,4 +1,4 @@
-#include "../neural_network/NN.h"
+#include "../ml_library_include/ml/neural_network/NN.h"
 #include <cmath>
 #include <cstdlib>
 
@@ -75,6 +75,10 @@ Neuron::Neuron(unsigned numOutputs, unsigned myIdx) : _myIdx(myIdx), _outputVal(
         _outputWeights.push_back(Connection());
         _outputWeights.back().weight = randomWeight();
     }
+}
+
+double Neuron::randomWeight() {
+    return rand() / double(RAND_MAX);
 }
 
 double Neuron::transferFunction(double x) {

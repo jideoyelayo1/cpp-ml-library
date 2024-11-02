@@ -1,0 +1,6001 @@
+topology: 2 4 1
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 0.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 1.0
+out: 0.0z
+in: 0.0 0.0
+out: 0.0z
+in: 1.0 0.0
+out: 1.0z
+in: 0.0 1.0
+out: 1.0z
+in: 1.0 1.0
+out: 0.0z

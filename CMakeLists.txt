@@ -4,7 +4,7 @@ project(CppMLLibrary VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Option to build examples
+# Option to build examples (enabled by default)
 option(BUILD_EXAMPLES "Build examples" ON)
 
 # Source files
@@ -28,16 +28,19 @@ include(FetchContent)
 FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-    GIT_TAG v2.13.4  # You can adjust to a newer stable version if needed
+    GIT_TAG v3.0.1  # Use the latest stable release of Catch2 v3 for improved compatibility
 )
 FetchContent_MakeAvailable(Catch2)
 
-# Add tests with Catch2
+# Ensure that Catch2 is built with the required C++ standard if needed
+set_property(TARGET Catch2::Catch2WithMain PROPERTY CXX_STANDARD 20)
+
+# Add tests with Catch2 v3
 file(GLOB_RECURSE TEST_SOURCES "tests/**/*.cpp")
 foreach(TEST_SOURCE ${TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} cpp_ml_library Catch2::Catch2)
+    target_link_libraries(${TEST_NAME} cpp_ml_library Catch2::Catch2WithMain)
     target_include_directories(${TEST_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/ml_library_include)
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endforeach()

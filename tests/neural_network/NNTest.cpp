@@ -1,4 +1,4 @@
-#include "ml/neural_network/NN.h"
+#include "NN.hpp"
 #include <catch2/catch_test_macros.hpp>
 #include <vector>
 #include <string>

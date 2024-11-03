@@ -1,4 +1,4 @@
-#include "ml/neural_network/NN.h"
+#include "NN.hpp"
 #include <iostream>
 #include <vector>
 

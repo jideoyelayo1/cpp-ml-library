@@ -7,19 +7,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Option to build examples (enabled by default)
 option(BUILD_EXAMPLES "Build examples" ON)
 
-# Include directories for headers
-# Adding it as a global include path for all targets
+# Global include directories for headers
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
+
+# Include Eigen directly
+include_directories("/path/to/eigen")  # Replace with the actual path to Eigen
 
 # Source files
 file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
 # Define the library target
 add_library(cpp_ml_library STATIC ${SOURCES})
-
-# Target-specific include directory for headers
 target_include_directories(cpp_ml_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
-
 
 # Installation
 install(TARGETS cpp_ml_library DESTINATION lib)
@@ -37,16 +36,18 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 
-# Add tests with Catch2 v3
+# Collect all test sources
 file(GLOB_RECURSE TEST_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/tests/**/*.cpp")
-foreach(TEST_SOURCE ${TEST_SOURCES})
-    get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
-    add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} cpp_ml_library Catch2::Catch2WithMain)
-    target_include_directories(${TEST_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
-    add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
-endforeach()
 
+# Define a single executable for all tests
+add_executable(AllTests ${TEST_SOURCES})
+
+# Link Catch2 and cpp_ml_library to the test executable
+target_link_libraries(AllTests cpp_ml_library Catch2::Catch2WithMain)
+target_include_directories(AllTests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
+
+# Register the AllTests executable as a test
+add_test(NAME AllTests COMMAND AllTests)
 
 # Add example executables if BUILD_EXAMPLES is ON
 if(BUILD_EXAMPLES)

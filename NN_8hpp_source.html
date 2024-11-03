@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cpp ML Library: ml_library_include/ml/neural_network/NN.h Source File</title>
+<title>Cpp ML Library: ml_library_include/ml/neural_network/NN.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">NN.h</div>  </div>
+<div class="title">NN.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NN_H</span></div>
@@ -163,22 +163,22 @@ $(function() {
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keywordtype">void</span> saveStringToFile(<span class="keyword">const</span> std::string&amp; filename, <span class="keyword">const</span> std::string&amp; content);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NN_H</span></div>
-<div class="ttc" id="aclassNN_html"><div class="ttname"><a href="classNN.html">NN</a></div><div class="ttdoc">Represents the neural network.</div><div class="ttdef"><b>Definition:</b> NN.h:134</div></div>
+<div class="ttc" id="aclassNN_html"><div class="ttname"><a href="classNN.html">NN</a></div><div class="ttdoc">Represents the neural network.</div><div class="ttdef"><b>Definition:</b> NN.hpp:134</div></div>
 <div class="ttc" id="aclassNN_html_a45fbaa6e1c83abcf6cea475a75f88b1d"><div class="ttname"><a href="classNN.html#a45fbaa6e1c83abcf6cea475a75f88b1d">NN::backProp</a></div><div class="ttdeci">void backProp(const vector&lt; double &gt; &amp;targetVals)</div><div class="ttdoc">Performs backpropagation based on the target values.</div></div>
 <div class="ttc" id="aclassNN_html_a75f7f402a7e1440e13231dc94398cc04"><div class="ttname"><a href="classNN.html#a75f7f402a7e1440e13231dc94398cc04">NN::feedForward</a></div><div class="ttdeci">void feedForward(const vector&lt; double &gt; &amp;inputVals)</div><div class="ttdoc">Feeds forward the input values through the network.</div></div>
-<div class="ttc" id="aclassNN_html_ab05027d4f8e4f7e8816c9e26a70b3b8a"><div class="ttname"><a href="classNN.html#ab05027d4f8e4f7e8816c9e26a70b3b8a">NN::getRecentAverageError</a></div><div class="ttdeci">double getRecentAverageError(void) const</div><div class="ttdoc">Gets the recent average error of the network.</div><div class="ttdef"><b>Definition:</b> NN.h:164</div></div>
+<div class="ttc" id="aclassNN_html_ab05027d4f8e4f7e8816c9e26a70b3b8a"><div class="ttname"><a href="classNN.html#ab05027d4f8e4f7e8816c9e26a70b3b8a">NN::getRecentAverageError</a></div><div class="ttdeci">double getRecentAverageError(void) const</div><div class="ttdoc">Gets the recent average error of the network.</div><div class="ttdef"><b>Definition:</b> NN.hpp:164</div></div>
 <div class="ttc" id="aclassNN_html_ab93c0539ee13e40ac659cf14e2877cbb"><div class="ttname"><a href="classNN.html#ab93c0539ee13e40ac659cf14e2877cbb">NN::getResults</a></div><div class="ttdeci">void getResults(vector&lt; double &gt; &amp;resultsVals) const</div><div class="ttdoc">Gets the output values from the network.</div></div>
-<div class="ttc" id="aclassNeuron_html"><div class="ttname"><a href="classNeuron.html">Neuron</a></div><div class="ttdoc">Represents a single neuron in the neural network.</div><div class="ttdef"><b>Definition:</b> NN.h:66</div></div>
-<div class="ttc" id="aclassNeuron_html_a219bfcc8c9cd5cc634fef77bccb72d84"><div class="ttname"><a href="classNeuron.html#a219bfcc8c9cd5cc634fef77bccb72d84">Neuron::setOutputVal</a></div><div class="ttdeci">void setOutputVal(double val)</div><div class="ttdoc">Sets the output value for this neuron.</div><div class="ttdef"><b>Definition:</b> NN.h:79</div></div>
+<div class="ttc" id="aclassNeuron_html"><div class="ttname"><a href="classNeuron.html">Neuron</a></div><div class="ttdoc">Represents a single neuron in the neural network.</div><div class="ttdef"><b>Definition:</b> NN.hpp:66</div></div>
+<div class="ttc" id="aclassNeuron_html_a219bfcc8c9cd5cc634fef77bccb72d84"><div class="ttname"><a href="classNeuron.html#a219bfcc8c9cd5cc634fef77bccb72d84">Neuron::setOutputVal</a></div><div class="ttdeci">void setOutputVal(double val)</div><div class="ttdoc">Sets the output value for this neuron.</div><div class="ttdef"><b>Definition:</b> NN.hpp:79</div></div>
 <div class="ttc" id="aclassNeuron_html_a8d491e656789f0be57733dc27864f36a"><div class="ttname"><a href="classNeuron.html#a8d491e656789f0be57733dc27864f36a">Neuron::calcHiddenGradients</a></div><div class="ttdeci">void calcHiddenGradients(const vector&lt; Neuron &gt; &amp;nextLayer)</div><div class="ttdoc">Calculates gradients for hidden layer neurons.</div></div>
 <div class="ttc" id="aclassNeuron_html_a9feaebdfb2c4d757b83ba2c5ce5a090f"><div class="ttname"><a href="classNeuron.html#a9feaebdfb2c4d757b83ba2c5ce5a090f">Neuron::updateInputWeights</a></div><div class="ttdeci">void updateInputWeights(vector&lt; Neuron &gt; &amp;prevLayer)</div><div class="ttdoc">Updates input weights for this neuron.</div></div>
-<div class="ttc" id="aclassNeuron_html_ac0e4317b5146cebd2abda0b9f6d3af6f"><div class="ttname"><a href="classNeuron.html#ac0e4317b5146cebd2abda0b9f6d3af6f">Neuron::getOutputVal</a></div><div class="ttdeci">double getOutputVal(void) const</div><div class="ttdoc">Gets the output value of this neuron.</div><div class="ttdef"><b>Definition:</b> NN.h:85</div></div>
+<div class="ttc" id="aclassNeuron_html_ac0e4317b5146cebd2abda0b9f6d3af6f"><div class="ttname"><a href="classNeuron.html#ac0e4317b5146cebd2abda0b9f6d3af6f">Neuron::getOutputVal</a></div><div class="ttdeci">double getOutputVal(void) const</div><div class="ttdoc">Gets the output value of this neuron.</div><div class="ttdef"><b>Definition:</b> NN.hpp:85</div></div>
 <div class="ttc" id="aclassNeuron_html_aed841fbec8dd00df77fc802c6934f903"><div class="ttname"><a href="classNeuron.html#aed841fbec8dd00df77fc802c6934f903">Neuron::calcOutputGradients</a></div><div class="ttdeci">void calcOutputGradients(double targetVal)</div><div class="ttdoc">Calculates gradients for the output neurons.</div></div>
-<div class="ttc" id="aclassTrainingData_html"><div class="ttname"><a href="classTrainingData.html">TrainingData</a></div><div class="ttdoc">A class to handle training data for the neural network.</div><div class="ttdef"><b>Definition:</b> NN.h:17</div></div>
-<div class="ttc" id="aclassTrainingData_html_aa815d753fad222c0037c85f0c691a862"><div class="ttname"><a href="classTrainingData.html#aa815d753fad222c0037c85f0c691a862">TrainingData::isEof</a></div><div class="ttdeci">bool isEof(void)</div><div class="ttdoc">Check if end of file is reached.</div><div class="ttdef"><b>Definition:</b> NN.h:29</div></div>
-<div class="ttc" id="astructConnection_html"><div class="ttname"><a href="structConnection.html">Connection</a></div><div class="ttdoc">Represents a connection between neurons, storing weight and delta weight.</div><div class="ttdef"><b>Definition:</b> NN.h:58</div></div>
-<div class="ttc" id="astructConnection_html_a9f74bf311cc02e9f2e17ca28baf74fab"><div class="ttname"><a href="structConnection.html#a9f74bf311cc02e9f2e17ca28baf74fab">Connection::deltaWeight</a></div><div class="ttdeci">double deltaWeight</div><div class="ttdoc">Change in weight for the connection.</div><div class="ttdef"><b>Definition:</b> NN.h:60</div></div>
-<div class="ttc" id="astructConnection_html_ab945ccb1a81e582abd5938f67af69390"><div class="ttname"><a href="structConnection.html#ab945ccb1a81e582abd5938f67af69390">Connection::weight</a></div><div class="ttdeci">double weight</div><div class="ttdoc">Weight of the connection.</div><div class="ttdef"><b>Definition:</b> NN.h:59</div></div>
+<div class="ttc" id="aclassTrainingData_html"><div class="ttname"><a href="classTrainingData.html">TrainingData</a></div><div class="ttdoc">A class to handle training data for the neural network.</div><div class="ttdef"><b>Definition:</b> NN.hpp:17</div></div>
+<div class="ttc" id="aclassTrainingData_html_aa815d753fad222c0037c85f0c691a862"><div class="ttname"><a href="classTrainingData.html#aa815d753fad222c0037c85f0c691a862">TrainingData::isEof</a></div><div class="ttdeci">bool isEof(void)</div><div class="ttdoc">Check if end of file is reached.</div><div class="ttdef"><b>Definition:</b> NN.hpp:29</div></div>
+<div class="ttc" id="astructConnection_html"><div class="ttname"><a href="structConnection.html">Connection</a></div><div class="ttdoc">Represents a connection between neurons, storing weight and delta weight.</div><div class="ttdef"><b>Definition:</b> NN.hpp:58</div></div>
+<div class="ttc" id="astructConnection_html_a9f74bf311cc02e9f2e17ca28baf74fab"><div class="ttname"><a href="structConnection.html#a9f74bf311cc02e9f2e17ca28baf74fab">Connection::deltaWeight</a></div><div class="ttdeci">double deltaWeight</div><div class="ttdoc">Change in weight for the connection.</div><div class="ttdef"><b>Definition:</b> NN.hpp:60</div></div>
+<div class="ttc" id="astructConnection_html_ab945ccb1a81e582abd5938f67af69390"><div class="ttname"><a href="structConnection.html#ab945ccb1a81e582abd5938f67af69390">Connection::weight</a></div><div class="ttdeci">double weight</div><div class="ttdoc">Weight of the connection.</div><div class="ttdef"><b>Definition:</b> NN.hpp:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

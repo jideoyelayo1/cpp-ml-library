@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trainingdata_24',['TrainingData',['../classTrainingData.html',1,'']]]
+  ['multilinearregression_28',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
 ];

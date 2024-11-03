@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cpp ML Library: Main Page</title>
+<title>Cpp ML Library: C++ Machine Learning Library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,11 +62,110 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Cpp ML Library Documentation</div>  </div>
+<div class="title">C++ Machine Learning Library </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <b>cpp-ml-library</b> is a C++ library implementing foundational machine learning algorithms inspired by the Udemy course **"Machine Learning A-Z: AI, Python &amp; R"** taught by <b>Kirill Eremenko</b> and <b>Hadelin de Ponteves</b>. This project aims to reimplement key algorithms from the course in C++ to provide reusable implementations for educational purposes, experimentation, and practical applications in larger C++ projects.</p>
+<p><img src="https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/ci.yml/badge.svg" alt="C++ CI" style="pointer-events: none;" class="inline"/> <img src="https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/release.yml/badge.svg" alt="Release CI" style="pointer-events: none;" class="inline"/> <img src="https://github.com/jideoyelayo1/cpp-ml-library/actions/workflows/doxygen.yml/badge.svg" alt="Doxygen CI" style="pointer-events: none;" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Project Structure</h1>
+<div class="fragment"><div class="line">cpp-ml-library/</div>
+<div class="line">├── include/                # Header files</div>
+<div class="line">├── src/                    # Source files</div>
+<div class="line">├── tests/                  # Unit tests</div>
+<div class="line">├── examples/               # Example usage files</div>
+<div class="line">├── docs/                   # Documentation files</div>
+<div class="line">└── CMakeLists.txt          # CMake configuration file</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+Getting Started</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Requirements</h2>
+<ul>
+<li>C++20</li>
+<li>CMake 3.18+ (if using CMake for building)</li>
+<li>Any C++ compiler that supports C++20 (e.g., GCC 10+, Clang 10+, MSVC)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Building the Library</h2>
+<p>To build the library with CMake:</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">make</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Installing the Library</h2>
+<p>After building, you can install the library system-wide:</p>
+<div class="fragment"><div class="line">make install</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Usage</h2>
+<p>To use this library in your C++ project, include the master header file:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;ml/ml.h&quot;</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Implemented Algorithms</h1>
+<p>The following machine learning algorithms are planned, inspired by concepts and techniques taught in the Udemy course:</p>
+<ol type="1">
+<li><b>Regression</b><ul>
+<li>[ ] Polynomial Regression</li>
+<li>[ ] Multi-Linear Regression</li>
+</ul>
+</li>
+<li><b>Classification</b><ul>
+<li>[ ] Decision Tree Classifier</li>
+<li>[ ] Random Forest Classifier</li>
+<li>[ ] K-Nearest Neighbors</li>
+</ul>
+</li>
+<li><b>Clustering</b><ul>
+<li>[ ] K-Means Clustering</li>
+</ul>
+</li>
+<li><b>Neural Networks</b><ul>
+<li>[ ] Artificial Neural Network (ANN)</li>
+<li>[ ] Convolutional Neural Network (CNN)</li>
+</ul>
+</li>
+<li><b>Association Rule Learning</b><ul>
+<li>[ ] Apriori</li>
+<li>[ ] Eclat</li>
+</ul>
+</li>
+<li><b>Support Vector Machine</b><ul>
+<li>[ ] Support Vector Regression (SVR)</li>
+</ul>
+</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Examples</h1>
+<p>Each algorithm will include example usage. Examples are located in the <code>examples/</code> directory.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Example: Decision Tree Classifier</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;ml/ml.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    ml::tree::DecisionTreeClassifier dtc;</div>
+<div class="line">    std::vector&lt;std::vector&lt;double&gt;&gt; data = { {5.1, 3.5, 1.4, 0.2}, {4.9, 3.0, 1.4, 0.2} };</div>
+<div class="line">    std::vector&lt;int&gt; labels = { 0, 1 };</div>
+<div class="line">    dtc.fit(data, labels);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> prediction = dtc.predict({5.1, 3.5, 1.4, 0.2});</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Predicted class: &quot;</span> &lt;&lt; prediction &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+Documentation</h1>
+<p>The documentation for this project is generated using Doxygen and is available online at <a href="https://jideoyelayo1.github.io/cpp-ml-library/">GitHub Pages</a>. The documentation provides details on each class, function, and algorithm.</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Contributing</h1>
+<p>Contributions are welcome! Please submit a pull request or open an issue if you'd like to discuss ideas or report bugs.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+License</h1>
+<p>This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

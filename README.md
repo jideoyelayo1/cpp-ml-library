@@ -70,6 +70,7 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [ ] K-Means Clustering
 
 4. **Neural Networks**
+   - [ ] Neural Network (NN)
    - [ ] Artificial Neural Network (ANN)
    - [ ] Convolutional Neural Network (CNN)
 
@@ -79,6 +80,25 @@ The following machine learning algorithms are planned, inspired by concepts and 
 
 6. **Support Vector Machine**
    - [ ] Support Vector Regression (SVR)
+
+## Algorithm Implementation Progress
+
+| Algorithm Category       | Algorithm                    | Implemented | Tests | Examples |
+|--------------------------|------------------------------|-------------|-------|----------|
+| **Regression**           | Polynomial Regression        | [ ]         | [ ]   | [ ]      |
+|                          | Multi-Linear Regression      | [ ]         | [ ]   | [ ]      |
+| **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
+|                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
+|                          | K-Nearest Neighbors          | [ ]         | [ ]   | [ ]      |
+| **Clustering**           | K-Means Clustering           | [ ]         | [ ]   | [ ]      |
+| **Neural Networks**      | Neural Network (NN)          | [x]         | [ ]   | [ ]      |
+|                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
+|                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
+| **Association Rule Learning** | Apriori                | [ ]         | [ ]   | [ ]      |
+|                          | Eclat                        | [ ]         | [ ]   | [ ]      |
+| **Support Vector Machine** | Support Vector Regression (SVR) | [ ]    | [ ]   | [ ]      |
+
+
 
 ## Examples
 

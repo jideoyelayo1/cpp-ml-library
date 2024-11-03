@@ -5,21 +5,33 @@
 
 // ********** TrainingData Class Implementation ********** //
 
-TrainingData::TrainingData(const string filename) {
+/**
+ * @brief Constructor that opens the file containing training data.
+ *        Ensures the file is ready for reading data sequentially.
+ */
+TrainingData::TrainingData(const std::string filename) {
     _trainingDataFile.open(filename.c_str());
 }
 
-void TrainingData::getTopology(vector<unsigned>& topology) {
-    string line, label;
+/**
+ * @brief Parses the topology of the neural network.
+ * 
+ * This method reads a line from the training data file that starts with the keyword "topology:" 
+ * followed by integers representing the number of neurons in each layer. For instance, a topology 
+ * line of "topology: 3 2 1" describes a network with 3 neurons in the first layer, 2 in the second,
+ * and 1 in the final layer.
+ */
+void TrainingData::getTopology(std::vector<unsigned>& topology) {
+    std::string line, label;
     if (!getline(_trainingDataFile, line)) {
-        cerr << "Error reading from the file." << endl;
+        std::cerr << "Error reading from the file." << std::endl;
         abort();
     }
 
-    stringstream ss(line);
+    std::stringstream ss(line);
     ss >> label;
     if (label != "topology:") {
-        cerr << "Invalid format. Expected 'topology:'." << endl;
+        std::cerr << "Invalid format. Expected 'topology:'." << std::endl;
         abort();
     }
 
@@ -28,18 +40,25 @@ void TrainingData::getTopology(vector<unsigned>& topology) {
         topology.push_back(numLayers);
     }
 
+    // Ensure that a valid topology was provided, otherwise halt execution.
     if (topology.empty()) {
-        cerr << "No topology data found." << endl;
+        std::cerr << "No topology data found." << std::endl;
         abort();
     }
 }
 
-unsigned TrainingData::getNextInputs(vector<double>& inputVals) {
+/**
+ * @brief Retrieves the next set of input values.
+ * 
+ * Each line with the "in:" prefix contains input values for a training pass.
+ * This function parses those values and stores them in inputVals.
+ */
+unsigned TrainingData::getNextInputs(std::vector<double>& inputVals) {
     inputVals.clear();
-    string line;
+    std::string line;
     getline(_trainingDataFile, line);
-    stringstream ss(line);
-    string label;
+    std::stringstream ss(line);
+    std::string label;
     ss >> label;
     if (label.compare("in:") == 0) {
         double oneVal;
@@ -50,12 +69,18 @@ unsigned TrainingData::getNextInputs(vector<double>& inputVals) {
     return inputVals.size();
 }
 
-unsigned TrainingData::getTargetOutputs(vector<double>& targetOutputsVals) {
+/**
+ * @brief Retrieves the target output values.
+ * 
+ * Each line with the "out:" prefix contains the expected output values for a training pass.
+ * This function parses those values and stores them in targetOutputsVals.
+ */
+unsigned TrainingData::getTargetOutputs(std::vector<double>& targetOutputsVals) {
     targetOutputsVals.clear();
-    string line;
+    std::string line;
     getline(_trainingDataFile, line);
-    stringstream ss(line);
-    string label;
+    std::stringstream ss(line);
+    std::string label;
     ss >> label;
     if (label.compare("out:") == 0) {
         double oneVal;
@@ -68,9 +93,22 @@ unsigned TrainingData::getTargetOutputs(vector<double>& targetOutputsVals) {
 
 // ********** Neuron Class Implementation ********** //
 
+/**
+ * @brief Static variables for learning rate (eta) and momentum (alpha).
+ * 
+ * - eta controls the rate at which the network adjusts during backpropagation.
+ * - alpha applies momentum to reduce oscillations during training.
+ */
 double Neuron::eta = 0.15;
 double Neuron::alpha = 0.5;
 
+/**
+ * @brief Neuron constructor that initializes output weights with random values.
+ * 
+ * Each neuron is connected to neurons in the next layer, and these connections
+ * are initialized with random weights in the range [0, 1). Random initialization
+ * is essential for neural networks to avoid symmetry during training.
+ */
 Neuron::Neuron(unsigned numOutputs, unsigned myIdx) : _myIdx(myIdx), _outputVal(0.0) {
     for (unsigned c = 0; c < numOutputs; ++c) {
         _outputWeights.push_back(Connection());
@@ -78,19 +116,44 @@ Neuron::Neuron(unsigned numOutputs, unsigned myIdx) : _myIdx(myIdx), _outputVal(
     }
 }
 
+/**
+ * @brief Generates a random weight for initializing connections.
+ * 
+ * Random weights are critical for breaking symmetry in the network.
+ * Without randomness, neurons would learn identical features.
+ */
 double Neuron::randomWeight() {
     return rand() / double(RAND_MAX);
 }
 
+/**
+ * @brief Hyperbolic tangent (tanh) transfer function.
+ * 
+ * The tanh function is commonly used as an activation function. It outputs
+ * values between -1 and 1, providing a non-linear transformation that enables
+ * the network to approximate complex functions.
+ */
 double Neuron::transferFunction(double x) {
     return tanh(x);
 }
 
+/**
+ * @brief Derivative of the tanh function for backpropagation.
+ * 
+ * The derivative is used to calculate gradients during the backpropagation process.
+ * With tanh(x), the derivative is 1 - x^2, which facilitates efficient gradient calculation.
+ */
 double Neuron::transferFunctionDerivative(double x) {
     return 1.0 - x * x;
 }
 
-void Neuron::feedForward(const vector<Neuron>& prevLayer) {
+/**
+ * @brief Computes the neuron’s output by summing inputs from the previous layer.
+ * 
+ * For each neuron in the previous layer, the output is weighted and summed. This
+ * summation is then passed through the transfer function to generate the final output.
+ */
+void Neuron::feedForward(const std::vector<Neuron>& prevLayer) {
     double sum = 0.0;
     for (unsigned n = 0; n < prevLayer.size(); ++n) {
         sum += prevLayer[n].getOutputVal() * prevLayer[n]._outputWeights[_myIdx].weight;
@@ -98,43 +161,71 @@ void Neuron::feedForward(const vector<Neuron>& prevLayer) {
     _outputVal = Neuron::transferFunction(sum);
 }
 
-// (Other Neuron methods like updateInputWeights, sumDOW, calcHiddenGradients, and calcOutputGradients go here...)
-
 // ********** NN Class Implementation ********** //
 
+/**
+ * @brief Smoothing factor for recent average error calculations.
+ * 
+ * The `_recentAverageSmoothFactor` is used to smooth out the fluctuations in the 
+ * recent average error, providing a more stable view of error trends during training.
+ */
 double NN::_recentAverageSmoothFactor = 100.0;
 
-NN::NN(const vector<unsigned>& topology) {
+/**
+ * @brief Neural network constructor that builds layers and initializes neurons.
+ * 
+ * Each layer is constructed according to the topology provided. The constructor also
+ * creates bias neurons, which always output 1.0. Bias neurons help the network learn
+ * patterns that require a constant offset.
+ */
+NN::NN(const std::vector<unsigned>& topology) {
     unsigned numLayers = topology.size();
     for (unsigned layerNum = 0; layerNum < numLayers; ++layerNum) {
-        _layers.push_back(vector<Neuron>());
+        _layers.push_back(std::vector<Neuron>());
         unsigned numOutputs = (layerNum == topology.size() - 1) ? 0 : topology[layerNum + 1];
         for (unsigned neuronNum = 0; neuronNum <= topology[layerNum]; ++neuronNum) {
             _layers.back().push_back(Neuron(numOutputs, neuronNum));
-            _layers.back().back().setOutputVal(1.0);
+            _layers.back().back().setOutputVal(1.0); // Bias neuron output
         }
     }
 }
 
-// (Other NN methods like feedForward, backProp, and getResults go here...)
-
 // Utility functions
-void showVectorVals(string label, vector<double>& v) {
-    cout << label << " ";
+
+/**
+ * @brief Utility function to print vector values with a label.
+ * 
+ * Primarily used for debugging, this function outputs each value in a vector
+ * with an associated label.
+ */
+void showVectorVals(std::string label, std::vector<double>& v) {
+    std::cout << label << " ";
     for (unsigned i = 0; i < v.size(); ++i) {
-        cout << v[i] << " ";
+        std::cout << v[i] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
-string printVectorVals(string label, vector<double>& v) {
-    string res = label + " ";
+/**
+ * @brief Converts vector values to a formatted string for easier inspection.
+ * 
+ * Useful for debugging and logging, this function formats vector values
+ * into a labeled string for printing or saving to a file.
+ */
+std::string printVectorVals(std::string label, std::vector<double>& v) {
+    std::string res = label + " ";
     for (const auto& val : v) {
-        res += to_string(val) + " ";
+        res += std::to_string(val) + " ";
     }
     return res + "\n";
 }
 
+/**
+ * @brief Saves a string to a file.
+ * 
+ * This utility function opens a file in write mode and saves the content.
+ * It’s used to log results or intermediate outputs for analysis.
+ */
 void saveStringToFile(const std::string& filename, const std::string& content) {
     std::ofstream outputFile(filename);
     if (outputFile.is_open()) {

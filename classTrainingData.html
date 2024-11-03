@@ -114,6 +114,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that opens the training data file. </p>
+<p>Constructor that opens the file containing training data. Ensures the file is ready for reading data sequentially.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The name of the training data file. </td></tr>
@@ -141,13 +142,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the next set of input values from the training data. </p>
+<p>Retrieves the next set of input values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inputVals</td><td>A vector to store the input values. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of input values. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of input values.</dd></dl>
+<p>Each line with the "in:" prefix contains input values for a training pass. This function parses those values and stores them in inputVals. </p>
 
 </div>
 </div>
@@ -168,13 +171,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the target output values from the training data. </p>
+<p>Retrieves the target output values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targetOutputsVals</td><td>A vector to store the target output values. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of target output values. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of target output values.</dd></dl>
+<p>Each line with the "out:" prefix contains the expected output values for a training pass. This function parses those values and stores them in targetOutputsVals. </p>
 
 </div>
 </div>
@@ -195,12 +200,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reads the topology of the neural network from the training data. </p>
+<p>Parses the topology of the neural network.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">topology</td><td>A vector to store the topology data. </td></tr>
+    <tr><td class="paramname">topology</td><td>A vector to store the topology data.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This method reads a line from the training data file that starts with the keyword "topology:" followed by integers representing the number of neurons in each layer. For instance, a topology line of "topology: 3 2 1" describes a network with 3 neurons in the first layer, 2 in the second, and 1 in the final layer. </p>
 
 </div>
 </div>

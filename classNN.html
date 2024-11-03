@@ -114,12 +114,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the neural network based on the given topology. </p>
+<p>Neural network constructor that builds layers and initializes neurons.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">topology</td><td>A vector representing the number of neurons in each layer. </td></tr>
+    <tr><td class="paramname">topology</td><td>A vector representing the number of neurons in each layer.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Each layer is constructed according to the topology provided. The constructor also creates bias neurons, which always output 1.0. Bias neurons help the network learn patterns that require a constant offset. </p>
 
 </div>
 </div>

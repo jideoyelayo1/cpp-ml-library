@@ -137,13 +137,15 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a neuron with a specified number of outputs. </p>
+<p><a class="el" href="classNeuron.html" title="Represents a single neuron in the neural network.">Neuron</a> constructor that initializes output weights with random values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">numOutputs</td><td>The number of outputs for the neuron. </td></tr>
-    <tr><td class="paramname">myIdx</td><td>The index of the neuron in its layer. </td></tr>
+    <tr><td class="paramname">myIdx</td><td>The index of the neuron in its layer.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Each neuron is connected to neurons in the next layer, and these connections are initialized with random weights in the range [0, 1). Random initialization is essential for neural networks to avoid symmetry during training. </p>
 
 </div>
 </div>
@@ -217,12 +219,14 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Feeds forward the input values from the previous layer. </p>
+<p>Computes the neuron’s output by summing inputs from the previous layer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">prevLayer</td><td>The previous layer of neurons. </td></tr>
+    <tr><td class="paramname">prevLayer</td><td>The previous layer of neurons.</td></tr>
   </table>
   </dd>
 </dl>
+<p>For each neuron in the previous layer, the output is weighted and summed. This summation is then passed through the transfer function to generate the final output. </p>
 
 </div>
 </div>
@@ -279,12 +283,14 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generates a random weight. </p>
+<p>Generates a random weight for initializing connections.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>Output is a random double. </td></tr>
+    <tr><td class="paramname">The</td><td>Output is a random double.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Random weights are critical for breaking symmetry in the network. Without randomness, neurons would learn identical features. </p>
 
 </div>
 </div>

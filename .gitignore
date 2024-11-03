@@ -29,6 +29,8 @@ docs/doxygen/
 *.a
 *.out
 *.log
+*.cbp
+*.layout
 
 # IDE-specific files
 .idea/

@@ -9,12 +9,12 @@
 
 /**
  * @file KMeans.hpp
- * @brief A simple implementation of the K-Means clustering algorithm.
+ * @brief An implementation of the K-Means clustering algorithm with K-Means++ initialization.
  */
 
 /**
  * @class KMeans
- * @brief Implements the K-Means clustering algorithm.
+ * @brief Implements the K-Means clustering algorithm with K-Means++ initialization.
  */
 class KMeans {
 public:
@@ -82,6 +82,12 @@ private:
      * @return A vector of new cluster centers.
      */
     std::vector<std::vector<double>> compute_cluster_centers(const std::vector<std::vector<double>>& X, const std::vector<int>& labels) const;
+
+    /**
+     * @brief Initializes cluster centers using the K-Means++ algorithm.
+     * @param X A vector of feature vectors.
+     */
+    void initialize_centers(const std::vector<std::vector<double>>& X);
 };
 
 KMeans::KMeans(int n_clusters, int max_iter, double tol, unsigned int random_state)
@@ -96,19 +102,9 @@ KMeans::~KMeans() {}
 
 void KMeans::fit(const std::vector<std::vector<double>>& X) {
     size_t n_samples = X.size();
-    size_t n_features = X[0].size();
 
-    // Initialize cluster centers randomly from the data points
-    cluster_centers.clear();
-    cluster_centers.reserve(n_clusters);
-    std::vector<size_t> indices(n_samples);
-    for (size_t i = 0; i < n_samples; ++i) {
-        indices[i] = i;
-    }
-    std::shuffle(indices.begin(), indices.end(), rng);
-    for (int i = 0; i < n_clusters; ++i) {
-        cluster_centers.push_back(X[indices[i]]);
-    }
+    // Initialize cluster centers using K-Means++ initialization
+    initialize_centers(X);
 
     labels.resize(n_samples);
     std::vector<std::vector<double>> old_cluster_centers;
@@ -186,9 +182,9 @@ std::vector<std::vector<double>> KMeans::compute_cluster_centers(const std::vect
 
     for (int k = 0; k < n_clusters; ++k) {
         if (counts[k] == 0) {
-            // If a cluster lost all its members, reinitialize its center randomly
+            // If a cluster lost all its members, reinitialize its center using K-Means++ logic
             std::uniform_int_distribution<size_t> dist(0, X.size() - 1);
-            new_centers[k] = X[dist(rng)]; // rng is mutable, so this is allowed
+            new_centers[k] = X[dist(rng)];
         } else {
             for (size_t j = 0; j < n_features; ++j) {
                 new_centers[k][j] /= counts[k];
@@ -197,6 +193,47 @@ std::vector<std::vector<double>> KMeans::compute_cluster_centers(const std::vect
     }
 
     return new_centers;
+}
+
+void KMeans::initialize_centers(const std::vector<std::vector<double>>& X) {
+    size_t n_samples = X.size();
+    size_t n_features = X[0].size();
+    cluster_centers.clear();
+    cluster_centers.reserve(n_clusters);
+
+    // Step 1: Choose one center uniformly at random from the data points
+    std::uniform_int_distribution<size_t> dist(0, n_samples - 1);
+    size_t first_center_idx = dist(rng);
+    cluster_centers.push_back(X[first_center_idx]);
+
+    // Step 2: For each data point, compute its distance to the nearest center
+    std::vector<double> distances(n_samples, std::numeric_limits<double>::max());
+
+    for (int k = 1; k < n_clusters; ++k) {
+        double total_distance = 0.0;
+        for (size_t i = 0; i < n_samples; ++i) {
+            double dist_to_center = euclidean_distance(X[i], cluster_centers.back());
+            if (dist_to_center < distances[i]) {
+                distances[i] = dist_to_center;
+            }
+            total_distance += distances[i];
+        }
+
+        // Step 3: Choose the next center with probability proportional to the square of the distance
+        std::uniform_real_distribution<double> uniform_dist(0.0, total_distance);
+        double random_value = uniform_dist(rng);
+
+        double cumulative_distance = 0.0;
+        size_t next_center_idx = 0;
+        for (size_t i = 0; i < n_samples; ++i) {
+            cumulative_distance += distances[i];
+            if (cumulative_distance >= random_value) {
+                next_center_idx = i;
+                break;
+            }
+        }
+        cluster_centers.push_back(X[next_center_idx]);
+    }
 }
 
 #endif // KMEANS_HPP

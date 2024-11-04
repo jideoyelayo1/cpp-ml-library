@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_33',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
+  ['get_5fcluster_5fcenters_39',['get_cluster_centers',['../classKMeans.html#af9133da50269ff5ce65cda20b518deca',1,'KMeans']]]
 ];

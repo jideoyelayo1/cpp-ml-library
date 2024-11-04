@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['randomforestclassifier_10',['RandomForestClassifier',['../classRandomForestClassifier.html',1,'RandomForestClassifier'],['../classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27',1,'RandomForestClassifier::RandomForestClassifier()']]],
-  ['randomforestclassifier_2ehpp_11',['RandomForestClassifier.hpp',['../RandomForestClassifier_8hpp.html',1,'']]],
-  ['randomforestregressor_12',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'RandomForestRegressor'],['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor::RandomForestRegressor()']]],
-  ['randomforestregressor_2ehpp_13',['RandomForestRegressor.hpp',['../RandomForestRegressor_8hpp.html',1,'']]]
+  ['multilinearregression_10',['MultilinearRegression',['../classMultilinearRegression.html',1,'MultilinearRegression'],['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression::MultilinearRegression()']]]
 ];

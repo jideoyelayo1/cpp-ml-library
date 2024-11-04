@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multilinearregression_22',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
+  ['logisticregression_26',['LogisticRegression',['../classLogisticRegression.html',1,'']]]
 ];

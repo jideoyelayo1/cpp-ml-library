@@ -10,9 +10,6 @@ option(BUILD_EXAMPLES "Build examples" ON)
 # Global include directories for headers
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
 
-# Include Eigen directly
-include_directories("/path/to/eigen")  # Replace with the actual path to Eigen
-
 # Source files
 file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
@@ -27,26 +24,26 @@ install(DIRECTORY ml_library_include/ DESTINATION include)
 # Enable testing
 enable_testing()
 
-# Add Catch2 for testing
-include(FetchContent)
-FetchContent_Declare(
-    Catch2
-    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-    GIT_TAG v3.0.1
-)
-FetchContent_MakeAvailable(Catch2)
+# Add individual test files as separate executables
+add_executable(LogisticRegressionTest tests/regression/LogisticRegressionTest.cpp)
+add_executable(PolynomialRegressionTest tests/regression/PolynomialRegressionTest.cpp)
+add_executable(MultiLinearRegressionTest tests/regression/MultiLinearRegressionTest.cpp)
 
-# Collect all test sources
-file(GLOB_RECURSE TEST_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/tests/**/*.cpp")
+# Link cpp_ml_library to each test
+target_link_libraries(LogisticRegressionTest cpp_ml_library)
+target_link_libraries(PolynomialRegressionTest cpp_ml_library)
+target_link_libraries(MultiLinearRegressionTest cpp_ml_library)
 
-# Define a single executable for all tests
-add_executable(AllTests ${TEST_SOURCES})
+# Add a master executable to run all tests
+add_executable(AllTests tests/AllTests.cpp)
 
-# Link Catch2 and cpp_ml_library to the test executable
-target_link_libraries(AllTests cpp_ml_library Catch2::Catch2WithMain)
-target_include_directories(AllTests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
+# Link cpp_ml_library to AllTests
+target_link_libraries(AllTests cpp_ml_library)
 
-# Register the AllTests executable as a test
+# Register individual tests and the master AllTests executable
+add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
+add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
+add_test(NAME MultiLinearRegressionTest COMMAND MultiLinearRegressionTest)
 add_test(NAME AllTests COMMAND AllTests)
 
 # Add example executables if BUILD_EXAMPLES is ON

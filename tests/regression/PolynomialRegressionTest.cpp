@@ -3,11 +3,7 @@
 #include <iostream>
 #include <cassert>
 #include <cmath>
-
-// Custom approximation function for comparing doubles
-inline bool approxEqual(double a, double b, double epsilon = 0.1) {
-    return std::fabs(a - b) <= epsilon;
-}
+#include "../TestUtils.hpp"
 
 inline void testPolynomialRegression() {
     PolynomialRegression model(2); // Quadratic regression

@@ -2,10 +2,8 @@
 #include <vector>
 #include <iostream>
 #include <cassert>
+#include "../TestUtils.hpp"
 
-inline bool approxEqual(double a, double b, double epsilon = 0.1) {
-    return std::abs(a - b) < epsilon;
-}
 
 inline void testMultilinearRegression() {
     MultilinearRegression model(0.01, 1000);

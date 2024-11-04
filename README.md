@@ -58,8 +58,10 @@ To use this library in your C++ project, include the master header file:
 The following machine learning algorithms are planned, inspired by concepts and techniques taught in the Udemy course:
 
 1. **Regression**
-   - [ ] Polynomial Regression
-   - [ ] Multi-Linear Regression
+   - [x] Polynomial Regression
+   - [x] Multi-Linear Regression
+   - [x] Logistic Regression
+
 
 2. **Classification**
    - [ ] Decision Tree Classifier
@@ -85,8 +87,9 @@ The following machine learning algorithms are planned, inspired by concepts and 
 
 | Algorithm Category       | Algorithm                    | Implemented | Tests | Examples |
 |--------------------------|------------------------------|-------------|-------|----------|
-| **Regression**           | Polynomial Regression        | [ ]         | [ ]   | [ ]      |
-|                          | Multi-Linear Regression      | [ ]         | [ ]   | [ ]      |
+| **Regression**           | Polynomial Regression        | [x]         | [ ]   | [x]      |
+|                          | Logistic Regression      | [x]         | [ ]   | [x]      |
+|                          | Multi-Linear Regression      | [x]         | [ ]   | [x]      |
 | **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | K-Nearest Neighbors          | [ ]         | [ ]   | [ ]      |

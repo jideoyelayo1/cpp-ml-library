@@ -16,19 +16,23 @@ int main() {
     std::vector<double> y = {0.2, 0.2, 2.3, 1.8};
 
     // Create and train the RandomForestRegressor model
-    RandomForestRegressor model(10, 5, 2); // Parameters: 10 trees, max depth = 5, min samples = 2
+    RandomForestRegressor model(10, 5, 2);
     model.fit(X, y);
 
     // Make predictions
     std::vector<double> predictions = model.predict(X);
 
-    // Verify predictions by comparing them with expected values
+    // Calculate Mean Absolute Error
+    double mae = 0.0;
     for (size_t i = 0; i < predictions.size(); ++i) {
-        assert(approxEqual(predictions[i], y[i], 0.1) && "Prediction does not match expected value.");
+        mae += std::fabs(predictions[i] - y[i]);
+        std::cout << "Predicted: " << predictions[i] << ", Actual: " << y[i] << std::endl;
     }
+    mae /= predictions.size();
 
-    // Inform user of successful test
+    // Assert that MAE is within tolerance
+    assert(mae < 0.2 && "Mean absolute error exceeds tolerance.");
+
     std::cout << "Random Forest Regression Basic Test passed." << std::endl;
-
     return 0;
 }

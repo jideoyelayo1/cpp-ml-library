@@ -1,9 +1,9 @@
-#include "LogisticRegression.hpp"
+#include "../../ml_library_include/ml/regression/LogisticRegression.hpp"
 #include <vector>
 #include <iostream>
 #include <cassert>
 
-void testLogisticRegression() {
+inline void testLogisticRegression() {
     LogisticRegression model(0.1, 1000);
 
     std::vector<std::vector<double>> features = {

@@ -1,13 +1,13 @@
-#include "ml/regression/MultiLinearRegression.h"
+#include "../../ml_library_include/ml/regression/MultiLinearRegression.hpp"
 #include <vector>
 #include <iostream>
 #include <cassert>
 
-bool approxEqual(double a, double b, double epsilon = 0.1) {
+inline bool approxEqual(double a, double b, double epsilon = 0.1) {
     return std::abs(a - b) < epsilon;
 }
 
-void testMultilinearRegression() {
+inline void testMultilinearRegression() {
     MultilinearRegression model(0.01, 1000);
 
     std::vector<std::vector<double>> features = {

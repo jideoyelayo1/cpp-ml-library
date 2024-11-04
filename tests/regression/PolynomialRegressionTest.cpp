@@ -1,15 +1,15 @@
-#include "PolynomialRegression.hpp"
+#include "../../ml_library_include/ml/regression/PolynomialRegression.hpp"
 #include <vector>
 #include <iostream>
 #include <cassert>
 #include <cmath>
 
 // Custom approximation function for comparing doubles
-bool approxEqual(double a, double b, double epsilon = 0.1) {
+inline bool approxEqual(double a, double b, double epsilon = 0.1) {
     return std::fabs(a - b) <= epsilon;
 }
 
-void testPolynomialRegression() {
+inline void testPolynomialRegression() {
     PolynomialRegression model(2); // Quadratic regression
 
     std::vector<double> x = {1.0, 2.0, 3.0, 4.0};

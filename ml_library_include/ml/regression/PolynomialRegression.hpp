@@ -32,7 +32,21 @@ public:
 private:
     int degree_;                    ///< Degree of the polynomial
     std::vector<double> coefficients_; ///< Coefficients of the polynomial
+
+    /**
+     * @brief Computes polynomial regression coefficients for the provided data.
+     * @param x Feature vector.
+     * @param y Target vector.
+     */
     void computeCoefficients(const std::vector<double>& x, const std::vector<double>& y);
+
+    /**
+     * @brief Solves the linear system using Gaussian elimination.
+     * @param A Matrix representing the system's coefficients.
+     * @param b Vector representing the constant terms.
+     * @return Solution vector containing the polynomial coefficients.
+     */
+    std::vector<double> gaussianElimination(std::vector<std::vector<double>>& A, std::vector<double>& b);
 };
 
 #endif // POLYNOMIAL_REGRESSION_HPP

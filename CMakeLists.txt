@@ -42,10 +42,19 @@ add_test(NAME MultiLinearRegressionTest COMMAND MultiLinearRegressionTest)
 add_test(NAME RandomForestRegressorTest COMMAND RandomForestRegressorTest)
 add_test(NAME DecisionTreeRegressorTest COMMAND DecisionTreeRegressorTest)
 
-# Add example executables if BUILD_EXAMPLES is ON
+# Example executables
 if(BUILD_EXAMPLES)
-    file(GLOB_RECURSE EXAMPLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/examples/*.cpp")
-    foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
+    # Define the list of example source files
+    set(EXAMPLES
+        "examples/LogisticRegressionExample.cpp"
+        "examples/MultilinearRegressionExample.cpp"
+        "examples/PolynomialRegressionExample.cpp"
+        "examples/DecisionTreeExample.cpp" 
+        "examples/RandomForestExample.cpp" 
+    )
+
+    # Loop through each example to create an executable
+    foreach(EXAMPLE_SOURCE ${EXAMPLES})
         get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
         add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
         target_link_libraries(${EXAMPLE_NAME} cpp_ml_library)

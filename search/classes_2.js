@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multilinearregression_15',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
+  ['multilinearregression_22',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
 ];

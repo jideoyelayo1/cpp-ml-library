@@ -24,14 +24,17 @@ install(DIRECTORY ml_library_include/ DESTINATION include)
 # Enable testing
 enable_testing()
 
-# Add individual test files as separate executables
+# Add individual test files as separate executables and define a macro for each
 add_executable(LogisticRegressionTest tests/regression/LogisticRegressionTest.cpp)
-add_executable(PolynomialRegressionTest tests/regression/PolynomialRegressionTest.cpp)
-add_executable(MultiLinearRegressionTest tests/regression/MultiLinearRegressionTest.cpp)
-
-# Link cpp_ml_library to each test
+target_compile_definitions(LogisticRegressionTest PRIVATE TEST_LOGISTIC_REGRESSION)
 target_link_libraries(LogisticRegressionTest cpp_ml_library)
+
+add_executable(PolynomialRegressionTest tests/regression/PolynomialRegressionTest.cpp)
+target_compile_definitions(PolynomialRegressionTest PRIVATE TEST_POLYNOMIAL_REGRESSION)
 target_link_libraries(PolynomialRegressionTest cpp_ml_library)
+
+add_executable(MultiLinearRegressionTest tests/regression/MultiLinearRegressionTest.cpp)
+target_compile_definitions(MultiLinearRegressionTest PRIVATE TEST_MULTILINEAR_REGRESSION)
 target_link_libraries(MultiLinearRegressionTest cpp_ml_library)
 
 # Register individual tests
@@ -48,5 +51,14 @@ if(BUILD_EXAMPLES)
         add_executable(${EXAMPLE_TARGET} ${EXAMPLE_SOURCE}) # Use prefixed name for executable
         target_link_libraries(${EXAMPLE_TARGET} cpp_ml_library)
         target_include_directories(${EXAMPLE_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
+
+        # Define specific macros to control main() inclusion if necessary
+        if(EXAMPLE_NAME STREQUAL "LogisticRegressionExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_LOGISTIC_REGRESSION)
+        elseif(EXAMPLE_NAME STREQUAL "MultilinearRegressionExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_MULTILINEAR_REGRESSION)
+        elseif(EXAMPLE_NAME STREQUAL "PolynomialRegressionExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_POLYNOMIAL_REGRESSION)
+        endif()
     endforeach()
 endif()

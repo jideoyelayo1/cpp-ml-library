@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cassert>
 
-inline void testLogisticRegression() {
+int main() {
     LogisticRegression model(0.1, 1000);
 
     std::vector<std::vector<double>> features = {
@@ -27,4 +27,5 @@ inline void testLogisticRegression() {
 
     // Inform user of successful test
     std::cout << "Logistic Regression Basic Test passed." << std::endl;
+    return 0;
 }

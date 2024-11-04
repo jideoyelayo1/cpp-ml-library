@@ -5,7 +5,7 @@
 #include "../TestUtils.hpp"
 
 
-inline void testMultilinearRegression() {
+int main() {
     MultilinearRegression model(0.01, 1000);
 
     std::vector<std::vector<double>> features = {
@@ -29,4 +29,5 @@ inline void testMultilinearRegression() {
 
     // Inform user of successful test
     std::cout << "MultilinearRegression Basic Test passed." << std::endl;
+    return 0;
 }

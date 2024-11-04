@@ -5,7 +5,7 @@
 #include <cmath>
 #include "../TestUtils.hpp"
 
-inline void testPolynomialRegression() {
+int main() {
     PolynomialRegression model(2); // Quadratic regression
 
     std::vector<double> x = {1.0, 2.0, 3.0, 4.0};
@@ -22,4 +22,6 @@ inline void testPolynomialRegression() {
 
     // Inform user of successful test
     std::cout << "Polynomial Regression Basic Test passed." << std::endl;
+
+    return 0;
 }

@@ -37,3 +37,6 @@ docs/doxygen/
 .DS_Store
 Thumbs.db
 .cache/
+
+# Remove solution
+cpp-ml/

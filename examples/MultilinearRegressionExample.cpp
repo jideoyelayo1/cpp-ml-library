@@ -4,7 +4,7 @@
 #include <cmath>
 
 // Helper function for approximate equality check
-bool approxEqual(double a, double b, double tolerance = 0.1) {
+inline bool approxEqual(double a, double b, double tolerance = 0.1) {
     return std::fabs(a - b) < tolerance;
 }
 

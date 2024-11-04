@@ -45,12 +45,22 @@ add_executable(RandomForestRegressor tests/tree/RandomForestRegressorTest.cpp)
 target_compile_definitions(RandomForestRegressor PRIVATE TEST_RANDOM_FOREST_REGRESSION)
 target_link_libraries(RandomForestRegressor cpp_ml_library)
 
+add_executable(DecisionTreeClassifier tests/tree/DecisionTreeClassifierTest.cpp)
+target_compile_definitions(DecisionTreeClassifier PRIVATE TEST_DECISION_TREE_CLASSIFIER)
+target_link_libraries(DecisionTreeClassifier cpp_ml_library)
+
+add_executable(RandomForestClassifier tests/tree/RandomForestClassifierTest.cpp)
+target_compile_definitions(RandomForestClassifier PRIVATE TEST_RANDOM_FOREST_CLASSIFIER)
+target_link_libraries(RandomForestClassifier cpp_ml_library)
+
 # Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
 add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
 add_test(NAME MultiLinearRegressionTest COMMAND MultiLinearRegressionTest)
 add_test(NAME DecisionTreeRegressor COMMAND DecisionTreeRegressor)
 add_test(NAME RandomForestRegressor COMMAND RandomForestRegressor)
+add_test(NAME DecisionTreeClassifier COMMAND DecisionTreeClassifier)
+add_test(NAME RandomForestClassifier COMMAND RandomForestClassifier)
 
 # Add example executables if BUILD_EXAMPLES is ON
 if(BUILD_EXAMPLES)
@@ -73,6 +83,10 @@ if(BUILD_EXAMPLES)
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_DECISION_TREE_REGRESSION)
         elseif(EXAMPLE_NAME STREQUAL "RandomForestExample")
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_RANDOM_FOREST_REGRESSION)
+        elseif(EXAMPLE_NAME STREQUAL "DecisionTreeClassifierExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_DECISION_TREE_CLASSIFIER)
+        elseif(EXAMPLE_NAME STREQUAL "RandomForestClassifier")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_RANDOM_FOREST_CLASSIFIER)
         endif()
     endforeach()
 endif()

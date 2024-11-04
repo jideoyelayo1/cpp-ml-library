@@ -61,6 +61,8 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [x] Polynomial Regression
    - [x] Multi-Linear Regression
    - [x] Logistic Regression
+   - [ ] Decision Tree Regression
+   - [ ] Random Forest Regression
 
 
 2. **Classification**
@@ -90,6 +92,8 @@ The following machine learning algorithms are planned, inspired by concepts and 
 | **Regression**           | Polynomial Regression        | [x]         | [ ]   | [x]      |
 |                          | Logistic Regression      | [x]         | [ ]   | [x]      |
 |                          | Multi-Linear Regression      | [x]         | [ ]   | [x]      |
+|                          | Decision Tree Regression     | [ ]         | [ ]   | [ ]      |
+|                          | Random Forest Regression     | [ ]         | [ ]   | [ ]      |
 | **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | K-Nearest Neighbors          | [ ]         | [ ]   | [ ]      |

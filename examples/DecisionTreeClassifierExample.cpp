@@ -45,9 +45,9 @@ void testDecisionTreeClassifier() {
 }
 
 // Only include main if TEST_DECISION_TREE_CLASSIFICATION is defined
-#ifdef TEST_DECISION_TREE_CLASSIFICATION
+//#ifdef TEST_DECISION_TREE_CLASSIFICATION
 int main() {
     testDecisionTreeClassifier();
     return 0;
 }
-#endif
+//#endif

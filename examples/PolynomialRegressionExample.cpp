@@ -1,4 +1,4 @@
-#include "PolynomialRegression.hpp"
+#include "../ml_library_include/ml/regression/PolynomialRegression.hpp"
 #include <iostream>
 
 int main() {

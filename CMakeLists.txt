@@ -37,11 +37,11 @@ add_executable(MultiLinearRegressionTest tests/regression/MultilinearRegressionT
 target_compile_definitions(MultiLinearRegressionTest PRIVATE TEST_MULTILINEAR_REGRESSION)
 target_link_libraries(MultiLinearRegressionTest cpp_ml_library)
 
-add_executable(DecisionTreeRegressor tests/tree/DecisionTreeRegressor.cpp)
+add_executable(DecisionTreeRegressor tests/tree/DecisionTreeRegressorTest.cpp)
 target_compile_definitions(DecisionTreeRegressor PRIVATE TEST_DECISION_TREE_REGRESSION)
 target_link_libraries(DecisionTreeRegressor cpp_ml_library)
 
-add_executable(RandomForestRegressor tests/tree/RandomForestRegressor.cpp)
+add_executable(RandomForestRegressor tests/tree/RandomForestRegressorTest.cpp)
 target_compile_definitions(RandomForestRegressor PRIVATE TEST_RANDOM_FOREST_REGRESSION)
 target_link_libraries(RandomForestRegressor cpp_ml_library)
 

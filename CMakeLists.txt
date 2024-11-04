@@ -24,7 +24,7 @@ install(DIRECTORY ml_library_include/ DESTINATION include)
 # Enable testing
 enable_testing()
 
-# Add individual test files as separate executables and define a macro for each
+# Linear Regression Tests
 add_executable(LogisticRegressionTest tests/regression/LogisticRegressionTest.cpp)
 target_compile_definitions(LogisticRegressionTest PRIVATE TEST_LOGISTIC_REGRESSION)
 target_link_libraries(LogisticRegressionTest cpp_ml_library)
@@ -37,10 +37,22 @@ add_executable(MultiLinearRegressionTest tests/regression/MultilinearRegressionT
 target_compile_definitions(MultiLinearRegressionTest PRIVATE TEST_MULTILINEAR_REGRESSION)
 target_link_libraries(MultiLinearRegressionTest cpp_ml_library)
 
+# Tree Regression Tests
+add_executable(RandomForestRegressorTest tests/tree/RandomForestRegressorTest.cpp)
+target_compile_definitions(RandomForestRegressorTest PRIVATE TEST_RANDOM_FOREST_REGRESSION)
+target_link_libraries(RandomForestRegressorTest cpp_ml_library)
+
+add_executable(DecisionTreeRegressorTest tests/tree/DecisionTreeRegressorTest.cpp)
+target_compile_definitions(DecisionTreeRegressorTest PRIVATE TEST_DECISION_TREE_REGRESSION)
+target_link_libraries(DecisionTreeRegressorTest cpp_ml_library)
+
+
 # Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
 add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
 add_test(NAME MultiLinearRegressionTest COMMAND MultiLinearRegressionTest)
+add_test(NAME RandomForestRegressorTest COMMAND RandomForestRegressorTest)
+add_test(NAME DecisionTreeRegressorTest COMMAND DecisionTreeRegressorTest)
 
 # Add example executables if BUILD_EXAMPLES is ON
 if(BUILD_EXAMPLES)

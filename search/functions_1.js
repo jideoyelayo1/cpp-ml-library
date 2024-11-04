@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multilinearregression_10',['MultilinearRegression',['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression']]]
+  ['fit_21',['fit',['../classDecisionTreeRegressor.html#a1ede2a4f082966ac970b85257dfad447',1,'DecisionTreeRegressor::fit()'],['../classRandomForestRegressor.html#a97305c5f47b7ff0ceaa2cb7253209eda',1,'RandomForestRegressor::fit()']]]
 ];

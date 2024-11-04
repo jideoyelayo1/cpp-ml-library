@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_9',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
+  ['decisiontreeregressor_20',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
 ];

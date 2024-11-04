@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['polynomialregression_8',['PolynomialRegression',['../classPolynomialRegression.html',1,'']]]
+  ['multilinearregression_15',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
 ];

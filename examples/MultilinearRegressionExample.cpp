@@ -1,9 +1,14 @@
 #include "../ml_library_include/ml/regression/MultiLinearRegression.hpp"
-#include <catch2/catch_test_macros.hpp>
-#include <catch2/catch_approx.hpp> // Include this for Approx
 #include <vector>
+#include <iostream>
+#include <cmath>
 
-TEST_CASE("MultilinearRegression Basic Test", "[MultilinearRegression]") {
+// Helper function for approximate equality check
+bool approxEqual(double a, double b, double tolerance = 0.1) {
+    return std::fabs(a - b) < tolerance;
+}
+
+void testMultilinearRegression() {
     MultilinearRegression model(0.01, 1000);
 
     std::vector<std::vector<double>> features = {
@@ -13,12 +18,32 @@ TEST_CASE("MultilinearRegression Basic Test", "[MultilinearRegression]") {
         {4.0, 5.0}
     };
 
-    std::vector<double> target = {3.0, 5.0, 7.0, 9.0};
+    std::vector<double> target = { 3.0, 5.0, 7.0, 9.0 };
 
-    REQUIRE_NOTHROW(model.train(features, target));
+    try {
+        model.train(features, target);
+        std::cout << "Training passed." << std::endl;
+    }
+    catch (...) {
+        std::cerr << "Training failed with an exception!" << std::endl;
+        return;
+    }
 
-    std::vector<double> testFeatures = {5.0, 6.0};
+    std::vector<double> testFeatures = { 5.0, 6.0 };
     double prediction = model.predict(testFeatures);
 
-    REQUIRE(prediction == Catch::Approx(11.0).epsilon(0.1));  // Use Catch::Approx explicitly
+    if (approxEqual(prediction, 11.0)) {
+        std::cout << "Test passed: Prediction is within tolerance." << std::endl;
+    }
+    else {
+        std::cerr << "Test failed: Prediction is " << prediction << ", expected ~11.0." << std::endl;
+    }
 }
+
+// Only include main if TEST_MULTILINEAR_REGRESSION is defined
+#ifdef TEST_MULTILINEAR_REGRESSION
+int main() {
+    testMultilinearRegression();
+    return 0;
+}
+#endif

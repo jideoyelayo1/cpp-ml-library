@@ -2,14 +2,15 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+// Test function for Neural Network
+void testNeuralNetwork() {
     // Define the topology of the neural network (3 layers: input, hidden, output)
-    std::vector<unsigned> topology = {3, 2, 1}; // Example: 3 input neurons, 2 hidden neurons, 1 output neuron
+    std::vector<unsigned> topology = { 3, 2, 1 }; // Example: 3 input neurons, 2 hidden neurons, 1 output neuron
     NN myNet(topology);
 
     // Define a single training pass with inputs and expected outputs
-    std::vector<double> inputVals = {1.0, 0.5, -1.2};
-    std::vector<double> targetVals = {0.8}; // Example target output
+    std::vector<double> inputVals = { 1.0, 0.5, -1.2 };
+    std::vector<double> targetVals = { 0.8 }; // Example target output
     std::vector<double> resultVals;
 
     // Train the neural network
@@ -28,6 +29,12 @@ int main() {
 
     // Display the recent average error after backpropagation
     std::cout << "Recent average error: " << myNet.getRecentAverageError() << std::endl;
+}
 
+// Only include main if TEST_NN is defined
+#ifdef TEST_NN
+int main() {
+    testNeuralNetwork();
     return 0;
 }
+#endif

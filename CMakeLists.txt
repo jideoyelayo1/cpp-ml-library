@@ -34,17 +34,10 @@ target_link_libraries(LogisticRegressionTest cpp_ml_library)
 target_link_libraries(PolynomialRegressionTest cpp_ml_library)
 target_link_libraries(MultiLinearRegressionTest cpp_ml_library)
 
-# Add a master executable to run all tests
-add_executable(AllTests tests/AllTests.cpp)
-
-# Link cpp_ml_library to AllTests
-target_link_libraries(AllTests cpp_ml_library)
-
-# Register individual tests and the master AllTests executable
+# Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
 add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
 add_test(NAME MultiLinearRegressionTest COMMAND MultiLinearRegressionTest)
-add_test(NAME AllTests COMMAND AllTests)
 
 # Add example executables if BUILD_EXAMPLES is ON
 if(BUILD_EXAMPLES)

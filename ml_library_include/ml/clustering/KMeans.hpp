@@ -58,7 +58,7 @@ private:
     std::vector<std::vector<double>> cluster_centers;
     std::vector<int> labels;
 
-    std::mt19937 rng; ///< Random number generator
+    mutable std::mt19937 rng; ///< Random number generator declared as mutable
 
     /**
      * @brief Computes the Euclidean distance between two points.
@@ -188,7 +188,7 @@ std::vector<std::vector<double>> KMeans::compute_cluster_centers(const std::vect
         if (counts[k] == 0) {
             // If a cluster lost all its members, reinitialize its center randomly
             std::uniform_int_distribution<size_t> dist(0, X.size() - 1);
-            new_centers[k] = X[dist(rng)];
+            new_centers[k] = X[dist(rng)]; // rng is mutable, so this is allowed
         } else {
             for (size_t j = 0; j < n_features; ++j) {
                 new_centers[k][j] /= counts[k];

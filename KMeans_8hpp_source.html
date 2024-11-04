@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::vector&lt;std::vector&lt;double&gt;&gt; cluster_centers;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::vector&lt;int&gt; labels;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::mt19937 rng; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">mutable</span> std::mt19937 rng; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">double</span> euclidean_distance(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; a, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; b) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
@@ -212,7 +212,7 @@ $(function() {
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (counts[k] == 0) {</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">// If a cluster lost all its members, reinitialize its center randomly</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            std::uniform_int_distribution&lt;size_t&gt; dist(0, X.size() - 1);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            new_centers[k] = X[dist(rng)];</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            new_centers[k] = X[dist(rng)]; <span class="comment">// rng is mutable, so this is allowed</span></div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; n_features; ++j) {</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                new_centers[k][j] /= counts[k];</div>

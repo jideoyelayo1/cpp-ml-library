@@ -1,4 +1,4 @@
-#include "../../ml_library_include/ml/clustering/KMeans.hpp"
+#include "../ml_library_include/ml/clustering/KMeans.hpp"
 #include <iostream>
 
 int testKMeansClustering() {

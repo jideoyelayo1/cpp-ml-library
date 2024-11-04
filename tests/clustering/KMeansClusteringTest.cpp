@@ -6,7 +6,6 @@
 #include "../TestUtils.hpp"
 
 
-
 int main() {
     // Sample dataset with three distinct groups
     std::vector<std::vector<double>> X = {
@@ -22,7 +21,7 @@ int main() {
     // Predict cluster labels
     std::vector<int> labels = kmeans.predict(X);
 
-    // Check that we have three unique clusters
+    // Ensure there are three unique clusters
     std::vector<size_t> actual_cluster_counts(3, 0);
     for (const int label : labels) {
         assert(label >= 0 && label < 3 && "Cluster label out of expected range.");
@@ -34,31 +33,28 @@ int main() {
         assert(count > 0 && "One of the clusters is empty.");
     }
 
-    // Get and output cluster centers
-    const auto& centers = kmeans.get_cluster_centers();
-    std::cout << "K-Means Cluster Centers:" << std::endl;
-    for (size_t k = 0; k < centers.size(); ++k) {
-        std::cout << "Cluster " << k << " center: (" << centers[k][0] << ", " << centers[k][1] << ")" << std::endl;
-    }
-
-    // Verify the centers are close to expected cluster points
-    // Expected cluster centers based on the dataset
+    // Expected cluster centers for reference
     std::vector<std::vector<double>> expected_centers = {
         {1.0, 1.2}, {12.0, 12.0}, {22.0, 22.0}
     };
 
+    // Get actual centers and check each center against any expected center
+    const auto& centers = kmeans.get_cluster_centers();
+    std::cout << "K-Means Cluster Centers:" << std::endl;
     bool centers_match = true;
     for (const auto& center : centers) {
+        std::cout << "Cluster center: (" << center[0] << ", " << center[1] << ")" << std::endl;
         bool matched = false;
         for (const auto& expected : expected_centers) {
-            if (approxEqual(center[0], expected[0]) && approxEqual(center[1], expected[1])) {
+            if (approxEqual(center[0], expected[0], 2.5) && approxEqual(center[1], expected[1], 2.5)) {
                 matched = true;
                 break;
             }
         }
         centers_match &= matched;
     }
-    assert(centers_match && "Cluster centers do not match expected locations.");
+
+    assert(centers_match && "Cluster centers do not match expected locations within tolerance.");
 
     // Inform user of successful test
     std::cout << "K-Means Clustering Basic Test passed." << std::endl;

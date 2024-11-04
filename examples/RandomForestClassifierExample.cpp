@@ -45,9 +45,9 @@ void testRandomForestClassifier() {
 }
 
 // Only include main if TEST_RANDOM_FOREST_CLASSIFICATION is defined
-#ifdef TEST_RANDOM_FOREST_CLASSIFICATION
+//#ifdef TEST_RANDOM_FOREST_CLASSIFICATION
 int main() {
     testRandomForestClassifier();
     return 0;
 }
-#endif
+//#endif

@@ -8,6 +8,8 @@
 #include <map>
 #include <cmath>
 #include <random>
+#include <ctime>
+#include <cstdlib>
 
 /**
  * @file RandomForestClassifier.hpp

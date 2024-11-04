@@ -5,10 +5,7 @@
 #include <cmath>
 #include "../TestUtils.hpp"
 
-// Helper function for approximate equality check
-inline bool approxEqual(double a, double b, double tolerance = 0.5) {
-    return std::fabs(a - b) <= tolerance;
-}
+
 
 int main() {
     // Sample dataset with three distinct groups

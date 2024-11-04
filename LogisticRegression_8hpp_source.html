@@ -75,29 +75,54 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOGISTIC_REGRESSION_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classLogisticRegression.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogisticRegression.html">LogisticRegression</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">LogisticRegression</a>(<span class="keywordtype">double</span> learningRate, <span class="keywordtype">int</span> iterations);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">train</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; features, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; labels);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">predict</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">double</span> learningRate_;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> iterations_;             </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::vector&lt;double&gt; weights_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span> sigmoid(<span class="keywordtype">double</span> z) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">double</span> predictProbability(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; features) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LOGISTIC_REGRESSION_HPP</span></div>
-<div class="ttc" id="aclassLogisticRegression_html"><div class="ttname"><a href="classLogisticRegression.html">LogisticRegression</a></div><div class="ttdoc">Logistic Regression model for binary classification tasks.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.hpp:9</div></div>
-<div class="ttc" id="aclassLogisticRegression_html_a144c9d5eb9a45a2611fc85eced9aade4"><div class="ttname"><a href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">LogisticRegression::LogisticRegression</a></div><div class="ttdeci">LogisticRegression(double learningRate, int iterations)</div><div class="ttdoc">Constructor initializing the learning rate and iteration count.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.cpp:5</div></div>
-<div class="ttc" id="aclassLogisticRegression_html_a283fe25b1aeb187ca44db48fd13897d8"><div class="ttname"><a href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">LogisticRegression::train</a></div><div class="ttdeci">void train(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;features, const std::vector&lt; int &gt; &amp;labels)</div><div class="ttdoc">Train the model using features and labels.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.cpp:8</div></div>
-<div class="ttc" id="aclassLogisticRegression_html_a3865f1957755297c1d0dc44de5af65dc"><div class="ttname"><a href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">LogisticRegression::predict</a></div><div class="ttdeci">int predict(const std::vector&lt; double &gt; &amp;features) const</div><div class="ttdoc">Predicts the class label for a given input.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.cpp:22</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classLogisticRegression.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogisticRegression.html">LogisticRegression</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">   17</a></span>&#160;    <a class="code" href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">LogisticRegression</a>(<span class="keywordtype">double</span> learningRate, <span class="keywordtype">int</span> iterations)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        : learningRate_(learningRate), iterations_(iterations) {}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">   25</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">train</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; features, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; labels) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">int</span> numFeatures = features[0].size();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        weights_ = std::vector&lt;double&gt;(numFeatures, 0.0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iter = 0; iter &lt; iterations_; ++iter) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; features.size(); ++i) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordtype">double</span> prediction = predictProbability(features[i]);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; numFeatures; ++j) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    weights_[j] += learningRate_ * (labels[i] - prediction) * features[i][j];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">   44</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">predict</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; features)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> predictProbability(features) &gt;= 0.5 ? 1 : 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> learningRate_;               </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> iterations_;                    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::vector&lt;double&gt; weights_;       </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">double</span> sigmoid(<span class="keywordtype">double</span> z)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> 1.0 / (1.0 + std::exp(-z));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">double</span> predictProbability(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; features)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">double</span> z = 0.0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; features.size(); ++i) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            z += weights_[i] * features[i];</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> sigmoid(z);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LOGISTIC_REGRESSION_HPP</span></div>
+<div class="ttc" id="aclassLogisticRegression_html"><div class="ttname"><a href="classLogisticRegression.html">LogisticRegression</a></div><div class="ttdoc">Logistic Regression model for binary classification tasks.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.hpp:10</div></div>
+<div class="ttc" id="aclassLogisticRegression_html_a144c9d5eb9a45a2611fc85eced9aade4"><div class="ttname"><a href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">LogisticRegression::LogisticRegression</a></div><div class="ttdeci">LogisticRegression(double learningRate, int iterations)</div><div class="ttdoc">Constructor initializing the learning rate and iteration count.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.hpp:17</div></div>
+<div class="ttc" id="aclassLogisticRegression_html_a283fe25b1aeb187ca44db48fd13897d8"><div class="ttname"><a href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">LogisticRegression::train</a></div><div class="ttdeci">void train(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;features, const std::vector&lt; int &gt; &amp;labels)</div><div class="ttdoc">Train the model using features and labels.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.hpp:25</div></div>
+<div class="ttc" id="aclassLogisticRegression_html_a3865f1957755297c1d0dc44de5af65dc"><div class="ttname"><a href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">LogisticRegression::predict</a></div><div class="ttdeci">int predict(const std::vector&lt; double &gt; &amp;features) const</div><div class="ttdoc">Predicts the class label for a given input.</div><div class="ttdef"><b>Definition:</b> LogisticRegression.hpp:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

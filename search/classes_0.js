@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connection_26',['Connection',['../structConnection.html',1,'']]]
+  ['logisticregression_6',['LogisticRegression',['../classLogisticRegression.html',1,'']]]
 ];

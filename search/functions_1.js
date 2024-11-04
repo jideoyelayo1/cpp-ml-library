@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['calchiddengradients_34',['calcHiddenGradients',['../classNeuron.html#a8d491e656789f0be57733dc27864f36a',1,'Neuron']]],
-  ['calcoutputgradients_35',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]]
+  ['multilinearregression_10',['MultilinearRegression',['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression']]]
 ];

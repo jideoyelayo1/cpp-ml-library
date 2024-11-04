@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deltaweight_5',['deltaWeight',['../structConnection.html#a9f74bf311cc02e9f2e17ca28baf74fab',1,'Connection']]]
+  ['multilinearregression_2',['MultilinearRegression',['../classMultilinearRegression.html',1,'MultilinearRegression'],['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression::MultilinearRegression()']]]
 ];

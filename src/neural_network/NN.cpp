@@ -1,4 +1,4 @@
-#include "ml/neural_network/NN.h"
+#include "../../ml_library_include/ml/neural_network/NN.hpp"
 
 #include <cmath>
 #include <cstdlib>

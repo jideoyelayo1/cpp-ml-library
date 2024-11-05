@@ -1,0 +1,64 @@
+name: PR Project Automation
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, review_requested, closed]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  automate_project_stages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install GitHub CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gh
+
+    - name: Move PR to To Do
+      if: github.event.action == 'opened'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "To Do") | .id' > card_id.txt
+        CARD_ID=$(cat card_id.txt)
+        if [ -n "$CARD_ID" ]; then
+          gh project card-move "$CARD_ID" --column "To Do"
+        fi
+
+    - name: Move PR to In Progress
+      if: github.event.action == 'ready_for_review'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "In Progress") | .id' > card_id.txt
+        CARD_ID=$(cat card_id.txt)
+        if [ -n "$CARD_ID" ]; then
+          gh project card-move "$CARD_ID" --column "In Progress"
+        fi
+
+    - name: Move PR to Review
+      if: github.event_name == 'pull_request_review' || github.event.action == 'review_requested'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "Review") | .id' > card_id.txt
+        CARD_ID=$(cat card_id.txt)
+        if [ -n "$CARD_ID" ]; then
+          gh project card-move "$CARD_ID" --column "Review"
+        fi
+
+    - name: Move PR to Done
+      if: github.event.action == 'closed'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "Done") | .id' > card_id.txt
+        CARD_ID=$(cat card_id.txt)
+        if [ -n "$CARD_ID" ]; then
+          gh project card-move "$CARD_ID" --column "Done"
+        fi

@@ -45,7 +45,7 @@ int main() {
     min_max_scale(X_test, min_val, max_val);
 
     // Create and train the model
-    SupportVectorRegression svr(1.0, 0.1, SupportVectorRegression::KernelType::RBF, 3, 0.1);
+    SupportVectorRegression svr(5.0, 0.1, SupportVectorRegression::KernelType::RBF, 3, 0.5);
     svr.fit(X_train, y_train);
 
     // Expected predictions (approximate values)

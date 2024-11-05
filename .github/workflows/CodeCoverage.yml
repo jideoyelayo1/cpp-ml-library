@@ -1,0 +1,13 @@
+- name: Run Code Coverage
+  run: |
+    mkdir -p build
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=1 ..
+    cmake --build .
+    ctest
+    gcovr -r ../src --xml -o coverage.xml
+
+- name: Upload Coverage to Codecov
+  uses: codecov/codecov-action@v2
+  with:
+    file: build/coverage.xml

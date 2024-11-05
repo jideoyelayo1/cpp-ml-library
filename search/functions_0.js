@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['decisiontreeclassifier_44',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier']]],
-  ['decisiontreeregressor_45',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
+  ['decisiontreeclassifier_54',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier']]],
+  ['decisiontreeregressor_55',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
 ];

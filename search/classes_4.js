@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['randomforestclassifier_24',['RandomForestClassifier',['../classRandomForestClassifier.html',1,'']]],
-  ['randomforestregressor_25',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'']]]
+  ['polynomialregression_34',['PolynomialRegression',['../classPolynomialRegression.html',1,'']]]
 ];

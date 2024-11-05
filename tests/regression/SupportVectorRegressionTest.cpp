@@ -34,15 +34,30 @@ int main() {
     // Make predictions
     std::vector<double> predictions = svr.predict(X_test);
 
-    // Check that predictions are close to expected values
+    // Set a tolerance for comparison
+    double tolerance = 0.1;
+    bool all_tests_passed = true;
+
+    // Check that predictions are close to expected values and report any deviations
     for (size_t i = 0; i < predictions.size(); ++i) {
-        // Allow a small tolerance due to potential numerical differences
-        double tolerance = 0.1;
-        assert(std::abs(predictions[i] - expected_predictions[i]) < tolerance);
+        double diff = std::abs(predictions[i] - expected_predictions[i]);
+        if (diff > tolerance) {
+            all_tests_passed = false;
+            std::cout << "Test failed for sample " << i << ":\n";
+            std::cout << "  Expected: " << expected_predictions[i] 
+                      << "\n  Predicted: " << predictions[i] 
+                      << "\n  Difference: " << diff 
+                      << "\n  Tolerance: " << tolerance << "\n";
+            
+            // Assert to indicate test failure
+            assert(diff <= tolerance && "Prediction is outside the tolerance range");
+        }
     }
 
-    // Inform user of successful test
-    std::cout << "Support Vector Regression Basic Test passed." << std::endl;
+    // Inform user of test outcome
+    if (all_tests_passed) {
+        std::cout << "Support Vector Regression Basic Test passed." << std::endl;
+    }
 
     return 0;
 }

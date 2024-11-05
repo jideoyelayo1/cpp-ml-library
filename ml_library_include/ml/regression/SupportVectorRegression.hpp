@@ -158,13 +158,11 @@ std::vector<double> SupportVectorRegression::predict(const std::vector<std::vect
 }
 
 void SupportVectorRegression::solve() {
-    // Improved SMO algorithm
+    // SMO algorithm for SVR
     size_t n_samples = X_train.size();
     size_t max_passes = 5;
     double tol = 1e-3;
     size_t passes = 0;
-
-    std::vector<double> error_cache(n_samples, 0.0);
 
     while (passes < max_passes) {
         size_t num_changed_alphas = 0;
@@ -172,8 +170,8 @@ void SupportVectorRegression::solve() {
         for (size_t i = 0; i < n_samples; ++i) {
             double E_i = predict_sample(X_train[i]) - y_train[i];
 
-            // Check if alpha[i] violates KKT conditions
-            if ((alpha[i] < C && E_i < -epsilon) || (alpha[i] > 0 && E_i > epsilon)) {
+            // Update alpha[i] and alpha_star[i]
+            if ((alpha[i] < C && E_i > epsilon) || (alpha_star[i] < C && E_i < -epsilon)) {
                 // Select j != i
                 size_t j = i;
                 while (j == i) {
@@ -181,50 +179,35 @@ void SupportVectorRegression::solve() {
                 }
                 double E_j = predict_sample(X_train[j]) - y_train[j];
 
-                // Compute L and H
-                double L, H;
-                if (alpha[i] + alpha[j] >= C) {
-                    L = alpha[i] + alpha[j] - C;
-                    H = C;
-                } else {
-                    L = 0;
-                    H = alpha[i] + alpha[j];
-                }
-
-                if (L == H)
-                    continue;
-
-                // Compute eta
+                // Compute K_ii, K_jj, K_ij
                 double K_ii = compute_kernel(X_train[i], X_train[i]);
                 double K_jj = compute_kernel(X_train[j], X_train[j]);
                 double K_ij = compute_kernel(X_train[i], X_train[j]);
-                double eta = 2 * K_ij - K_ii - K_jj;
 
-                if (eta >= 0)
+                // Compute eta
+                double eta = K_ii + K_jj - 2 * K_ij;
+
+                if (eta <= 0)
                     continue;
 
-                // Update alpha[i]
                 double alpha_i_old = alpha[i];
-                alpha[i] -= (E_i - E_j) / eta;
-                alpha[i] = std::clamp(alpha[i], L, H);
+                double alpha_star_i_old = alpha_star[i];
 
-                // Check for significant change
-                if (std::abs(alpha[i] - alpha_i_old) < tol)
+                if (E_i > epsilon) {
+                    // Update alpha[i]
+                    alpha[i] = alpha_i_old - (E_i - epsilon) / eta;
+                    alpha[i] = std::clamp(alpha[i], 0.0, C);
+                } else if (E_i < -epsilon) {
+                    // Update alpha_star[i]
+                    alpha_star[i] = alpha_star_i_old - (E_i + epsilon) / eta;
+                    alpha_star[i] = std::clamp(alpha_star[i], 0.0, C);
+                } else {
                     continue;
+                }
 
-                // Update alpha[j]
-                alpha[j] += alpha_i_old - alpha[i];
-
-                // Compute b
-                double b1 = b - E_i - (alpha[i] - alpha_i_old) * K_ii - (alpha[j] - alpha[j]) * K_ij;
-                double b2 = b - E_j - (alpha[i] - alpha_i_old) * K_ij - (alpha[j] - alpha[j]) * K_jj;
-
-                if (0 < alpha[i] && alpha[i] < C)
-                    b = b1;
-                else if (0 < alpha[j] && alpha[j] < C)
-                    b = b2;
-                else
-                    b = (b1 + b2) / 2.0;
+                // Update b
+                double b1 = b - E_i - (alpha[i] - alpha_i_old) * K_ii + (alpha_star[i] - alpha_star_i_old) * K_ii;
+                b = b1;
 
                 num_changed_alphas++;
             }

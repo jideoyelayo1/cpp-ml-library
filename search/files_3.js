@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_2ehpp_56',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
+  ['logisticregression_2ehpp_61',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
 ];

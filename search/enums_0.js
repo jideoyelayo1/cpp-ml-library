@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linkage_83',['Linkage',['../classHierarchicalClustering.html#a500501194837d440d3e840904e398a57',1,'HierarchicalClustering']]]
+  ['kerneltype_91',['KernelType',['../classSupportVectorRegression.html#a825c248f58094c3f0bc53197135ad2a3',1,'SupportVectorRegression']]]
 ];

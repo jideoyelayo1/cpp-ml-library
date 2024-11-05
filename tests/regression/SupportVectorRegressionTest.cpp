@@ -24,19 +24,25 @@ void min_max_scale(std::vector<std::vector<double>>& data, double& min_val, doub
 int main() {
     // Training data
     std::vector<std::vector<double>> X_train = {
-        {1.0},
-        {2.0},
-        {3.0},
-        {4.0},
-        {5.0}
+        {10.0},
+        {20.0},
+        {30.0},
+        {40.0},
+        {50.0}
     };
-    std::vector<double> y_train = {1.0, 2.0, 3.0, 4.0, 5.0};
+    std::vector<double> y_train = {
+        10.0, 
+        20.0, 
+        30.0, 
+        40.0, 
+        50.0
+    };
 
     // Test data
     std::vector<std::vector<double>> X_test = {
-        {1.5},
-        {2.5},
-        {3.5}
+        {15.0},
+        {25.0},
+        {35.0}
     };
 
     // Apply scaling to both X_train and X_test using min-max normalization
@@ -49,13 +55,17 @@ int main() {
     svr.fit(X_train, y_train);
 
     // Expected predictions (approximate values)
-    std::vector<double> expected_predictions = {1.5, 2.5, 3.5};
+    std::vector<double> expected_predictions = {
+        15.0, 
+        25.0, 
+        35.0
+    };
 
     // Make predictions
     std::vector<double> predictions = svr.predict(X_test);
 
     // Set a tolerance for comparison
-    double tolerance = 0.5;
+    double tolerance = 5;
     bool all_tests_passed = true;
 
     // Check that predictions are close to expected values and report any deviations

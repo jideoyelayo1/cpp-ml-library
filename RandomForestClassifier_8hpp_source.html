@@ -78,283 +78,268 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;numeric&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRandomForestClassifier.html">RandomForestClassifier</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier</a>(<span class="keywordtype">int</span> n_estimators = 10, <span class="keywordtype">int</span> max_depth = 5, <span class="keywordtype">int</span> min_samples_split = 2, <span class="keywordtype">int</span> max_features = -1);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classRandomForestClassifier.html#a4800afe155a45562190e220a13b68277">~RandomForestClassifier</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">fit</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::vector&lt;int&gt; <a class="code" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">predict</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">struct </span>Node {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">bool</span> is_leaf;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> value; <span class="comment">// Class label for leaf nodes</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> feature_index;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">double</span> threshold;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        Node* left;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        Node* right;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        Node() : is_leaf(<span class="keyword">false</span>), value(0), feature_index(-1), threshold(0.0), left(<span class="keyword">nullptr</span>), right(<span class="keyword">nullptr</span>) {}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">struct </span>DecisionTree {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        Node* root;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">int</span> max_depth;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> min_samples_split;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> max_features;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRandomForestClassifier.html">RandomForestClassifier</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier</a>(<span class="keywordtype">int</span> n_estimators = 10, <span class="keywordtype">int</span> max_depth = 5, <span class="keywordtype">int</span> min_samples_split = 2, <span class="keywordtype">int</span> max_features = -1);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a70c6cf76dd0cae36427874f5c10e818c">   36</a></span>&#160;    <a class="code" href="classRandomForestClassifier.html#a70c6cf76dd0cae36427874f5c10e818c">~RandomForestClassifier</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">fit</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::vector&lt;int&gt; <a class="code" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">predict</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">struct </span>Node {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> is_leaf;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> value; <span class="comment">// Class label for leaf nodes</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> feature_index;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">double</span> threshold;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::unique_ptr&lt;Node&gt; left;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::unique_ptr&lt;Node&gt; right;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        Node() : is_leaf(false), value(0), feature_index(-1), threshold(0.0) {}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">struct </span>DecisionTree {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::unique_ptr&lt;Node&gt; root;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">int</span> max_depth;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">int</span> min_samples_split;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> max_features;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::mt19937 random_engine;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        DecisionTree(<span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ~DecisionTree();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        DecisionTree(<span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features, std::mt19937::result_type seed);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ~DecisionTree() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">fit</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">int</span> predict_sample(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; x) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        Node* build_tree(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y, <span class="keywordtype">int</span> depth);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::unique_ptr&lt;Node&gt; build_tree(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y, <span class="keywordtype">int</span> depth);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">double</span> calculate_gini(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> split_dataset(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y, <span class="keywordtype">int</span> feature_index, <span class="keywordtype">double</span> threshold,</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                           std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_left, std::vector&lt;int&gt;&amp; y_left,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                           std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_right, std::vector&lt;int&gt;&amp; y_right) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> delete_tree(Node* node);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> majority_class(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> n_estimators;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> max_depth;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> min_samples_split;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> max_features;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::vector&lt;DecisionTree*&gt; trees;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> bootstrap_sample(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                          std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_sample, std::vector&lt;int&gt;&amp; y_sample);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">   95</a></span>&#160;<a class="code" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier::RandomForestClassifier</a>(<span class="keywordtype">int</span> n_estimators, <span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    : n_estimators(n_estimators), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::srand(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::time(0)));</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a4800afe155a45562190e220a13b68277">  100</a></span>&#160;<a class="code" href="classRandomForestClassifier.html#a4800afe155a45562190e220a13b68277">RandomForestClassifier::~RandomForestClassifier</a>() {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tree : trees) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">delete</span> tree;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">RandomForestClassifier::fit</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// Set max_features if not set</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (max_features == -1) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        max_features = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::sqrt(X[0].size()));</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_estimators; ++i) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        std::vector&lt;std::vector&lt;double&gt;&gt; X_sample;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        std::vector&lt;int&gt; y_sample;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        bootstrap_sample(X, y, X_sample, y_sample);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        DecisionTree* tree = <span class="keyword">new</span> DecisionTree(max_depth, min_samples_split, max_features);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        tree-&gt;fit(X_sample, y_sample);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        trees.push_back(tree);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">  123</a></span>&#160;std::vector&lt;int&gt; <a class="code" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">RandomForestClassifier::predict</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::vector&lt;int&gt; predictions(X.size());</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; X.size(); ++i) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::map&lt;int, int&gt; votes;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tree : trees) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordtype">int</span> vote = tree-&gt;predict_sample(X[i]);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            votes[vote]++;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// Majority vote</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        predictions[i] = std::max_element(votes.begin(), votes.end(),</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                          [](<span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; a, <span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; b) {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                              return a.second &lt; b.second;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                          })-&gt;first;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> predictions;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::bootstrap_sample(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                              std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_sample, std::vector&lt;int&gt;&amp; y_sample) {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">size_t</span> n_samples = X.size();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    std::uniform_int_distribution&lt;size_t&gt; dist(0, n_samples - 1);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    std::default_random_engine engine(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(std::rand()));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n_samples; ++i) {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">size_t</span> index = dist(engine);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        X_sample.push_back(X[index]);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        y_sample.push_back(y[index]);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;RandomForestClassifier::DecisionTree::DecisionTree(<span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    : root(nullptr), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::vector&lt;std::unique_ptr&lt;DecisionTree&gt;&gt; trees;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::mt19937 random_engine;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> bootstrap_sample(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                          std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_sample, std::vector&lt;int&gt;&amp; y_sample);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">   96</a></span>&#160;<a class="code" href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier::RandomForestClassifier</a>(<span class="keywordtype">int</span> n_estimators, <span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    : n_estimators(n_estimators), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    std::random_device rd;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    random_engine.seed(rd());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">RandomForestClassifier::fit</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// Set max_features if not set</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> actual_max_features = max_features;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (actual_max_features == -1) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        actual_max_features = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::sqrt(X[0].size()));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_estimators; ++i) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::vector&lt;std::vector&lt;double&gt;&gt; X_sample;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        std::vector&lt;int&gt; y_sample;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        bootstrap_sample(X, y, X_sample, y_sample);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">auto</span> tree = std::make_unique&lt;DecisionTree&gt;(max_depth, min_samples_split, actual_max_features, random_engine());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        tree-&gt;fit(X_sample, y_sample);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        trees.push_back(std::move(tree));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">  120</a></span>&#160;std::vector&lt;int&gt; <a class="code" href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">RandomForestClassifier::predict</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::vector&lt;int&gt; predictions(X.size());</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; X.size(); ++i) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        std::unordered_map&lt;int, int&gt; votes;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tree : trees) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordtype">int</span> vote = tree-&gt;predict_sample(X[i]);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            votes[vote]++;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// Majority vote</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        predictions[i] = std::max_element(votes.begin(), votes.end(),</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                          [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                              return a.second &lt; b.second;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                          })-&gt;first;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> predictions;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::bootstrap_sample(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                              std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_sample, std::vector&lt;int&gt;&amp; y_sample) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">size_t</span> n_samples = X.size();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    std::uniform_int_distribution&lt;size_t&gt; dist(0, n_samples - 1);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n_samples; ++i) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">size_t</span> index = dist(random_engine);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        X_sample.push_back(X[index]);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        y_sample.push_back(y[index]);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;RandomForestClassifier::DecisionTree::DecisionTree(<span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> min_samples_split, <span class="keywordtype">int</span> max_features, std::mt19937::result_type seed)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    : root(nullptr), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features), random_engine(seed) {}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::DecisionTree::fit(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    root = build_tree(X, y, 0);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;RandomForestClassifier::DecisionTree::~DecisionTree() {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    delete_tree(root);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::DecisionTree::fit(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    root = build_tree(X, y, 0);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keywordtype">int</span> RandomForestClassifier::DecisionTree::predict_sample(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; x)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    Node* node = root;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">while</span> (!node-&gt;is_leaf) {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span> (x[node-&gt;feature_index] &lt;= node-&gt;threshold) {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            node = node-&gt;left;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            node = node-&gt;right;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> node-&gt;value;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;RandomForestClassifier::Node* RandomForestClassifier::DecisionTree::build_tree(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                                                               <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y, <span class="keywordtype">int</span> depth) {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Node* node = <span class="keyword">new</span> Node();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// Check stopping criteria</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (depth &gt;= max_depth || y.size() &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(min_samples_split) || calculate_gini(y) == 0.0) {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        node-&gt;is_leaf = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// Majority class label</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::map&lt;int, int&gt; class_counts;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> label : y) {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            class_counts[label]++;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        node-&gt;value = std::max_element(class_counts.begin(), class_counts.end(),</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                       [](<span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; a, <span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; b) {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                           return a.second &lt; b.second;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                       })-&gt;first;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">int</span> RandomForestClassifier::DecisionTree::predict_sample(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">const</span> Node* node = root.get();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">while</span> (!node-&gt;is_leaf) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> (x[node-&gt;feature_index] &lt;= node-&gt;threshold) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            node = node-&gt;left.get();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            node = node-&gt;right.get();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> node-&gt;value;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;std::unique_ptr&lt;RandomForestClassifier::Node&gt; RandomForestClassifier::DecisionTree::build_tree(</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y, <span class="keywordtype">int</span> depth) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">auto</span> node = std::make_unique&lt;Node&gt;();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// Check stopping criteria</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (depth &gt;= max_depth || y.size() &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(min_samples_split) || calculate_gini(y) == 0.0) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        node-&gt;is_leaf = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        node-&gt;value = majority_class(y);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">double</span> best_gini = std::numeric_limits&lt;double&gt;::max();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">int</span> best_feature_index = -1;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">double</span> best_threshold = 0.0;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    std::vector&lt;std::vector&lt;double&gt;&gt; best_X_left, best_X_right;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::vector&lt;int&gt; best_y_left, best_y_right;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">int</span> num_features = X[0].size();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    std::vector&lt;int&gt; features_indices(num_features);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::iota(features_indices.begin(), features_indices.end(), 0);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">// Randomly select features without replacement</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::shuffle(features_indices.begin(), features_indices.end(), random_engine);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">if</span> (max_features &lt; num_features) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        features_indices.resize(max_features);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">double</span> best_gini = std::numeric_limits&lt;double&gt;::max();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">int</span> best_feature_index = -1;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">double</span> best_threshold = 0.0;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    std::vector&lt;std::vector&lt;double&gt;&gt; best_X_left, best_X_right;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    std::vector&lt;int&gt; best_y_left, best_y_right;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">int</span> num_features = X[0].size();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    std::vector&lt;int&gt; features_indices(num_features);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    std::iota(features_indices.begin(), features_indices.end(), 0);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> feature_index : features_indices) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// Get all possible thresholds</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::vector&lt;double&gt; feature_values;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        feature_values.reserve(X.size());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x : X) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            feature_values.push_back(x[feature_index]);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::sort(feature_values.begin(), feature_values.end());</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        feature_values.erase(std::unique(feature_values.begin(), feature_values.end()), feature_values.end());</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">// Randomly select features without replacement</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    std::shuffle(features_indices.begin(), features_indices.end(), std::default_random_engine(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(std::rand())));</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">if</span> (max_features &lt; num_features) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        features_indices.resize(max_features);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> feature_index : features_indices) {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">// Get all possible thresholds</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        std::vector&lt;double&gt; feature_values;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x : X) {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            feature_values.push_back(x[feature_index]);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        std::sort(feature_values.begin(), feature_values.end());</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        std::vector&lt;double&gt; thresholds;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; feature_values.size(); ++i) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            thresholds.push_back((feature_values[i - 1] + feature_values[i]) / 2.0);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">// Evaluate each threshold</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> threshold : thresholds) {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            std::vector&lt;std::vector&lt;double&gt;&gt; X_left, X_right;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            std::vector&lt;int&gt; y_left, y_right;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            split_dataset(X, y, feature_index, threshold, X_left, y_left, X_right, y_right);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">if</span> (y_left.empty() || y_right.empty())</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordtype">double</span> gini_left = calculate_gini(y_left);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordtype">double</span> gini_right = calculate_gini(y_right);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordtype">double</span> gini = (gini_left * y_left.size() + gini_right * y_right.size()) / y.size();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">if</span> (gini &lt; best_gini) {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                best_gini = gini;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                best_feature_index = feature_index;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                best_threshold = threshold;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                best_X_left = X_left;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                best_X_right = X_right;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                best_y_left = y_left;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                best_y_right = y_right;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// If no split improves the Gini impurity, make this a leaf node</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (best_feature_index == -1) {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        node-&gt;is_leaf = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// Majority class label</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        std::map&lt;int, int&gt; class_counts;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> label : y) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            class_counts[label]++;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        node-&gt;value = std::max_element(class_counts.begin(), class_counts.end(),</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                       [](<span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; a, <span class="keyword">const</span> std::pair&lt;int, int&gt;&amp; b) {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                                           return a.second &lt; b.second;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                                       })-&gt;first;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// Recursively build the left and right subtrees</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    node-&gt;feature_index = best_feature_index;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    node-&gt;threshold = best_threshold;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    node-&gt;left = build_tree(best_X_left, best_y_left, depth + 1);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    node-&gt;right = build_tree(best_X_right, best_y_right, depth + 1);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keywordtype">double</span> RandomForestClassifier::DecisionTree::calculate_gini(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; y)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    std::map&lt;int, int&gt; class_counts;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> label : y) {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        class_counts[label]++;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">double</span> impurity = 1.0;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">size_t</span> total = y.size();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; class_count : class_counts) {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordtype">double</span> prob = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(class_count.second) / total;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        impurity -= prob * prob;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> impurity;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::DecisionTree::split_dataset(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                                                         <span class="keywordtype">int</span> feature_index, <span class="keywordtype">double</span> threshold,</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                                                         std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_left, std::vector&lt;int&gt;&amp; y_left,</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                                         std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_right, std::vector&lt;int&gt;&amp; y_right)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; X.size(); ++i) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> (X[i][feature_index] &lt;= threshold) {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            X_left.push_back(X[i]);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            y_left.push_back(y[i]);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            X_right.push_back(X[i]);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            y_right.push_back(y[i]);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::DecisionTree::delete_tree(Node* node) {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (node != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        delete_tree(node-&gt;left);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        delete_tree(node-&gt;right);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keyword">delete</span> node;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RANDOM_FOREST_CLASSIFIER_HPP</span></div>
-<div class="ttc" id="aclassRandomForestClassifier_html"><div class="ttname"><a href="classRandomForestClassifier.html">RandomForestClassifier</a></div><div class="ttdoc">Implements a Random Forest Classifier.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:23</div></div>
-<div class="ttc" id="aclassRandomForestClassifier_html_a3838a1924cf6689026252fe150cc5f89"><div class="ttname"><a href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">RandomForestClassifier::predict</a></div><div class="ttdeci">std::vector&lt; int &gt; predict(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;X) const</div><div class="ttdoc">Predicts class labels for given input data.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:123</div></div>
-<div class="ttc" id="aclassRandomForestClassifier_html_a4800afe155a45562190e220a13b68277"><div class="ttname"><a href="classRandomForestClassifier.html#a4800afe155a45562190e220a13b68277">RandomForestClassifier::~RandomForestClassifier</a></div><div class="ttdeci">~RandomForestClassifier()</div><div class="ttdoc">Destructor for RandomForestClassifier.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:100</div></div>
-<div class="ttc" id="aclassRandomForestClassifier_html_a9f6e8e3c60eb207150972b30cfd97d27"><div class="ttname"><a href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier::RandomForestClassifier</a></div><div class="ttdeci">RandomForestClassifier(int n_estimators=10, int max_depth=5, int min_samples_split=2, int max_features=-1)</div><div class="ttdoc">Constructs a RandomForestClassifier.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:95</div></div>
-<div class="ttc" id="aclassRandomForestClassifier_html_af0f94f66ee7dcce35653d373ffd9d046"><div class="ttname"><a href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">RandomForestClassifier::fit</a></div><div class="ttdeci">void fit(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;X, const std::vector&lt; int &gt; &amp;y)</div><div class="ttdoc">Fits the model to the training data.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:106</div></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (feature_values.size() &lt;= 1) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        std::vector&lt;double&gt; thresholds;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        thresholds.reserve(feature_values.size() - 1);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; feature_values.size(); ++i) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            thresholds.push_back((feature_values[i - 1] + feature_values[i]) / 2.0);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">// Evaluate each threshold</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> threshold : thresholds) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            std::vector&lt;std::vector&lt;double&gt;&gt; X_left, X_right;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            std::vector&lt;int&gt; y_left, y_right;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            split_dataset(X, y, feature_index, threshold, X_left, y_left, X_right, y_right);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span> (y_left.empty() || y_right.empty())</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordtype">double</span> gini_left = calculate_gini(y_left);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordtype">double</span> gini_right = calculate_gini(y_right);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordtype">double</span> gini = (gini_left * y_left.size() + gini_right * y_right.size()) / y.size();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">if</span> (gini &lt; best_gini) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                best_gini = gini;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                best_feature_index = feature_index;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                best_threshold = threshold;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                best_X_left = std::move(X_left);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                best_X_right = std::move(X_right);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                best_y_left = std::move(y_left);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                best_y_right = std::move(y_right);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// If no split improves the Gini impurity, make this a leaf node</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">if</span> (best_feature_index == -1) {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        node-&gt;is_leaf = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        node-&gt;value = majority_class(y);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// Recursively build the left and right subtrees</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    node-&gt;feature_index = best_feature_index;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    node-&gt;threshold = best_threshold;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    node-&gt;left = build_tree(best_X_left, best_y_left, depth + 1);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    node-&gt;right = build_tree(best_X_right, best_y_right, depth + 1);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keywordtype">double</span> RandomForestClassifier::DecisionTree::calculate_gini(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; y)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    std::unordered_map&lt;int, int&gt; class_counts;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> label : y) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        class_counts[label]++;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">double</span> impurity = 1.0;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">size_t</span> total = y.size();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [label, count] : class_counts) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">double</span> prob = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(count) / total;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        impurity -= prob * prob;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> impurity;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keywordtype">int</span> RandomForestClassifier::DecisionTree::majority_class(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; y)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    std::unordered_map&lt;int, int&gt; class_counts;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> label : y) {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        class_counts[label]++;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> std::max_element(class_counts.begin(), class_counts.end(),</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                            [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                return a.second &lt; b.second;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                            })-&gt;first;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keywordtype">void</span> RandomForestClassifier::DecisionTree::split_dataset(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; y,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                         <span class="keywordtype">int</span> feature_index, <span class="keywordtype">double</span> threshold,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                                                         std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_left, std::vector&lt;int&gt;&amp; y_left,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                                         std::vector&lt;std::vector&lt;double&gt;&gt;&amp; X_right, std::vector&lt;int&gt;&amp; y_right)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; X.size(); ++i) {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">if</span> (X[i][feature_index] &lt;= threshold) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            X_left.push_back(X[i]);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            y_left.push_back(y[i]);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            X_right.push_back(X[i]);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            y_right.push_back(y[i]);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RANDOM_FOREST_CLASSIFIER_HPP</span></div>
+<div class="ttc" id="aclassRandomForestClassifier_html"><div class="ttname"><a href="classRandomForestClassifier.html">RandomForestClassifier</a></div><div class="ttdoc">Implements a Random Forest Classifier.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:22</div></div>
+<div class="ttc" id="aclassRandomForestClassifier_html_a3838a1924cf6689026252fe150cc5f89"><div class="ttname"><a href="classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89">RandomForestClassifier::predict</a></div><div class="ttdeci">std::vector&lt; int &gt; predict(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;X) const</div><div class="ttdoc">Predicts class labels for given input data.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:120</div></div>
+<div class="ttc" id="aclassRandomForestClassifier_html_a70c6cf76dd0cae36427874f5c10e818c"><div class="ttname"><a href="classRandomForestClassifier.html#a70c6cf76dd0cae36427874f5c10e818c">RandomForestClassifier::~RandomForestClassifier</a></div><div class="ttdeci">~RandomForestClassifier()=default</div><div class="ttdoc">Destructor for RandomForestClassifier.</div></div>
+<div class="ttc" id="aclassRandomForestClassifier_html_a9f6e8e3c60eb207150972b30cfd97d27"><div class="ttname"><a href="classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27">RandomForestClassifier::RandomForestClassifier</a></div><div class="ttdeci">RandomForestClassifier(int n_estimators=10, int max_depth=5, int min_samples_split=2, int max_features=-1)</div><div class="ttdoc">Constructs a RandomForestClassifier.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:96</div></div>
+<div class="ttc" id="aclassRandomForestClassifier_html_af0f94f66ee7dcce35653d373ffd9d046"><div class="ttname"><a href="classRandomForestClassifier.html#af0f94f66ee7dcce35653d373ffd9d046">RandomForestClassifier::fit</a></div><div class="ttdeci">void fit(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;X, const std::vector&lt; int &gt; &amp;y)</div><div class="ttdoc">Fits the model to the training data.</div><div class="ttdef"><b>Definition:</b> RandomForestClassifier.hpp:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

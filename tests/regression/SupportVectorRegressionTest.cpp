@@ -5,25 +5,11 @@
 #include <cmath> // For std::abs
 
 // Helper function to perform min-max scaling on a single feature vector
-void min_max_scale(std::vector<std::vector<double>>& data, double& min_val, double& max_val) {
-    min_val = std::numeric_limits<double>::max();
-    max_val = std::numeric_limits<double>::lowest();
-
-    // Find min and max in data
-    for (const auto& x : data) {
-        min_val = std::min(min_val, x[0]);
-        max_val = std::max(max_val, x[0]);
-    }
-
-    // Apply min-max scaling to each feature
+void min_max_scale(std::vector<std::vector<double>>& data, double min_val, double max_val) {
+    // Apply min-max scaling to each feature using provided min_val and max_val
     for (auto& x : data) {
         x[0] = (x[0] - min_val) / (max_val - min_val);
     }
-}
-
-// Helper function to inverse min-max scale a value
-double inverse_min_max_scale(double scaled_value, double min_val, double max_val) {
-    return scaled_value * (max_val - min_val) + min_val;
 }
 
 int main() {
@@ -50,16 +36,23 @@ int main() {
         {35.0}
     };
 
-    // Apply scaling to both X_train and X_test using min-max normalization
-    double min_val, max_val;
+    // Find min and max in X_train
+    double min_val = std::numeric_limits<double>::max();
+    double max_val = std::numeric_limits<double>::lowest();
+    for (const auto& x : X_train) {
+        min_val = std::min(min_val, x[0]);
+        max_val = std::max(max_val, x[0]);
+    }
+
+    // Apply scaling to X_train and X_test
     min_max_scale(X_train, min_val, max_val);
     min_max_scale(X_test, min_val, max_val);
 
-    // Create and train the model with higher C for better fitting
-    SupportVectorRegression svr(10.0, 0.1, SupportVectorRegression::KernelType::LINEAR);
+    // Create and train the model with adjusted parameters
+    SupportVectorRegression svr(10.0, 0.01, SupportVectorRegression::KernelType::LINEAR);
     svr.fit(X_train, y_train);
 
-    // Expected predictions (approximate values on the original scale)
+    // Expected predictions (approximate values)
     std::vector<double> expected_predictions = {
         15.0, 
         25.0, 
@@ -69,10 +62,8 @@ int main() {
     // Make predictions
     std::vector<double> predictions = svr.predict(X_test);
 
-    // Transform predictions back to the original scale
-    for (auto& pred : predictions) {
-        pred = inverse_min_max_scale(pred, min_val, max_val);
-    }
+    // No inverse scaling is needed for predictions
+    // Since y_train was not scaled, predictions are already in the correct scale
 
     // Set a tolerance for comparison
     double tolerance = 0.1;

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['backprop_86',['backProp',['../classNeuralNetwork.html#a2c7571d542db31954dcbb44d2856f8c7',1,'NeuralNetwork']]]
+  ['backprop_91',['backProp',['../classNeuralNetwork.html#a2c7571d542db31954dcbb44d2856f8c7',1,'NeuralNetwork']]]
 ];

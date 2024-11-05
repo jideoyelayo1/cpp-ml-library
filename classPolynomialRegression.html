@@ -78,24 +78,21 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d0614bfb4ff432e22bb2fc08c513b2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPolynomialRegression.html#a2d0614bfb4ff432e22bb2fc08c513b2e">PolynomialRegression</a> (int degree, double regularizationParameter=0.0)</td></tr>
-<tr class="memdesc:a2d0614bfb4ff432e22bb2fc08c513b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing the polynomial degree.  <a href="classPolynomialRegression.html#a2d0614bfb4ff432e22bb2fc08c513b2e">More...</a><br /></td></tr>
-<tr class="separator:a2d0614bfb4ff432e22bb2fc08c513b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af293bfd9da3c4130f1e0bac4c1fdc2c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPolynomialRegression.html#af293bfd9da3c4130f1e0bac4c1fdc2c7">PolynomialRegression</a> (int degree)</td></tr>
+<tr class="memdesc:af293bfd9da3c4130f1e0bac4c1fdc2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing the polynomial degree.  <a href="classPolynomialRegression.html#af293bfd9da3c4130f1e0bac4c1fdc2c7">More...</a><br /></td></tr>
+<tr class="separator:af293bfd9da3c4130f1e0bac4c1fdc2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6147d1aea6b067cac8ced70ed64db26f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPolynomialRegression.html#a6147d1aea6b067cac8ced70ed64db26f">train</a> (const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y)</td></tr>
 <tr class="memdesc:a6147d1aea6b067cac8ced70ed64db26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train the model using features and target values.  <a href="classPolynomialRegression.html#a6147d1aea6b067cac8ced70ed64db26f">More...</a><br /></td></tr>
 <tr class="separator:a6147d1aea6b067cac8ced70ed64db26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e76d16af19d25825bb6fbb91572483"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPolynomialRegression.html#ac5e76d16af19d25825bb6fbb91572483">predict</a> (double x) const</td></tr>
 <tr class="memdesc:ac5e76d16af19d25825bb6fbb91572483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the output for a given input value.  <a href="classPolynomialRegression.html#ac5e76d16af19d25825bb6fbb91572483">More...</a><br /></td></tr>
 <tr class="separator:ac5e76d16af19d25825bb6fbb91572483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a259baed253544ba042dda0f58606bd4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPolynomialRegression.html#a259baed253544ba042dda0f58606bd4c">getCoefficients</a> () const</td></tr>
-<tr class="memdesc:a259baed253544ba042dda0f58606bd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coefficients of the fitted polynomial.  <a href="classPolynomialRegression.html#a259baed253544ba042dda0f58606bd4c">More...</a><br /></td></tr>
-<tr class="separator:a259baed253544ba042dda0f58606bd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Polynomial Regression model for fitting polynomial curves. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2d0614bfb4ff432e22bb2fc08c513b2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d0614bfb4ff432e22bb2fc08c513b2e">&#9670;&nbsp;</a></span>PolynomialRegression()</h2>
+<a id="af293bfd9da3c4130f1e0bac4c1fdc2c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af293bfd9da3c4130f1e0bac4c1fdc2c7">&#9670;&nbsp;</a></span>PolynomialRegression()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,18 +104,8 @@ Public Member Functions</h2></td></tr>
           <td class="memname">PolynomialRegression::PolynomialRegression </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>degree</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>regularizationParameter</em> = <code>0.0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -132,7 +119,6 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">degree</td><td>Degree of the polynomial. </td></tr>
-    <tr><td class="paramname">regularizationParameter</td><td>Regularization strength (default is 0.0, no regularization). </td></tr>
   </table>
   </dd>
 </dl>
@@ -140,34 +126,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a259baed253544ba042dda0f58606bd4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a259baed253544ba042dda0f58606bd4c">&#9670;&nbsp;</a></span>getCoefficients()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;double&gt; PolynomialRegression::getCoefficients </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the coefficients of the fitted polynomial. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of coefficients. </dd></dl>
-
-</div>
-</div>
 <a id="ac5e76d16af19d25825bb6fbb91572483"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5e76d16af19d25825bb6fbb91572483">&#9670;&nbsp;</a></span>predict()</h2>
 

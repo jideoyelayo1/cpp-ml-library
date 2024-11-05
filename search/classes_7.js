@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['polynomialregression_70',['PolynomialRegression',['../classPolynomialRegression.html',1,'']]]
+  ['neuralnetwork_72',['NeuralNetwork',['../classNeuralNetwork.html',1,'']]],
+  ['neuron_73',['Neuron',['../classNeuron.html',1,'']]]
 ];

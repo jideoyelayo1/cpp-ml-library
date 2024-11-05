@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weight_47',['weight',['../structConnection.html#ab945ccb1a81e582abd5938f67af69390',1,'Connection']]]
+  ['updateinputweights_49',['updateInputWeights',['../classNeuron.html#aa081e71c3862d4a18365dfd6f452a3a1',1,'Neuron']]]
 ];

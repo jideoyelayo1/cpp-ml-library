@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['neuralnetwork_68',['NeuralNetwork',['../classNeuralNetwork.html',1,'']]],
-  ['neuron_69',['Neuron',['../classNeuron.html',1,'']]]
+  ['multilinear_70',['Multilinear',['../classMultilinear.html',1,'']]],
+  ['multilinearregression_71',['MultilinearRegression',['../classMultilinearRegression.html',1,'']]]
 ];

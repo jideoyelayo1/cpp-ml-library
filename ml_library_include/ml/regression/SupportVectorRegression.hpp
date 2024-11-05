@@ -100,12 +100,15 @@ private:
      * @return The kernel value.
      */
     double compute_kernel(const std::vector<double>& x1, const std::vector<double>& x2) const;
+
+    std::mt19937 rng; ///< Random number generator.
 };
 
 SupportVectorRegression::SupportVectorRegression(double C, double epsilon, KernelType kernel_type,
                                                  int degree, double gamma, double coef0)
     : C(C), epsilon(epsilon), kernel_type(kernel_type), degree(degree), gamma(gamma), coef0(coef0), b(0.0) {
     initialize_kernel();
+    rng.seed(std::random_device{}());
 }
 
 SupportVectorRegression::~SupportVectorRegression() {}
@@ -117,7 +120,7 @@ void SupportVectorRegression::initialize_kernel() {
         };
     } else if (kernel_type == KernelType::POLYNOMIAL) {
         kernel = [this](const std::vector<double>& x1, const std::vector<double>& x2) {
-            return std::pow(std::inner_product(x1.begin(), x1.end(), x2.begin(), 0.0) + coef0, degree);
+            return std::pow(gamma * std::inner_product(x1.begin(), x1.end(), x2.begin(), 0.0) + coef0, degree);
         };
     } else if (kernel_type == KernelType::RBF) {
         kernel = [this](const std::vector<double>& x1, const std::vector<double>& x2) {
@@ -157,7 +160,6 @@ void SupportVectorRegression::solve() {
     size_t max_iter = 1000;
     double tol = 1e-3;
 
-    std::vector<double> error_cache(n_samples, 0.0);
     std::vector<double> E(n_samples, 0.0);
 
     for (size_t i = 0; i < n_samples; ++i) {
@@ -168,55 +170,90 @@ void SupportVectorRegression::solve() {
         size_t num_changed = 0;
 
         for (size_t i = 0; i < n_samples; ++i) {
-            double Ei = E[i];
+            double Ei = predict_sample(X_train[i]) - y_train[i];
 
+            // Decide whether to update alpha or alpha_star
             if ((alpha[i] < C && Ei < -epsilon) || (alpha[i] > 0 && Ei > epsilon)) {
+                // Update alpha[i]
                 // Select j != i randomly
-                size_t j = i;
+                std::uniform_int_distribution<size_t> dist(0, n_samples - 1);
+                size_t j = dist(rng);
                 while (j == i) {
-                    j = rand() % n_samples;
+                    j = dist(rng);
                 }
-
-                double Ej = E[j];
-
-                // Compute bounds L and H
-                double L, H;
-                if (alpha[i] + alpha_star[i] >= C) {
-                    L = alpha[i] + alpha_star[i] - C;
-                    H = C;
-                } else {
-                    L = 0;
-                    H = alpha[i] + alpha_star[i];
-                }
-
-                if (L == H)
-                    continue;
+                double Ej = predict_sample(X_train[j]) - y_train[j];
 
                 // Compute eta
-                double Kii = compute_kernel(X_train[i], X_train[i]);
-                double Kjj = compute_kernel(X_train[j], X_train[j]);
-                double Kij = compute_kernel(X_train[i], X_train[j]);
-                double eta = Kii + Kjj - 2 * Kij;
+                double eta = compute_kernel(X_train[i], X_train[i]) + compute_kernel(X_train[j], X_train[j]) - 2.0 * compute_kernel(X_train[i], X_train[j]);
 
                 if (eta <= 0)
                     continue;
 
-                // Update alpha_i and alpha_j
+                // Update alpha[i]
                 double alpha_i_old = alpha[i];
                 double alpha_j_old = alpha[j];
 
-                alpha[i] += (Ej - Ei) / eta;
-                alpha[i] = std::clamp(alpha[i], L, H);
+                double delta = (Ei - Ej) / eta;
+                alpha[i] = alpha_i_old + delta;
+                alpha[j] = alpha_j_old - delta;
 
-                alpha[j] = alpha_j_old + alpha_i_old - alpha[i];
+                // Clip alpha[i] and alpha[j] to [0, C]
+                alpha[i] = std::clamp(alpha[i], 0.0, C);
+                alpha[j] = std::clamp(alpha[j], 0.0, C);
 
-                // Update threshold b
-                double b1 = b - Ei - (alpha[i] - alpha_i_old) * Kii - (alpha[j] - alpha_j_old) * Kij;
-                double b2 = b - Ej - (alpha[i] - alpha_i_old) * Kij - (alpha[j] - alpha_j_old) * Kjj;
+                // Update b
+                double b1 = b - Ei - (alpha[i] - alpha_i_old) * compute_kernel(X_train[i], X_train[i]) - (alpha[j] - alpha_j_old) * compute_kernel(X_train[i], X_train[j]);
+                double b2 = b - Ej - (alpha[i] - alpha_i_old) * compute_kernel(X_train[i], X_train[j]) - (alpha[j] - alpha_j_old) * compute_kernel(X_train[j], X_train[j]);
 
                 if (alpha[i] > 0 && alpha[i] < C)
                     b = b1;
                 else if (alpha[j] > 0 && alpha[j] < C)
+                    b = b2;
+                else
+                    b = (b1 + b2) / 2.0;
+
+                // Update error cache
+                for (size_t k = 0; k < n_samples; ++k) {
+                    E[k] = predict_sample(X_train[k]) - y_train[k];
+                }
+
+                num_changed++;
+            }
+            else if ((alpha_star[i] < C && Ei > epsilon) || (alpha_star[i] > 0 && Ei < -epsilon)) {
+                // Update alpha_star[i]
+                // Select j != i randomly
+                std::uniform_int_distribution<size_t> dist(0, n_samples - 1);
+                size_t j = dist(rng);
+                while (j == i) {
+                    j = dist(rng);
+                }
+                double Ej = predict_sample(X_train[j]) - y_train[j];
+
+                // Compute eta
+                double eta = compute_kernel(X_train[i], X_train[i]) + compute_kernel(X_train[j], X_train[j]) - 2.0 * compute_kernel(X_train[i], X_train[j]);
+
+                if (eta <= 0)
+                    continue;
+
+                // Update alpha_star[i]
+                double alpha_star_i_old = alpha_star[i];
+                double alpha_star_j_old = alpha_star[j];
+
+                double delta = (Ej - Ei) / eta;
+                alpha_star[i] = alpha_star_i_old + delta;
+                alpha_star[j] = alpha_star_j_old - delta;
+
+                // Clip alpha_star[i] and alpha_star[j] to [0, C]
+                alpha_star[i] = std::clamp(alpha_star[i], 0.0, C);
+                alpha_star[j] = std::clamp(alpha_star[j], 0.0, C);
+
+                // Update b
+                double b1 = b - Ei - (alpha_star[i] - alpha_star_i_old) * compute_kernel(X_train[i], X_train[i]) - (alpha_star[j] - alpha_star_j_old) * compute_kernel(X_train[i], X_train[j]);
+                double b2 = b - Ej - (alpha_star[i] - alpha_star_i_old) * compute_kernel(X_train[i], X_train[j]) - (alpha_star[j] - alpha_star_j_old) * compute_kernel(X_train[j], X_train[j]);
+
+                if (alpha_star[i] > 0 && alpha_star[i] < C)
+                    b = b1;
+                else if (alpha_star[j] > 0 && alpha_star[j] < C)
                     b = b2;
                 else
                     b = (b1 + b2) / 2.0;
@@ -236,7 +273,7 @@ void SupportVectorRegression::solve() {
 }
 
 double SupportVectorRegression::predict_sample(const std::vector<double>& x) const {
-    double result = -b;
+    double result = b;
     for (size_t i = 0; i < X_train.size(); ++i) {
         double coeff = alpha[i] - alpha_star[i];
         result += coeff * compute_kernel(X_train[i], x);

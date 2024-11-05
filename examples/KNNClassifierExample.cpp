@@ -35,6 +35,7 @@ int testKNNClassifier() {
     return 0;
 }
 
-int testKNNClassifier(){
+int main(){
+    testKNNClassifier();
     return 0;
 }

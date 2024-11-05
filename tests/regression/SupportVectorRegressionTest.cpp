@@ -21,6 +21,11 @@ void min_max_scale(std::vector<std::vector<double>>& data, double& min_val, doub
     }
 }
 
+// Helper function to inverse min-max scale a value
+double inverse_min_max_scale(double scaled_value, double min_val, double max_val) {
+    return scaled_value * (max_val - min_val) + min_val;
+}
+
 int main() {
     // Training data
     std::vector<std::vector<double>> X_train = {
@@ -50,11 +55,11 @@ int main() {
     min_max_scale(X_train, min_val, max_val);
     min_max_scale(X_test, min_val, max_val);
 
-    // Create and train the model
-    SupportVectorRegression svr;
+    // Create and train the model with higher C for better fitting
+    SupportVectorRegression svr(10.0, 0.1, SupportVectorRegression::KernelType::LINEAR);
     svr.fit(X_train, y_train);
 
-    // Expected predictions (approximate values)
+    // Expected predictions (approximate values on the original scale)
     std::vector<double> expected_predictions = {
         15.0, 
         25.0, 
@@ -64,8 +69,13 @@ int main() {
     // Make predictions
     std::vector<double> predictions = svr.predict(X_test);
 
+    // Transform predictions back to the original scale
+    for (auto& pred : predictions) {
+        pred = inverse_min_max_scale(pred, min_val, max_val);
+    }
+
     // Set a tolerance for comparison
-    double tolerance = 5;
+    double tolerance = 0.1;
     bool all_tests_passed = true;
 
     // Check that predictions are close to expected values and report any deviations

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neuralnetwork_2ehpp_85',['NeuralNetwork.hpp',['../NeuralNetwork_8hpp.html',1,'']]]
+  ['polynomialregression_2ehpp_81',['PolynomialRegression.hpp',['../PolynomialRegression_8hpp.html',1,'']]]
 ];

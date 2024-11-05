@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_2ehpp_84',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
+  ['neuralnetwork_2ehpp_80',['NeuralNetwork.hpp',['../NeuralNetwork_8hpp.html',1,'']]]
 ];

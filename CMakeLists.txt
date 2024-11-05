@@ -57,6 +57,14 @@ add_executable(KMeansClustering tests/clustering/KMeansClusteringTest.cpp)
 target_compile_definitions(KMeansClustering PRIVATE TEST_KMEANS_CLUSTERING)
 target_link_libraries(KMeansClustering cpp_ml_library)
 
+add_executable(KNNClassifier tests/clustering/KNNClassifierTest.cpp)
+target_compile_definitions(KNNClassifier PRIVATE TEST_KKN_CLASSIFIER)
+target_link_libraries(KNNClassifier cpp_ml_library)
+
+add_executable(KNNRegressor tests/clustering/KNNRegressorTest.cpp)
+target_compile_definitions(KNNRegressor PRIVATE TEST_KNN_REGRESSOR)
+target_link_libraries(KNNRegressor cpp_ml_library)
+
 # Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
 add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
@@ -66,6 +74,8 @@ add_test(NAME RandomForestRegressor COMMAND RandomForestRegressor)
 add_test(NAME DecisionTreeClassifier COMMAND DecisionTreeClassifier)
 add_test(NAME RandomForestClassifier COMMAND RandomForestClassifier)
 add_test(NAME KMeansClustering COMMAND KMeansClustering)
+add_test(NAME KNNClassifier COMMAND KNNClassifier)
+add_test(NAME KNNRegressor COMMAND KNNRegressor)
 
 
 # Add example executables if BUILD_EXAMPLES is ON
@@ -95,6 +105,10 @@ if(BUILD_EXAMPLES)
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_RANDOM_FOREST_CLASSIFIER)
         elseif(EXAMPLE_NAME STREQUAL "KMeansExample")
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_KMEANS_CLUSTERING)
+        elseif(EXAMPLE_NAME STREQUAL "KNNClassifierExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_KKN_CLASSIFIER)
+        elseif(EXAMPLE_NAME STREQUAL "KNNRegressorExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_KNN_REGRESSOR)
         endif()
     endforeach()
 endif()

@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p build
           cd build
-          cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON ..
+          cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON -DCMAKE_CXX_FLAGS="--coverage" ..
 
       - name: Build the project
         run: |

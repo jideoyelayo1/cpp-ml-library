@@ -76,13 +76,13 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [ ] Hierarchical clustering
 
 4. **Neural Networks**
-   - [ ] Neural Network (NN)
+   - [x] Neural Network (NN)
    - [ ] Artificial Neural Network (ANN)
    - [ ] Convolutional Neural Network (CNN)
 
 5. **Association Rule Learning**
-   - [ ] Apriori
-   - [ ] Eclat
+   - [x] Apriori
+   - [x] Eclat
 
 6. **Support Vector Machine**
    - [ ] Support Vector Regression (SVR)
@@ -98,13 +98,13 @@ The following machine learning algorithms are planned, inspired by concepts and 
 |                          | Random Forest Regression     | [ ]         | [ ]   | [ ]      |
 | **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
-|                          | K-Nearest Neighbors          | [ ]         | [ ]   | [ ]      |
-| **Clustering**           | K-Means Clustering           | [ ]         | [ ]   | [ ]      |
+|                          | K-Nearest Neighbors          | [x]         | [ ]   | [ ]      |
+| **Clustering**           | K-Means Clustering           | [x]         | [ ]   | [ ]      |
 | **Neural Networks**      | Neural Network (NN)          | [x]         | [ ]   | [ ]      |
 |                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
 |                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
-| **Association Rule Learning** | Apriori                | [ ]         | [ ]   | [ ]      |
-|                          | Eclat                        | [ ]         | [ ]   | [ ]      |
+| **Association Rule Learning** | Apriori                | [x]         | [x]   | [x]      |
+|                          | Eclat                        | [x]         | [x]   | [x]      |
 | **Support Vector Machine** | Support Vector Regression (SVR) | [ ]    | [ ]   | [ ]      |
 
 

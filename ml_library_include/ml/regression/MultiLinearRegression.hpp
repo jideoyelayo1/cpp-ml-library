@@ -7,6 +7,12 @@
 #include <cmath>
 
 /**
+ * @file MultilinearRegression.hpp
+ * @brief A simple implementation of Multi Linear Regression.
+ */
+
+/**
+ * @class Multilinear Regression
  * @brief A class that implements Multilinear Regression for predicting values
  * based on multiple features.
  */

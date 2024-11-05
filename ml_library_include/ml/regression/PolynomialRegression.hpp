@@ -6,6 +6,11 @@
 #include <iostream>
 
 /**
+ * @file PolynomialRegression.hpp
+ * @brief A simple implementation of Polynomial Regression.
+ */
+/**
+ * @class PolynomialRegression
  * @brief Polynomial Regression model for fitting polynomial curves.
  */
 class PolynomialRegression {

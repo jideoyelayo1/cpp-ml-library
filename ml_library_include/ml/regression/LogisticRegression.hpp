@@ -5,6 +5,11 @@
 #include <cmath>
 
 /**
+ * @file LogisticRegression.hpp
+ * @brief A simple implementation of Logistic Regression.
+ */
+/**
+ * @class Logistic Regression
  * @brief Logistic Regression model for binary classification tasks.
  */
 class LogisticRegression {

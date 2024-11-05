@@ -8,10 +8,11 @@
 #include <functional>
 #include <numeric>
 #include <random>
+#include <cassert>
 
 /**
  * @file SupportVectorRegression.hpp
- * @brief Implementation of Support Vector Regression (SVR).
+ * @brief Implementation of Support Vector Regression (SVR) using SMO algorithm.
  */
 
 /**
@@ -39,7 +40,7 @@ public:
      * @param coef0 Independent term in polynomial kernel.
      */
     SupportVectorRegression(double C = 1.0, double epsilon = 0.1, KernelType kernel_type = KernelType::RBF,
-                            int degree = 3, double gamma = 0.1, double coef0 = 0.0);
+                            int degree = 3, double gamma = 1.0, double coef0 = 0.0);
 
     /**
      * @brief Destructor for SupportVectorRegression.
@@ -69,10 +70,10 @@ private:
     double coef0; ///< Independent term in polynomial kernel.
 
     std::vector<std::vector<double>> X_train; ///< Training data features.
-    std::vector<double> y_train; ///< Training data target values.
-    std::vector<double> alpha; ///< Lagrange multipliers for positive errors.
-    std::vector<double> alpha_star; ///< Lagrange multipliers for negative errors.
-    double b; ///< Bias term.
+    std::vector<double> y_train;              ///< Training data target values.
+    std::vector<double> alpha;                ///< Lagrange multipliers for positive errors.
+    std::vector<double> alpha_star;           ///< Lagrange multipliers for negative errors.
+    double b;                                 ///< Bias term.
 
     std::function<double(const std::vector<double>&, const std::vector<double>&)> kernel; ///< Kernel function.
 
@@ -105,6 +106,29 @@ private:
      * @brief Random number generator.
      */
     std::mt19937 rng;
+
+    /**
+     * @brief Error cache for SMO algorithm.
+     */
+    std::vector<double> errors;
+
+    /**
+     * @brief Initialize error cache.
+     */
+    void initialize_errors();
+
+    /**
+     * @brief Update error cache for a given index.
+     * @param i Index of the sample.
+     */
+    void update_error(size_t i);
+
+    /**
+     * @brief Select second index j for SMO algorithm.
+     * @param i First index.
+     * @return Second index j.
+     */
+    size_t select_second_index(size_t i);
 };
 
 SupportVectorRegression::SupportVectorRegression(double C, double epsilon, KernelType kernel_type,
@@ -145,6 +169,8 @@ void SupportVectorRegression::fit(const std::vector<std::vector<double>>& X, con
     alpha.resize(n_samples, 0.0);
     alpha_star.resize(n_samples, 0.0);
 
+    initialize_errors();
+
     solve();
 }
 
@@ -157,57 +183,107 @@ std::vector<double> SupportVectorRegression::predict(const std::vector<std::vect
     return predictions;
 }
 
+void SupportVectorRegression::initialize_errors() {
+    size_t n_samples = X_train.size();
+    errors.resize(n_samples);
+    for (size_t i = 0; i < n_samples; ++i) {
+        errors[i] = predict_sample(X_train[i]) - y_train[i];
+    }
+}
+
+double SupportVectorRegression::predict_sample(const std::vector<double>& x) const {
+    double result = b;
+    size_t n_samples = X_train.size();
+    for (size_t i = 0; i < n_samples; ++i) {
+        double coeff = alpha[i] - alpha_star[i];
+        if (std::abs(coeff) > 1e-8) {
+            result += coeff * compute_kernel(X_train[i], x);
+        }
+    }
+    return result;
+}
+
+double SupportVectorRegression::compute_kernel(const std::vector<double>& x1, const std::vector<double>& x2) const {
+    return kernel(x1, x2);
+}
+
+void SupportVectorRegression::update_error(size_t i) {
+    errors[i] = predict_sample(X_train[i]) - y_train[i];
+}
+
+size_t SupportVectorRegression::select_second_index(size_t i) {
+    size_t n_samples = X_train.size();
+    std::uniform_int_distribution<size_t> dist(0, n_samples - 1);
+    size_t j = dist(rng);
+    while (j == i) {
+        j = dist(rng);
+    }
+    return j;
+}
+
 void SupportVectorRegression::solve() {
-    // SMO algorithm for SVR
     size_t n_samples = X_train.size();
     size_t max_passes = 5;
-    double tol = 1e-3;
     size_t passes = 0;
+    double tol = 1e-3;
 
     while (passes < max_passes) {
         size_t num_changed_alphas = 0;
-
         for (size_t i = 0; i < n_samples; ++i) {
-            double E_i = predict_sample(X_train[i]) - y_train[i];
+            double E_i = errors[i];
 
-            // Update alpha[i] and alpha_star[i]
-            if ((alpha[i] < C && E_i > epsilon) || (alpha_star[i] < C && E_i < -epsilon)) {
-                // Select j != i
-                size_t j = i;
-                while (j == i) {
-                    j = rng() % n_samples;
-                }
-                double E_j = predict_sample(X_train[j]) - y_train[j];
+            // Check KKT conditions for alpha[i]
+            bool violate_KKT_alpha = ((alpha[i] < C) && (E_i > epsilon)) || ((alpha[i] > 0) && (E_i < epsilon));
 
-                // Compute K_ii, K_jj, K_ij
+            // Check KKT conditions for alpha_star[i]
+            bool violate_KKT_alpha_star = ((alpha_star[i] < C) && (E_i < -epsilon)) || ((alpha_star[i] > 0) && (E_i > -epsilon));
+
+            if (violate_KKT_alpha || violate_KKT_alpha_star) {
+                size_t j = select_second_index(i);
+                double E_j = errors[j];
+
+                // Compute eta
                 double K_ii = compute_kernel(X_train[i], X_train[i]);
                 double K_jj = compute_kernel(X_train[j], X_train[j]);
                 double K_ij = compute_kernel(X_train[i], X_train[j]);
-
-                // Compute eta
                 double eta = K_ii + K_jj - 2 * K_ij;
 
-                if (eta <= 0)
-                    continue;
-
-                double alpha_i_old = alpha[i];
-                double alpha_star_i_old = alpha_star[i];
-
-                if (E_i > epsilon) {
-                    // Update alpha[i]
-                    alpha[i] = alpha_i_old - (E_i - epsilon) / eta;
-                    alpha[i] = std::clamp(alpha[i], 0.0, C);
-                } else if (E_i < -epsilon) {
-                    // Update alpha_star[i]
-                    alpha_star[i] = alpha_star_i_old - (E_i + epsilon) / eta;
-                    alpha_star[i] = std::clamp(alpha_star[i], 0.0, C);
-                } else {
+                if (eta <= 0) {
                     continue;
                 }
 
-                // Update b
-                double b1 = b - E_i - (alpha[i] - alpha_i_old) * K_ii + (alpha_star[i] - alpha_star_i_old) * K_ii;
-                b = b1;
+                double alpha_i_old = alpha[i];
+                double alpha_star_i_old = alpha_star[i];
+                double alpha_j_old = alpha[j];
+                double alpha_star_j_old = alpha_star[j];
+
+                // Update alpha[i] and alpha[j]
+                double delta_alpha = 0.0;
+
+                if (violate_KKT_alpha) {
+                    delta_alpha = std::min(C - alpha[i], std::max(-alpha[i], (E_i - E_j) / eta));
+                    alpha[i] += delta_alpha;
+                    alpha[j] -= delta_alpha;
+                } else if (violate_KKT_alpha_star) {
+                    delta_alpha = std::min(C - alpha_star[i], std::max(-alpha_star[i], -(E_i - E_j) / eta));
+                    alpha_star[i] += delta_alpha;
+                    alpha_star[j] -= delta_alpha;
+                }
+
+                // Update threshold b
+                double b1 = b - E_i - delta_alpha * (K_ii - K_ij);
+                double b2 = b - E_j - delta_alpha * (K_ij - K_jj);
+
+                if ((alpha[i] > 0 && alpha[i] < C) || (alpha_star[i] > 0 && alpha_star[i] < C))
+                    b = b1;
+                else if ((alpha[j] > 0 && alpha[j] < C) || (alpha_star[j] > 0 && alpha_star[j] < C))
+                    b = b2;
+                else
+                    b = (b1 + b2) / 2.0;
+
+                // Update error cache
+                update_error(i);
+                update_error(j);
 
                 num_changed_alphas++;
             }
@@ -218,21 +294,6 @@ void SupportVectorRegression::solve() {
         else
             passes = 0;
     }
-}
-
-double SupportVectorRegression::predict_sample(const std::vector<double>& x) const {
-    double result = b;
-    for (size_t i = 0; i < X_train.size(); ++i) {
-        double coeff = alpha[i] - alpha_star[i];
-        if (std::abs(coeff) > 1e-6) {
-            result += coeff * compute_kernel(X_train[i], x);
-        }
-    }
-    return result;
-}
-
-double SupportVectorRegression::compute_kernel(const std::vector<double>& x1, const std::vector<double>& x2) const {
-    return kernel(x1, x2);
 }
 
 #endif // SUPPORT_VECTOR_REGRESSION_HPP

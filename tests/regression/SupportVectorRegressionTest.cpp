@@ -30,7 +30,7 @@ int main() {
         {4.0},
         {5.0}
     };
-    std::vector<double> y_train = {1.5, 2.0, 2.5, 3.0, 3.5};
+    std::vector<double> y_train = {1.0, 2.0, 3.0, 4.0, 5.0};
 
     // Test data
     std::vector<std::vector<double>> X_test = {
@@ -49,13 +49,13 @@ int main() {
     svr.fit(X_train, y_train);
 
     // Expected predictions (approximate values)
-    std::vector<double> expected_predictions = {1.75, 2.25, 2.75};
+    std::vector<double> expected_predictions = {1.5, 2.5, 3.5};
 
     // Make predictions
     std::vector<double> predictions = svr.predict(X_test);
 
     // Set a tolerance for comparison
-    double tolerance = 3.0;
+    double tolerance = 0.5;
     bool all_tests_passed = true;
 
     // Check that predictions are close to expected values and report any deviations

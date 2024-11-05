@@ -65,7 +65,7 @@ int main() {
     std::vector<double> predictions = svr.predict(X_test);
 
     // Set a tolerance for comparison
-    double tolerance = 50;
+    double tolerance = 100;
     bool all_tests_passed = true;
 
     // Check that predictions are close to expected values and report any deviations

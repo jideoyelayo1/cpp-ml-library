@@ -7,7 +7,7 @@
 #include <cmath>
 
 /**
- * @file MultilinearRegression.hpp
+ * @file MultiLinearRegression.hpp
  * @brief A simple implementation of Multi Linear Regression.
  */
 

@@ -70,35 +70,22 @@ $(function() {
 <div class="title">MultilinearRegression Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>A class that implements Multilinear Regression for predicting values based on multiple features.  
- <a href="classMultilinearRegression.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="MultiLinearRegression_8hpp_source.html">MultiLinearRegression.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acc5e2132784e7038c51686dd34409bdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#acc5e2132784e7038c51686dd34409bdb">MultilinearRegression</a> (double learningRate=0.01, int iterations=1000, double regularizationParameter=0.0)</td></tr>
-<tr class="memdesc:acc5e2132784e7038c51686dd34409bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="classMultilinearRegression.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">MultilinearRegression</a> model with the given learning rate and number of iterations.  <a href="classMultilinearRegression.html#acc5e2132784e7038c51686dd34409bdb">More...</a><br /></td></tr>
-<tr class="separator:acc5e2132784e7038c51686dd34409bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d236767b4c76b34e1aee2044fff9f43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43">MultilinearRegression</a> (double learningRate=0.01, int iterations=1000)</td></tr>
+<tr class="memdesc:a3d236767b4c76b34e1aee2044fff9f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="classMultilinearRegression.html">MultilinearRegression</a> model with the given learning rate and number of iterations.  <a href="classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43">More...</a><br /></td></tr>
+<tr class="separator:a3d236767b4c76b34e1aee2044fff9f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ba63a697eb38840da44221097fc007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007">train</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;features, const std::vector&lt; double &gt; &amp;target)</td></tr>
-<tr class="memdesc:a26ba63a697eb38840da44221097fc007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trains the Multilinear Regression model on the provided data.  <a href="classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007">More...</a><br /></td></tr>
+<tr class="memdesc:a26ba63a697eb38840da44221097fc007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trains the <a class="el" href="classMultilinear.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">Multilinear</a> Regression model on the provided data.  <a href="classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007">More...</a><br /></td></tr>
 <tr class="separator:a26ba63a697eb38840da44221097fc007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a62d3f82a20546683a8685c5b1e6432"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#a2a62d3f82a20546683a8685c5b1e6432">predict</a> (const std::vector&lt; double &gt; &amp;features) const</td></tr>
 <tr class="memdesc:a2a62d3f82a20546683a8685c5b1e6432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the output for a given set of features.  <a href="classMultilinearRegression.html#a2a62d3f82a20546683a8685c5b1e6432">More...</a><br /></td></tr>
 <tr class="separator:a2a62d3f82a20546683a8685c5b1e6432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0ee71138e59834613c15af555ee7778"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#aa0ee71138e59834613c15af555ee7778">getWeights</a> () const</td></tr>
-<tr class="memdesc:aa0ee71138e59834613c15af555ee7778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current weights of the model.  <a href="classMultilinearRegression.html#aa0ee71138e59834613c15af555ee7778">More...</a><br /></td></tr>
-<tr class="separator:aa0ee71138e59834613c15af555ee7778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a944141d7212442dfba4c6e0daa82dffc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultilinearRegression.html#a944141d7212442dfba4c6e0daa82dffc">getBias</a> () const</td></tr>
-<tr class="memdesc:a944141d7212442dfba4c6e0daa82dffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current bias of the model.  <a href="classMultilinearRegression.html#a944141d7212442dfba4c6e0daa82dffc">More...</a><br /></td></tr>
-<tr class="separator:a944141d7212442dfba4c6e0daa82dffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that implements Multilinear Regression for predicting values based on multiple features. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acc5e2132784e7038c51686dd34409bdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc5e2132784e7038c51686dd34409bdb">&#9670;&nbsp;</a></span>MultilinearRegression()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3d236767b4c76b34e1aee2044fff9f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d236767b4c76b34e1aee2044fff9f43">&#9670;&nbsp;</a></span>MultilinearRegression()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,13 +103,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iterations</em> = <code>1000</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>regularizationParameter</em> = <code>0.0</code>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1000</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -137,12 +118,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs the <a class="el" href="classMultilinearRegression.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">MultilinearRegression</a> model with the given learning rate and number of iterations. </p>
+<p>Constructs the <a class="el" href="classMultilinearRegression.html">MultilinearRegression</a> model with the given learning rate and number of iterations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">learningRate</td><td>The rate at which the model learns (default 0.01). </td></tr>
     <tr><td class="paramname">iterations</td><td>The number of iterations for the gradient descent (default 1000). </td></tr>
-    <tr><td class="paramname">regularizationParameter</td><td>The regularization parameter lambda (default 0.0, no regularization). </td></tr>
   </table>
   </dd>
 </dl>
@@ -150,62 +130,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a944141d7212442dfba4c6e0daa82dffc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a944141d7212442dfba4c6e0daa82dffc">&#9670;&nbsp;</a></span>getBias()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double MultilinearRegression::getBias </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the current bias of the model. </p>
-<dl class="section return"><dt>Returns</dt><dd>The bias term. </dd></dl>
-
-</div>
-</div>
-<a id="aa0ee71138e59834613c15af555ee7778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0ee71138e59834613c15af555ee7778">&#9670;&nbsp;</a></span>getWeights()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;double&gt; MultilinearRegression::getWeights </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the current weights of the model. </p>
-<dl class="section return"><dt>Returns</dt><dd>A vector containing the weights. </dd></dl>
-
-</div>
-</div>
 <a id="a2a62d3f82a20546683a8685c5b1e6432"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a62d3f82a20546683a8685c5b1e6432">&#9670;&nbsp;</a></span>predict()</h2>
 
@@ -275,7 +199,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Trains the Multilinear Regression model on the provided data. </p>
+<p>Trains the <a class="el" href="classMultilinear.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">Multilinear</a> Regression model on the provided data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">features</td><td>A vector of vectors, where each sub-vector represents the features for one data point. </td></tr>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['randomforestclassifier_52',['RandomForestClassifier',['../classRandomForestClassifier.html',1,'']]],
-  ['randomforestregressor_53',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'']]]
+  ['neuralnetwork_67',['NeuralNetwork',['../classNeuralNetwork.html',1,'']]],
+  ['neuron_68',['Neuron',['../classNeuron.html',1,'']]]
 ];

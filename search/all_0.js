@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['c_2b_2b_20machine_20learning_20library_0',['C++ Machine Learning Library',['../index.html',1,'']]]
+  ['backprop_0',['backProp',['../classNeuralNetwork.html#a2c7571d542db31954dcbb44d2856f8c7',1,'NeuralNetwork']]]
 ];

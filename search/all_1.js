@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['decisiontreeclassifier_1',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html',1,'DecisionTreeClassifier'],['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier::DecisionTreeClassifier()']]],
-  ['decisiontreeclassifier_2ehpp_2',['DecisionTreeClassifier.hpp',['../DecisionTreeClassifier_8hpp.html',1,'']]],
-  ['decisiontreeregressor_3',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html',1,'DecisionTreeRegressor'],['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor::DecisionTreeRegressor()']]],
-  ['decisiontreeregressor_2ehpp_4',['DecisionTreeRegressor.hpp',['../DecisionTreeRegressor_8hpp.html',1,'']]]
+  ['c_2b_2b_20machine_20learning_20library_1',['C++ Machine Learning Library',['../index.html',1,'']]],
+  ['calchiddengradients_2',['calcHiddenGradients',['../classNeuron.html#aa5a48ad29e30e75b06a48977e7b0ec5d',1,'Neuron']]],
+  ['calcoutputgradients_3',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]],
+  ['connection_4',['Connection',['../structConnection.html',1,'']]]
 ];

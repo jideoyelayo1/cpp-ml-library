@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['decisiontreeclassifier_66',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier']]],
-  ['decisiontreeregressor_67',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
+  ['backprop_85',['backProp',['../classNeuralNetwork.html#a2c7571d542db31954dcbb44d2856f8c7',1,'NeuralNetwork']]]
 ];

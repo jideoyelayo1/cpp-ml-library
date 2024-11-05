@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_5fcluster_5fcenters_69',['get_cluster_centers',['../classHierarchicalClustering.html#a18cc8a57a8b466a421d555654e083e5f',1,'HierarchicalClustering::get_cluster_centers()'],['../classKMeans.html#af9133da50269ff5ce65cda20b518deca',1,'KMeans::get_cluster_centers()']]]
+  ['decisiontreeclassifier_88',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier']]],
+  ['decisiontreeregressor_89',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
 ];

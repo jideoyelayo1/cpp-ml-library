@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['kmeans_71',['KMeans',['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans']]],
-  ['knnclassifier_72',['KNNClassifier',['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier']]],
-  ['knnregressor_73',['KNNRegressor',['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor']]]
+  ['get_5fcluster_5fcenters_92',['get_cluster_centers',['../classHierarchicalClustering.html#a18cc8a57a8b466a421d555654e083e5f',1,'HierarchicalClustering::get_cluster_centers()'],['../classKMeans.html#af9133da50269ff5ce65cda20b518deca',1,'KMeans::get_cluster_centers()']]],
+  ['getoutputval_93',['getOutputVal',['../classNeuron.html#aaf2328534be53e01280a141294a0096c',1,'Neuron']]],
+  ['getrecentaverageerror_94',['getRecentAverageError',['../classNeuralNetwork.html#afcf7abdcaa236076dc19782b4170b71e',1,'NeuralNetwork']]],
+  ['getresults_95',['getResults',['../classNeuralNetwork.html#afa9b18533af5b91d3fa60af39a2ce99c',1,'NeuralNetwork']]]
 ];

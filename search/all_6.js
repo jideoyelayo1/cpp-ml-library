@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['linkage_16',['Linkage',['../classHierarchicalClustering.html#a500501194837d440d3e840904e398a57',1,'HierarchicalClustering']]],
-  ['logistic_17',['Logistic',['../classLogistic.html',1,'']]],
-  ['logisticregression_18',['LogisticRegression',['../classLogisticRegression.html',1,'LogisticRegression'],['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression::LogisticRegression()']]],
-  ['logisticregression_2ehpp_19',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
+  ['kerneltype_18',['KernelType',['../classSupportVectorRegression.html#a825c248f58094c3f0bc53197135ad2a3',1,'SupportVectorRegression']]],
+  ['kmeans_19',['KMeans',['../classKMeans.html',1,'KMeans'],['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans::KMeans()']]],
+  ['kmeans_2ehpp_20',['KMeans.hpp',['../KMeans_8hpp.html',1,'']]],
+  ['knnclassifier_21',['KNNClassifier',['../classKNNClassifier.html',1,'KNNClassifier'],['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier::KNNClassifier()']]],
+  ['knnclassifier_2ehpp_22',['KNNClassifier.hpp',['../KNNClassifier_8hpp.html',1,'']]],
+  ['knnregressor_23',['KNNRegressor',['../classKNNRegressor.html',1,'KNNRegressor'],['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor::KNNRegressor()']]],
+  ['knnregressor_2ehpp_24',['KNNRegressor.hpp',['../KNNRegressor_8hpp.html',1,'']]]
 ];

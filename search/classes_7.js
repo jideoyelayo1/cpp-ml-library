@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['supportvectorregression_54',['SupportVectorRegression',['../classSupportVectorRegression.html',1,'']]]
+  ['polynomialregression_69',['PolynomialRegression',['../classPolynomialRegression.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_74',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
+  ['hierarchicalclustering_96',['HierarchicalClustering',['../classHierarchicalClustering.html#ae76537ded4d09c7e6b78507acfa8d24e',1,'HierarchicalClustering']]]
 ];

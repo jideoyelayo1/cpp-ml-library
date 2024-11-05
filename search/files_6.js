@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['supportvectorregression_2ehpp_65',['SupportVectorRegression.hpp',['../SupportVectorRegression_8hpp.html',1,'']]]
+  ['randomforestclassifier_2ehpp_82',['RandomForestClassifier.hpp',['../RandomForestClassifier_8hpp.html',1,'']]],
+  ['randomforestregressor_2ehpp_83',['RandomForestRegressor.hpp',['../RandomForestRegressor_8hpp.html',1,'']]]
 ];

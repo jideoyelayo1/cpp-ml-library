@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['supportvectorregression_80',['SupportVectorRegression',['../classSupportVectorRegression.html#a95640af865cd840d987b3dcd1642ff50',1,'SupportVectorRegression']]]
+  ['neuralnetwork_102',['NeuralNetwork',['../classNeuralNetwork.html#ab19f9075155d3e785d6d8ce944ffb6ff',1,'NeuralNetwork']]],
+  ['neuron_103',['Neuron',['../classNeuron.html#a8b8e6bf928236abb284044edc4764436',1,'Neuron']]]
 ];

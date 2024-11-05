@@ -81,15 +81,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff52dd6be84c560194d2ddc7202ad26f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#aff52dd6be84c560194d2ddc7202ad26f">Eclat</a> (double min_support)</td></tr>
 <tr class="memdesc:aff52dd6be84c560194d2ddc7202ad26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classEclat.html" title="Class to perform frequent itemset mining using the Eclat algorithm.">Eclat</a> class.  <a href="classEclat.html#aff52dd6be84c560194d2ddc7202ad26f">More...</a><br /></td></tr>
 <tr class="separator:aff52dd6be84c560194d2ddc7202ad26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c2570bc351914de199874c0d5e1373e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#a8c2570bc351914de199874c0d5e1373e">run</a> (const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;transactions)</td></tr>
-<tr class="memdesc:a8c2570bc351914de199874c0d5e1373e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the <a class="el" href="classEclat.html" title="Class to perform frequent itemset mining using the Eclat algorithm.">Eclat</a> algorithm on the provided dataset.  <a href="classEclat.html#a8c2570bc351914de199874c0d5e1373e">More...</a><br /></td></tr>
-<tr class="separator:a8c2570bc351914de199874c0d5e1373e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818749cd96d37a994614041f05a92b7a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#a818749cd96d37a994614041f05a92b7a">get_support_counts</a> () const</td></tr>
-<tr class="memdesc:a818749cd96d37a994614041f05a92b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the support counts for all frequent itemsets found.  <a href="classEclat.html#a818749cd96d37a994614041f05a92b7a">More...</a><br /></td></tr>
-<tr class="separator:a818749cd96d37a994614041f05a92b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e685911e6f97a56edb1da1f4dc30f0b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#a5e685911e6f97a56edb1da1f4dc30f0b">itemset_to_string</a> (const std::set&lt; int &gt; &amp;itemset) const</td></tr>
-<tr class="memdesc:a5e685911e6f97a56edb1da1f4dc30f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an itemset to a string representation for use as a key.  <a href="classEclat.html#a5e685911e6f97a56edb1da1f4dc30f0b">More...</a><br /></td></tr>
-<tr class="separator:a5e685911e6f97a56edb1da1f4dc30f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9e045a12391bd89096b9b4dbb59b12"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#a7e9e045a12391bd89096b9b4dbb59b12">run</a> (const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;transactions)</td></tr>
+<tr class="memdesc:a7e9e045a12391bd89096b9b4dbb59b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the <a class="el" href="classEclat.html" title="Class to perform frequent itemset mining using the Eclat algorithm.">Eclat</a> algorithm on the provided dataset.  <a href="classEclat.html#a7e9e045a12391bd89096b9b4dbb59b12">More...</a><br /></td></tr>
+<tr class="separator:a7e9e045a12391bd89096b9b4dbb59b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a90b6bf441625880e9d55ef43bc7be3"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::vector&lt; int &gt;, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEclat.html#a3a90b6bf441625880e9d55ef43bc7be3">get_support_counts</a> () const</td></tr>
+<tr class="memdesc:a3a90b6bf441625880e9d55ef43bc7be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the support counts for all frequent itemsets found.  <a href="classEclat.html#a3a90b6bf441625880e9d55ef43bc7be3">More...</a><br /></td></tr>
+<tr class="separator:a3a90b6bf441625880e9d55ef43bc7be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to perform frequent itemset mining using the <a class="el" href="classEclat.html" title="Class to perform frequent itemset mining using the Eclat algorithm.">Eclat</a> algorithm. </p>
@@ -121,14 +118,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a818749cd96d37a994614041f05a92b7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a818749cd96d37a994614041f05a92b7a">&#9670;&nbsp;</a></span>get_support_counts()</h2>
+<a id="a3a90b6bf441625880e9d55ef43bc7be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a90b6bf441625880e9d55ef43bc7be3">&#9670;&nbsp;</a></span>get_support_counts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt; std::string, int &gt; Eclat::get_support_counts </td>
+          <td class="memname">std::map&lt; std::vector&lt; int &gt;, int &gt; Eclat::get_support_counts </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -137,45 +134,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the support counts for all frequent itemsets found. </p>
-<dl class="section return"><dt>Returns</dt><dd>An unordered_map where keys are itemsets (as strings) and values are support counts. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A map where keys are itemsets (as vectors) and values are support counts. </dd></dl>
 
 </div>
 </div>
-<a id="a5e685911e6f97a56edb1da1f4dc30f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e685911e6f97a56edb1da1f4dc30f0b">&#9670;&nbsp;</a></span>itemset_to_string()</h2>
+<a id="a7e9e045a12391bd89096b9b4dbb59b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9e045a12391bd89096b9b4dbb59b12">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Eclat::itemset_to_string </td>
-          <td>(</td>
-          <td class="paramtype">const std::set&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>itemset</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts an itemset to a string representation for use as a key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">itemset</td><td>The itemset to convert. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A string representation of the itemset. </dd></dl>
-
-</div>
-</div>
-<a id="a8c2570bc351914de199874c0d5e1373e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c2570bc351914de199874c0d5e1373e">&#9670;&nbsp;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::set&lt; int &gt; &gt; Eclat::run </td>
+          <td class="memname">std::vector&lt; std::vector&lt; int &gt; &gt; Eclat::run </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>transactions</em></td><td>)</td>
@@ -191,7 +161,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of frequent itemsets, where each itemset is represented as a set of items. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of frequent itemsets, where each itemset is represented as a vector of items. </dd></dl>
 
 </div>
 </div>

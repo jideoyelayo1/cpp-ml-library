@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['itemset_5fto_5fstring_106',['itemset_to_string',['../classEclat.html#a5e685911e6f97a56edb1da1f4dc30f0b',1,'Eclat']]]
+  ['kmeans_105',['KMeans',['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans']]],
+  ['knnclassifier_106',['KNNClassifier',['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier']]],
+  ['knnregressor_107',['KNNRegressor',['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor']]]
 ];

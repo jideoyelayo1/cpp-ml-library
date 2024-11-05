@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['multilinear_33',['Multilinear',['../classMultilinear.html',1,'']]],
-  ['multilinearregression_34',['MultilinearRegression',['../classMultilinearRegression.html',1,'MultilinearRegression'],['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression::MultilinearRegression()']]]
+  ['neuralnetwork_34',['NeuralNetwork',['../classNeuralNetwork.html',1,'NeuralNetwork'],['../classNeuralNetwork.html#ab19f9075155d3e785d6d8ce944ffb6ff',1,'NeuralNetwork::NeuralNetwork()']]],
+  ['neuralnetwork_2ehpp_35',['NeuralNetwork.hpp',['../NeuralNetwork_8hpp.html',1,'']]],
+  ['neuron_36',['Neuron',['../classNeuron.html',1,'Neuron'],['../classNeuron.html#a8b8e6bf928236abb284044edc4764436',1,'Neuron::Neuron()']]]
 ];

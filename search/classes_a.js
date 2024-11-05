@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['supportvectorregression_78',['SupportVectorRegression',['../classSupportVectorRegression.html',1,'']]]
+  ['supportvectorregression_77',['SupportVectorRegression',['../classSupportVectorRegression.html',1,'']]]
 ];

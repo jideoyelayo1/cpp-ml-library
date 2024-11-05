@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setoutputval_119',['setOutputVal',['../classNeuron.html#a219bfcc8c9cd5cc634fef77bccb72d84',1,'Neuron']]],
-  ['supportvectorregression_120',['SupportVectorRegression',['../classSupportVectorRegression.html#a95640af865cd840d987b3dcd1642ff50',1,'SupportVectorRegression']]]
+  ['train_119',['train',['../classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8',1,'LogisticRegression::train()'],['../classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007',1,'MultilinearRegression::train()'],['../classPolynomialRegression.html#a6147d1aea6b067cac8ced70ed64db26f',1,'PolynomialRegression::train()']]]
 ];

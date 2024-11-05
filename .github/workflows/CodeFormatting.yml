@@ -1,0 +1,29 @@
+name: Code Formatting
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install clang-format
+      run: sudo apt-get install -y clang-format
+
+    - name: Run clang-format and check for formatting issues
+      run: |
+        find . -name "*.cpp" -o -name "*.hpp" | xargs clang-format -i
+
+    - name: Commit formatting changes
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add .
+        git commit -m "Apply code formatting changes" || echo "No changes to commit"
+      continue-on-error: true

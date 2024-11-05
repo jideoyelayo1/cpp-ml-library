@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['calchiddengradients_86',['calcHiddenGradients',['../classNeuron.html#aa5a48ad29e30e75b06a48977e7b0ec5d',1,'Neuron']]],
-  ['calcoutputgradients_87',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]]
+  ['calchiddengradients_93',['calcHiddenGradients',['../classNeuron.html#aa5a48ad29e30e75b06a48977e7b0ec5d',1,'Neuron']]],
+  ['calcoutputgradients_94',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]]
 ];

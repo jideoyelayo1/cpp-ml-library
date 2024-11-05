@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hierarchicalclustering_2ehpp_75',['HierarchicalClustering.hpp',['../HierarchicalClustering_8hpp.html',1,'']]]
+  ['eclat_2ehpp_81',['Eclat.hpp',['../Eclat_8hpp.html',1,'']]]
 ];

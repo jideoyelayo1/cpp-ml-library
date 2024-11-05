@@ -76,7 +76,7 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [x] Hierarchical clustering
 
 4. **Neural Networks**
-   - [ ] Neural Network (NN)
+   - [x] Neural Network (NN)
    - [ ] Artificial Neural Network (ANN)
    - [ ] Convolutional Neural Network (CNN)
 

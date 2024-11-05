@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kmeans_7',['KMeans',['../classKMeans.html',1,'KMeans'],['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans::KMeans()']]],
-  ['kmeans_2ehpp_8',['KMeans.hpp',['../KMeans_8hpp.html',1,'']]]
+  ['multilinearregression_7',['MultilinearRegression',['../classMultilinearRegression.html',1,'MultilinearRegression'],['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression::MultilinearRegression()']]]
 ];

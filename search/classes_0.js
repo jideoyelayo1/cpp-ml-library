@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['decisiontreeclassifier_23',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html',1,'']]],
-  ['decisiontreeregressor_24',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html',1,'']]]
+  ['decisiontreeclassifier_19',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html',1,'']]],
+  ['decisiontreeregressor_20',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html',1,'']]]
 ];

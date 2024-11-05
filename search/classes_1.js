@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kmeans_25',['KMeans',['../classKMeans.html',1,'']]]
+  ['logisticregression_21',['LogisticRegression',['../classLogisticRegression.html',1,'']]]
 ];

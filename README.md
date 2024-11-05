@@ -100,7 +100,7 @@ The following machine learning algorithms are planned, inspired by concepts and 
 |                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | K-Nearest Neighbors          | [ ]         | [ ]   | [ ]      |
 | **Clustering**           | K-Means Clustering           | [ ]         | [ ]   | [ ]      |
-| **Neural Networks**      | Neural Network (NN)          | [x]         | [ ]   | [ ]      |
+| **Neural Networks**      | Neural Network (NN)          | [x]         | [x]   | [x]      |
 |                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
 |                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
 | **Association Rule Learning** | Apriori                | [ ]         | [ ]   | [ ]      |

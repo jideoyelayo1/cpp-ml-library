@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticregression_108',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
+  ['logisticregression_110',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
 ];

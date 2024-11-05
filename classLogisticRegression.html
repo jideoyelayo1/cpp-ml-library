@@ -70,22 +70,32 @@ $(function() {
 <div class="title">LogisticRegression Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Logistic Regression model for binary classification tasks.  
+ <a href="classLogisticRegression.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="LogisticRegression_8hpp_source.html">LogisticRegression.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a144c9d5eb9a45a2611fc85eced9aade4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">LogisticRegression</a> (double learningRate, int iterations)</td></tr>
-<tr class="memdesc:a144c9d5eb9a45a2611fc85eced9aade4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing the learning rate and iteration count.  <a href="classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4">More...</a><br /></td></tr>
-<tr class="separator:a144c9d5eb9a45a2611fc85eced9aade4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8726b53d0d654971a8453d0c91bbbe44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogisticRegression.html#a8726b53d0d654971a8453d0c91bbbe44">LogisticRegression</a> (double learningRate=0.01, int iterations=1000, bool useBias=true)</td></tr>
+<tr class="memdesc:a8726b53d0d654971a8453d0c91bbbe44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing the learning rate and iteration count.  <a href="classLogisticRegression.html#a8726b53d0d654971a8453d0c91bbbe44">More...</a><br /></td></tr>
+<tr class="separator:a8726b53d0d654971a8453d0c91bbbe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a283fe25b1aeb187ca44db48fd13897d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">train</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;features, const std::vector&lt; int &gt; &amp;labels)</td></tr>
 <tr class="memdesc:a283fe25b1aeb187ca44db48fd13897d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train the model using features and labels.  <a href="classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8">More...</a><br /></td></tr>
 <tr class="separator:a283fe25b1aeb187ca44db48fd13897d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3865f1957755297c1d0dc44de5af65dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">predict</a> (const std::vector&lt; double &gt; &amp;features) const</td></tr>
 <tr class="memdesc:a3865f1957755297c1d0dc44de5af65dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the class label for a given input.  <a href="classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc">More...</a><br /></td></tr>
 <tr class="separator:a3865f1957755297c1d0dc44de5af65dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df0fa597e24c5d6603076626920216b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogisticRegression.html#a4df0fa597e24c5d6603076626920216b">predictProbability</a> (const std::vector&lt; double &gt; &amp;features) const</td></tr>
+<tr class="memdesc:a4df0fa597e24c5d6603076626920216b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the probability of class 1 for a given input.  <a href="classLogisticRegression.html#a4df0fa597e24c5d6603076626920216b">More...</a><br /></td></tr>
+<tr class="separator:a4df0fa597e24c5d6603076626920216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a144c9d5eb9a45a2611fc85eced9aade4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a144c9d5eb9a45a2611fc85eced9aade4">&#9670;&nbsp;</a></span>LogisticRegression()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Logistic Regression model for binary classification tasks. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8726b53d0d654971a8453d0c91bbbe44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8726b53d0d654971a8453d0c91bbbe44">&#9670;&nbsp;</a></span>LogisticRegression()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,13 +107,19 @@ Public Member Functions</h2></td></tr>
           <td class="memname">LogisticRegression::LogisticRegression </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>learningRate</em>, </td>
+          <td class="paramname"><em>learningRate</em> = <code>0.01</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iterations</em>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useBias</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,6 +139,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">learningRate</td><td>The rate at which the model learns. </td></tr>
     <tr><td class="paramname">iterations</td><td>Number of training iterations. </td></tr>
+    <tr><td class="paramname">useBias</td><td>Whether to include a bias term. </td></tr>
   </table>
   </dd>
 </dl>
@@ -162,6 +179,41 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Predicted class label (0 or 1). </dd></dl>
+
+</div>
+</div>
+<a id="a4df0fa597e24c5d6603076626920216b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df0fa597e24c5d6603076626920216b">&#9670;&nbsp;</a></span>predictProbability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogisticRegression::predictProbability </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>features</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Predicts the probability of class 1 for a given input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>Input feature vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Probability of the input belonging to class 1. </dd></dl>
 
 </div>
 </div>

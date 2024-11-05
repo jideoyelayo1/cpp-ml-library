@@ -24,7 +24,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
         gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "To Do") | .id' > card_id.txt
         CARD_ID=$(cat card_id.txt)
         if [ -n "$CARD_ID" ]; then
@@ -36,7 +35,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
         gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "In Progress") | .id' > card_id.txt
         CARD_ID=$(cat card_id.txt)
         if [ -n "$CARD_ID" ]; then
@@ -48,7 +46,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
         gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "Review") | .id' > card_id.txt
         CARD_ID=$(cat card_id.txt)
         if [ -n "$CARD_ID" ]; then
@@ -60,7 +57,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
         gh pr view ${{ github.event.pull_request.number }} --json projectCards --jq '.projectCards[] | select(.name == "Done") | .id' > card_id.txt
         CARD_ID=$(cat card_id.txt)
         if [ -n "$CARD_ID" ]; then

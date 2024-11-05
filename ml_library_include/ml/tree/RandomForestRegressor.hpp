@@ -5,10 +5,9 @@
 #include <algorithm>
 #include <numeric>
 #include <limits>
-#include <cstdlib>
-#include <ctime>
 #include <cmath>
 #include <random>
+#include <memory>
 
 /**
  * @file RandomForestRegressor.hpp
@@ -33,7 +32,7 @@ public:
     /**
      * @brief Destructor for RandomForestRegressor.
      */
-    ~RandomForestRegressor();
+    ~RandomForestRegressor() = default;
 
     /**
      * @brief Fits the model to the training data.
@@ -55,37 +54,39 @@ private:
         double value;
         int feature_index;
         double threshold;
-        Node* left;
-        Node* right;
+        std::unique_ptr<Node> left;
+        std::unique_ptr<Node> right;
 
-        Node() : is_leaf(false), value(0.0), feature_index(-1), threshold(0.0), left(nullptr), right(nullptr) {}
+        Node()
+            : is_leaf(false), value(0.0), feature_index(-1), threshold(0.0), left(nullptr), right(nullptr) {}
     };
 
     struct DecisionTree {
-        Node* root;
+        std::unique_ptr<Node> root;
         int max_depth;
         int min_samples_split;
         int max_features;
+        std::mt19937 random_engine;
 
         DecisionTree(int max_depth, int min_samples_split, int max_features);
-        ~DecisionTree();
+        ~DecisionTree() = default;
         void fit(const std::vector<std::vector<double>>& X, const std::vector<double>& y);
         double predict_sample(const std::vector<double>& x) const;
 
     private:
-        Node* build_tree(const std::vector<std::vector<double>>& X, const std::vector<double>& y, int depth);
+        std::unique_ptr<Node> build_tree(const std::vector<std::vector<double>>& X, const std::vector<double>& y, int depth);
         double calculate_mse(const std::vector<double>& y) const;
         void split_dataset(const std::vector<std::vector<double>>& X, const std::vector<double>& y, int feature_index, double threshold,
                            std::vector<std::vector<double>>& X_left, std::vector<double>& y_left,
                            std::vector<std::vector<double>>& X_right, std::vector<double>& y_right) const;
-        void delete_tree(Node* node);
     };
 
     int n_estimators;
     int max_depth;
     int min_samples_split;
     int max_features;
-    std::vector<DecisionTree*> trees;
+    std::vector<std::unique_ptr<DecisionTree>> trees;
+    std::mt19937 random_engine;
 
     void bootstrap_sample(const std::vector<std::vector<double>>& X, const std::vector<double>& y,
                           std::vector<std::vector<double>>& X_sample, std::vector<double>& y_sample);
@@ -93,19 +94,15 @@ private:
 
 RandomForestRegressor::RandomForestRegressor(int n_estimators, int max_depth, int min_samples_split, int max_features)
     : n_estimators(n_estimators), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {
-    std::srand(static_cast<unsigned int>(std::time(0)));
-}
-
-RandomForestRegressor::~RandomForestRegressor() {
-    for (auto tree : trees) {
-        delete tree;
-    }
+    std::random_device rd;
+    random_engine.seed(rd());
 }
 
 void RandomForestRegressor::fit(const std::vector<std::vector<double>>& X, const std::vector<double>& y) {
     // Set max_features if not set
-    if (max_features == -1) {
-        max_features = static_cast<int>(std::sqrt(X[0].size()));
+    int actual_max_features = max_features;
+    if (actual_max_features == -1) {
+        actual_max_features = static_cast<int>(std::sqrt(X[0].size()));
     }
 
     for (int i = 0; i < n_estimators; ++i) {
@@ -113,9 +110,9 @@ void RandomForestRegressor::fit(const std::vector<std::vector<double>>& X, const
         std::vector<double> y_sample;
         bootstrap_sample(X, y, X_sample, y_sample);
 
-        DecisionTree* tree = new DecisionTree(max_depth, min_samples_split, max_features);
+        auto tree = std::make_unique<DecisionTree>(max_depth, min_samples_split, actual_max_features);
         tree->fit(X_sample, y_sample);
-        trees.push_back(tree);
+        trees.push_back(std::move(tree));
     }
 }
 
@@ -136,20 +133,18 @@ void RandomForestRegressor::bootstrap_sample(const std::vector<std::vector<doubl
                                              std::vector<std::vector<double>>& X_sample, std::vector<double>& y_sample) {
     size_t n_samples = X.size();
     std::uniform_int_distribution<size_t> dist(0, n_samples - 1);
-    std::default_random_engine engine(static_cast<unsigned long>(std::rand()));
 
     for (size_t i = 0; i < n_samples; ++i) {
-        size_t index = dist(engine);
+        size_t index = dist(random_engine);
         X_sample.push_back(X[index]);
         y_sample.push_back(y[index]);
     }
 }
 
 RandomForestRegressor::DecisionTree::DecisionTree(int max_depth, int min_samples_split, int max_features)
-    : root(nullptr), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {}
-
-RandomForestRegressor::DecisionTree::~DecisionTree() {
-    delete_tree(root);
+    : root(nullptr), max_depth(max_depth), min_samples_split(min_samples_split), max_features(max_features) {
+    std::random_device rd;
+    random_engine.seed(rd());
 }
 
 void RandomForestRegressor::DecisionTree::fit(const std::vector<std::vector<double>>& X, const std::vector<double>& y) {
@@ -157,20 +152,20 @@ void RandomForestRegressor::DecisionTree::fit(const std::vector<std::vector<doub
 }
 
 double RandomForestRegressor::DecisionTree::predict_sample(const std::vector<double>& x) const {
-    Node* node = root;
+    const Node* node = root.get();
     while (!node->is_leaf) {
         if (x[node->feature_index] <= node->threshold) {
-            node = node->left;
+            node = node->left.get();
         } else {
-            node = node->right;
+            node = node->right.get();
         }
     }
     return node->value;
 }
 
-RandomForestRegressor::Node* RandomForestRegressor::DecisionTree::build_tree(const std::vector<std::vector<double>>& X,
-                                                                             const std::vector<double>& y, int depth) {
-    Node* node = new Node();
+std::unique_ptr<RandomForestRegressor::Node> RandomForestRegressor::DecisionTree::build_tree(
+    const std::vector<std::vector<double>>& X, const std::vector<double>& y, int depth) {
+    auto node = std::make_unique<Node>();
 
     // Check stopping criteria
     if (depth >= max_depth || y.size() < static_cast<size_t>(min_samples_split)) {
@@ -190,7 +185,7 @@ RandomForestRegressor::Node* RandomForestRegressor::DecisionTree::build_tree(con
     std::iota(features_indices.begin(), features_indices.end(), 0);
 
     // Randomly select features without replacement
-    std::shuffle(features_indices.begin(), features_indices.end(), std::default_random_engine(static_cast<unsigned long>(std::rand())));
+    std::shuffle(features_indices.begin(), features_indices.end(), random_engine);
     if (max_features < num_features) {
         features_indices.resize(max_features);
     }
@@ -198,11 +193,15 @@ RandomForestRegressor::Node* RandomForestRegressor::DecisionTree::build_tree(con
     for (int feature_index : features_indices) {
         // Get all possible thresholds
         std::vector<double> feature_values;
+        feature_values.reserve(X.size());
         for (const auto& x : X) {
             feature_values.push_back(x[feature_index]);
         }
         std::sort(feature_values.begin(), feature_values.end());
+        feature_values.erase(std::unique(feature_values.begin(), feature_values.end()), feature_values.end());
+
         std::vector<double> thresholds;
+        thresholds.reserve(feature_values.size() - 1);
         for (size_t i = 1; i < feature_values.size(); ++i) {
             thresholds.push_back((feature_values[i - 1] + feature_values[i]) / 2.0);
         }
@@ -224,10 +223,10 @@ RandomForestRegressor::Node* RandomForestRegressor::DecisionTree::build_tree(con
                 best_mse = mse;
                 best_feature_index = feature_index;
                 best_threshold = threshold;
-                best_X_left = X_left;
-                best_X_right = X_right;
-                best_y_left = y_left;
-                best_y_right = y_right;
+                best_X_left = std::move(X_left);
+                best_X_right = std::move(X_right);
+                best_y_left = std::move(y_left);
+                best_y_right = std::move(y_right);
             }
         }
     }
@@ -249,10 +248,10 @@ RandomForestRegressor::Node* RandomForestRegressor::DecisionTree::build_tree(con
 
 double RandomForestRegressor::DecisionTree::calculate_mse(const std::vector<double>& y) const {
     double mean = std::accumulate(y.begin(), y.end(), 0.0) / y.size();
-    double mse = 0.0;
-    for (double val : y) {
-        mse += (val - mean) * (val - mean);
-    }
+    double mse = std::transform_reduce(y.begin(), y.end(), 0.0, std::plus<>(), [mean](double val) {
+        double diff = val - mean;
+        return diff * diff;
+    });
     return mse / y.size();
 }
 
@@ -268,14 +267,6 @@ void RandomForestRegressor::DecisionTree::split_dataset(const std::vector<std::v
             X_right.push_back(X[i]);
             y_right.push_back(y[i]);
         }
-    }
-}
-
-void RandomForestRegressor::DecisionTree::delete_tree(Node* node) {
-    if (node != nullptr) {
-        delete_tree(node->left);
-        delete_tree(node->right);
-        delete node;
     }
 }
 

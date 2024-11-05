@@ -69,6 +69,14 @@ add_executable(HierarchicalClustering tests/clustering/HierarchicalClusteringTes
 target_compile_definitions(HierarchicalClustering PRIVATE TEST_HIERARCHICAL_CLUSTERING)
 target_link_libraries(HierarchicalClustering cpp_ml_library)
 
+add_executable(SupportVectorRegression tests/regression/SupportVectorRegressionTest.cpp)
+target_compile_definitions(SupportVectorRegression PRIVATE TEST_SUPPORT_VECTOR_REGRESSION)
+target_link_libraries(SupportVectorRegression cpp_ml_library)
+
+add_executable(NeuralNetwork tests/neural_network/NeuralNetworkTest.cpp)
+target_compile_definitions(NeuralNetwork PRIVATE TEST_NEURAL_NETWORK)
+target_link_libraries(NeuralNetwork cpp_ml_library)
+
 # Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
 add_test(NAME PolynomialRegressionTest COMMAND PolynomialRegressionTest)
@@ -81,6 +89,8 @@ add_test(NAME KMeansClustering COMMAND KMeansClustering)
 add_test(NAME KNNClassifier COMMAND KNNClassifier)
 add_test(NAME KNNRegressor COMMAND KNNRegressor)
 add_test(NAME HierarchicalClustering COMMAND HierarchicalClustering)
+add_test(NAME SupportVectorRegression COMMAND SupportVectorRegression)
+add_test(NAME NeuralNetwork COMMAND NeuralNetwork)
 
 
 # Add example executables if BUILD_EXAMPLES is ON
@@ -116,6 +126,10 @@ if(BUILD_EXAMPLES)
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_KNN_REGRESSOR)
         elseif(EXAMPLE_NAME STREQUAL "HierarchicalClusteringExample")
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_HIERARCHICAL_CLUSTERING)
+        elseif(EXAMPLE_NAME STREQUAL "SupportVectorRegressionExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_SUPPORT_VECTOR_REGRESSION)
+        elseif(EXAMPLE_NAME STREQUAL "NeuralNetworkExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_NEURAL_NETWORK)
         endif()
     endforeach()
 endif()

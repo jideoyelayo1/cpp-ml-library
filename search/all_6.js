@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['randomforestclassifier_10',['RandomForestClassifier',['../classRandomForestClassifier.html',1,'RandomForestClassifier'],['../classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27',1,'RandomForestClassifier::RandomForestClassifier()']]],
-  ['randomforestclassifier_2ehpp_11',['RandomForestClassifier.hpp',['../RandomForestClassifier_8hpp.html',1,'']]],
-  ['randomforestregressor_12',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'RandomForestRegressor'],['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor::RandomForestRegressor()']]],
-  ['randomforestregressor_2ehpp_13',['RandomForestRegressor.hpp',['../RandomForestRegressor_8hpp.html',1,'']]]
+  ['linkage_15',['Linkage',['../classHierarchicalClustering.html#a500501194837d440d3e840904e398a57',1,'HierarchicalClustering']]],
+  ['logistic_16',['Logistic',['../classLogistic.html',1,'']]],
+  ['logisticregression_17',['LogisticRegression',['../classLogisticRegression.html',1,'LogisticRegression'],['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression::LogisticRegression()']]],
+  ['logisticregression_2ehpp_18',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
 ];

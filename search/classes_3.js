@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['polynomialregression_23',['PolynomialRegression',['../classPolynomialRegression.html',1,'']]]
+  ['logistic_43',['Logistic',['../classLogistic.html',1,'']]],
+  ['logisticregression_44',['LogisticRegression',['../classLogisticRegression.html',1,'']]]
 ];

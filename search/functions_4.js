@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['polynomialregression_35',['PolynomialRegression',['../classPolynomialRegression.html#af293bfd9da3c4130f1e0bac4c1fdc2c7',1,'PolynomialRegression']]],
-  ['predict_36',['predict',['../classLogisticRegression.html#a3865f1957755297c1d0dc44de5af65dc',1,'LogisticRegression::predict()'],['../classMultilinearRegression.html#a2a62d3f82a20546683a8685c5b1e6432',1,'MultilinearRegression::predict()'],['../classPolynomialRegression.html#ac5e76d16af19d25825bb6fbb91572483',1,'PolynomialRegression::predict()'],['../classDecisionTreeClassifier.html#a4c699bd8520bca82240847af72e484c7',1,'DecisionTreeClassifier::predict()'],['../classDecisionTreeRegressor.html#a773dd7ffcab99184b13f0032c2e81b44',1,'DecisionTreeRegressor::predict()'],['../classRandomForestClassifier.html#a3838a1924cf6689026252fe150cc5f89',1,'RandomForestClassifier::predict()'],['../classRandomForestRegressor.html#a910475f26348495f1819c64d988c6d6f',1,'RandomForestRegressor::predict()']]]
+  ['kmeans_65',['KMeans',['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans']]],
+  ['knnclassifier_66',['KNNClassifier',['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier']]],
+  ['knnregressor_67',['KNNRegressor',['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['multilinearregression_34',['MultilinearRegression',['../classMultilinearRegression.html#a3d236767b4c76b34e1aee2044fff9f43',1,'MultilinearRegression']]]
+  ['hierarchicalclustering_64',['HierarchicalClustering',['../classHierarchicalClustering.html#ae76537ded4d09c7e6b78507acfa8d24e',1,'HierarchicalClustering']]]
 ];

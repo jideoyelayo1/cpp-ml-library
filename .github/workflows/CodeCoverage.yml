@@ -1,13 +1,49 @@
-- name: Run Code Coverage
-  run: |
-    mkdir -p build
-    cd build
-    cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=1 ..
-    cmake --build .
-    ctest
-    gcovr -r ../src --xml -o coverage.xml
+name: Code Coverage
 
-- name: Upload Coverage to Codecov
-  uses: codecov/codecov-action@v2
-  with:
-    file: build/coverage.xml
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  code-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: sudo apt-get install -y lcov
+
+      - name: Set up build directory and configure with CMake
+        run: |
+          mkdir -p build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON ..
+
+      - name: Build the project
+        run: |
+          cd build
+          cmake --build .
+
+      - name: Run tests and capture coverage
+        run: |
+          cd build
+          ctest --output-on-failure
+          lcov --capture --directory . --output-file coverage.info
+
+      - name: Generate filtered coverage report
+        run: |
+          cd build
+          lcov --remove coverage.info '/usr/*' --output-file coverage.info # Remove external dependencies
+          lcov --list coverage.info
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          files: build/coverage.info
+          flags: code-coverage
+          name: codecov-upload
+          fail_ci_if_error: true

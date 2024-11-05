@@ -22,7 +22,7 @@ void testEclat() {
     Eclat eclat(min_support);
 
     // Run Eclat algorithm
-    std::vector<std::set<int>> frequent_itemsets = eclat.run(transactions);
+    std::vector<std::vector<int>> frequent_itemsets = eclat.run(transactions);
 
     // Get support counts
     auto support_counts = eclat.get_support_counts();
@@ -30,18 +30,15 @@ void testEclat() {
     // Display frequent itemsets and their support counts
     std::cout << "Frequent Itemsets:\n";
     for (const auto& itemset : frequent_itemsets) {
-        std::string itemset_str;
+        std::cout << "Itemset: { ";
         for (int item : itemset) {
-            itemset_str += std::to_string(item) + " ";
+            std::cout << item << " ";
         }
-        std::string key = eclat.itemset_to_string(itemset);
-        int support = support_counts[key];
-        std::cout << "Itemset: {" << itemset_str << "} - Support: " << support << "\n";
+        std::cout << "} - Support: " << support_counts.at(itemset) << "\n";
     }
-
 }
 
-int main(){
+int main() {
     testEclat();
     return 0;
 }

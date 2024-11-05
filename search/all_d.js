@@ -4,5 +4,5 @@ var searchData=
   ['randomforestclassifier_2ehpp_42',['RandomForestClassifier.hpp',['../RandomForestClassifier_8hpp.html',1,'']]],
   ['randomforestregressor_43',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'RandomForestRegressor'],['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor::RandomForestRegressor()']]],
   ['randomforestregressor_2ehpp_44',['RandomForestRegressor.hpp',['../RandomForestRegressor_8hpp.html',1,'']]],
-  ['run_45',['run',['../classEclat.html#a8c2570bc351914de199874c0d5e1373e',1,'Eclat']]]
+  ['run_45',['run',['../classApriori.html#a6c3974e6c1e21350b327b6cc017ae912',1,'Apriori']]]
 ];

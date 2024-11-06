@@ -72,8 +72,7 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md1"></a>
 Project Structure</h1>
 <div class="fragment"><div class="line">cpp-ml-library/</div>
-<div class="line">├── include/                # Header files</div>
-<div class="line">├── src/                    # Source files</div>
+<div class="line">├── ml_library_include/     # Header files</div>
 <div class="line">├── tests/                  # Unit tests</div>
 <div class="line">├── examples/               # Example usage files</div>
 <div class="line">├── docs/                   # Documentation files</div>
@@ -107,27 +106,27 @@ Implemented Algorithms</h1>
 <p>The following machine learning algorithms are planned, inspired by concepts and techniques taught in the Udemy course:</p>
 <ol type="1">
 <li><b>Regression</b><ul>
-<li>[x] Polynomial Regression</li>
-<li>[x] Multi-Linear Regression</li>
-<li>[x] Logistic Regression</li>
-<li>[x] Decision Tree Regression</li>
-<li>[x] Random Forest Regression</li>
-<li>[x] K-Nearest Neighbors</li>
+<li>[x] Polynomial Regression (<a class="el" href="classPolynomialRegression.html" title="Polynomial Regression model for fitting polynomial curves.">PolynomialRegression</a>)</li>
+<li>[x] Multi-Linear Regression (<a class="el" href="classMultilinearRegression.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">MultilinearRegression</a>)</li>
+<li>[x] Logistic Regression (<a class="el" href="classLogisticRegression.html" title="Logistic Regression model for binary classification tasks.">LogisticRegression</a>)</li>
+<li>[x] Decision Tree Regression (<a class="el" href="classDecisionTreeRegressor.html" title="Implements a Decision Tree Regressor.">DecisionTreeRegressor</a>)</li>
+<li>[x] Random Forest Regression (<a class="el" href="classRandomForestRegressor.html" title="Implements a Random Forest Regressor.">RandomForestRegressor</a>)</li>
+<li>[x] K-Nearest Neighbors (<a class="el" href="classKNNRegressor.html" title="K-Nearest Neighbors Regressor for regression tasks.">KNNRegressor</a>)</li>
 </ul>
 </li>
 <li><b>Classification</b><ul>
-<li>[x] Decision Tree Classifier</li>
-<li>[x] Random Forest Classifier</li>
-<li>[x] K-Nearest Neighbors</li>
+<li>[x] Decision Tree Classifier (<a class="el" href="classDecisionTreeClassifier.html" title="Implements a Decision Tree Classifier.">DecisionTreeClassifier</a>)</li>
+<li>[x] Random Forest Classifier (<a class="el" href="classRandomForestClassifier.html" title="Implements a Random Forest Classifier.">RandomForestClassifier</a>)</li>
+<li>[x] K-Nearest Neighbors (<a class="el" href="classKNNClassifier.html" title="K-Nearest Neighbors Classifier for classification tasks.">KNNClassifier</a>)</li>
 </ul>
 </li>
 <li><b>Clustering</b><ul>
-<li>[x] K-Means Clustering</li>
-<li>[x] Hierarchical clustering</li>
+<li>[x] K-Means Clustering (<a class="el" href="classKMeans.html" title="Implements the K-Means clustering algorithm with K-Means++ initialization.">KMeans</a>)</li>
+<li>[x] Hierarchical clustering (<a class="el" href="classHierarchicalClustering.html" title="Agglomerative Hierarchical Clustering for clustering tasks.">HierarchicalClustering</a>)</li>
 </ul>
 </li>
 <li><b>Neural Networks</b><ul>
-<li>[x] Neural Network (NN)</li>
+<li>[x] Neural Network (<a class="el" href="classNeuralNetwork.html" title="Represents the neural network consisting of layers of neurons.">NeuralNetwork</a>)</li>
 <li>[ ] Artificial Neural Network (ANN)</li>
 <li>[ ] Convolutional Neural Network (CNN)</li>
 </ul>
@@ -138,7 +137,7 @@ Implemented Algorithms</h1>
 </ul>
 </li>
 <li><b>Support Vector Machine</b><ul>
-<li>[ ] Support Vector Regression (SVR)</li>
+<li>[ ] Support Vector Regression (<a class="el" href="classSupportVectorRegression.html" title="Support Vector Regression using the ε-insensitive loss function.">SupportVectorRegression</a>)</li>
 </ul>
 </li>
 </ol>
@@ -148,25 +147,29 @@ Algorithm Implementation Progress</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Algorithm Category   </th><th class="markdownTableHeadNone">Algorithm   </th><th class="markdownTableHeadNone">Implemented   </th><th class="markdownTableHeadNone">Tests   </th><th class="markdownTableHeadNone">Examples    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Regression</b>   </td><td class="markdownTableBodyNone">Polynomial Regression   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
+<td class="markdownTableBodyNone"><b>Regression</b>   </td><td class="markdownTableBodyNone">Polynomial Regression (<a class="el" href="classPolynomialRegression.html" title="Polynomial Regression model for fitting polynomial curves.">PolynomialRegression</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Logistic Regression   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Logistic Regression (<a class="el" href="classLogisticRegression.html" title="Logistic Regression model for binary classification tasks.">LogisticRegression</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Multi-Linear Regression   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Multi-Linear Regression (<a class="el" href="classMultilinearRegression.html" title="A class that implements Multilinear Regression for predicting values based on multiple features.">MultilinearRegression</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Decision Tree Regression   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Decision Tree Regression (<a class="el" href="classDecisionTreeRegressor.html" title="Implements a Decision Tree Regressor.">DecisionTreeRegressor</a>)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Random Forest Regression   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Random Forest Regression (<a class="el" href="classRandomForestRegressor.html" title="Implements a Random Forest Regressor.">RandomForestRegressor</a>)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>Classification</b>   </td><td class="markdownTableBodyNone">Decision Tree Classifier   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">K-Nearest Neighbors (<a class="el" href="classKNNRegressor.html" title="K-Nearest Neighbors Regressor for regression tasks.">KNNRegressor</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Random Forest Classifier   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"><b>Classification</b>   </td><td class="markdownTableBodyNone">Decision Tree Classifier (<a class="el" href="classDecisionTreeClassifier.html" title="Implements a Decision Tree Classifier.">DecisionTreeClassifier</a>)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">K-Nearest Neighbors   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Random Forest Classifier (<a class="el" href="classRandomForestClassifier.html" title="Implements a Random Forest Classifier.">RandomForestClassifier</a>)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Clustering</b>   </td><td class="markdownTableBodyNone">K-Means Clustering   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">K-Nearest Neighbors (<a class="el" href="classKNNClassifier.html" title="K-Nearest Neighbors Classifier for classification tasks.">KNNClassifier</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>Neural Networks</b>   </td><td class="markdownTableBodyNone">Neural Network (NN)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
+<td class="markdownTableBodyNone"><b>Clustering</b>   </td><td class="markdownTableBodyNone">K-Means Clustering (<a class="el" href="classKMeans.html" title="Implements the K-Means clustering algorithm with K-Means++ initialization.">KMeans</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Hierarchical clustering (<a class="el" href="classHierarchicalClustering.html" title="Agglomerative Hierarchical Clustering for clustering tasks.">HierarchicalClustering</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Neural Networks</b>   </td><td class="markdownTableBodyNone">Neural Network (<a class="el" href="classNeuralNetwork.html" title="Represents the neural network consisting of layers of neurons.">NeuralNetwork</a>)   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Artificial Neural Network   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]    </td></tr>
 <tr class="markdownTableRowEven">
@@ -176,7 +179,7 @@ Algorithm Implementation Progress</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"><a class="el" href="classEclat.html" title="Class to perform frequent itemset mining using the Eclat algorithm.">Eclat</a>   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]   </td><td class="markdownTableBodyNone">[x]    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Support Vector Machine</b>   </td><td class="markdownTableBodyNone">Support Vector Regression (SVR)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td></tr>
+<td class="markdownTableBodyNone"><b>Support Vector Machine</b>   </td><td class="markdownTableBodyNone">Support Vector Regression (<a class="el" href="classSupportVectorRegression.html" title="Support Vector Regression using the ε-insensitive loss function.">SupportVectorRegression</a>)   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td><td class="markdownTableBodyNone">[ ]   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Examples</h1>

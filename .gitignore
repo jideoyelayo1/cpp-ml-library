@@ -17,7 +17,7 @@ cmake_install.cmake
 Makefile
 
 # Doxygen Output
-docs/doxygen/
+docs/doxygen/*
 
 # Generated binaries and object files
 *.obj

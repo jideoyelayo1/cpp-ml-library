@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['train_123',['train',['../classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8',1,'LogisticRegression::train()'],['../classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007',1,'MultilinearRegression::train()'],['../classPolynomialRegression.html#a6147d1aea6b067cac8ced70ed64db26f',1,'PolynomialRegression::train()']]]
+  ['randomforestclassifier_125',['RandomForestClassifier',['../classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27',1,'RandomForestClassifier']]],
+  ['randomforestregressor_126',['RandomForestRegressor',['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor']]],
+  ['run_127',['run',['../classApriori.html#a6c3974e6c1e21350b327b6cc017ae912',1,'Apriori::run()'],['../classEclat.html#a7e9e045a12391bd89096b9b4dbb59b12',1,'Eclat::run()']]]
 ];

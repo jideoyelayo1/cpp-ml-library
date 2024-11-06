@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hierarchicalclustering_66',['HierarchicalClustering',['../classHierarchicalClustering.html',1,'']]]
+  ['eclat_69',['Eclat',['../classEclat.html',1,'']]]
 ];

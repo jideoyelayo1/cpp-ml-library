@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kmeans_116',['KMeans',['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans']]],
-  ['knnclassifier_117',['KNNClassifier',['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier']]],
-  ['knnregressor_118',['KNNRegressor',['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor']]]
+  ['kmeans_115',['KMeans',['../classKMeans.html#aac2c5985d527c9ebe2c84ca0eda0fe41',1,'KMeans']]],
+  ['knnclassifier_116',['KNNClassifier',['../classKNNClassifier.html#a520ee959e30a8622510c4c46a51bfec1',1,'KNNClassifier']]],
+  ['knnregressor_117',['KNNRegressor',['../classKNNRegressor.html#ac74cf27c5ad08a3be7b7e7704d902696',1,'KNNRegressor']]]
 ];

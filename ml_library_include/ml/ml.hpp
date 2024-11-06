@@ -2,16 +2,21 @@
 #ifndef ML_H
 #define ML_H
 
-#include "tree/DecisionTreeClassifier.hpp"
-#include "tree/DecisionTreeRegressor.hpp"
-#include "tree/RandomForestClassifier.hpp"
-#include "tree/RandomForestRegressor.hpp"
-#include "regression/PolynomialRegression.hpp"
-#include "regression/MultiLinearRegression.hpp"
-#include "neural_network/ANN.hpp"
-#include "neural_network/CNN.hpp"
-#include "clustering/KMeans.hpp"
-#include "association/Apriori.hpp"
-#include "association/Eclat.hpp"
+#include "./tree/DecisionTreeClassifier.hpp"
+#include "./tree/DecisionTreeRegressor.hpp"
+#include "./tree/RandomForestClassifier.hpp"
+#include "./tree/RandomForestRegressor.hpp"
+#include "./regression/PolynomialRegression.hpp"
+#include "./regression/MultiLinearRegression.hpp"
+#include "./neural_network/ANN.hpp"
+#include "./neural_network/CNN.hpp"
+#include "./clustering/KMeans.hpp"
+#include "./association/Apriori.hpp"
+#include "./association/Eclat.hpp"
+
+/**
+ * @file ml.hpp
+ * @brief A header to connect all the Algoritm header paths.
+ */
 
 #endif // ML_H

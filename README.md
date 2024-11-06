@@ -10,8 +10,7 @@
 
 ```plaintext
 cpp-ml-library/
-├── include/                # Header files
-├── src/                    # Source files
+├── ml_library_include/     # Header files
 ├── tests/                  # Unit tests
 ├── examples/               # Example usage files
 ├── docs/                   # Documentation files

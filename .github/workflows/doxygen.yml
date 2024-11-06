@@ -21,12 +21,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y wget
 
-    - name: Install Latest Doxygen
-      run: |
-        wget -O doxygen.tar.gz https://doxygen.nl/files/doxygen-1.9.8.linux.bin.tar.gz
-        tar -xzf doxygen.tar.gz
-        sudo mv doxygen-1.9.8/bin/* /usr/local/bin/
-        doxygen --version
+    - name: Install Doxygen
+      run: sudo apt-get install -y doxygen
 
     - name: Create Output Directory
       run: mkdir -p docs/doxygen

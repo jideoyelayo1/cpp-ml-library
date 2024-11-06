@@ -77,9 +77,14 @@ add_executable(NeuralNetwork tests/neural_network/NeuralNetworkTest.cpp)
 target_compile_definitions(NeuralNetwork PRIVATE TEST_NEURAL_NETWORK)
 target_link_libraries(NeuralNetwork cpp_ml_library)
 
+
 add_executable(Apriori tests/association/AprioriTest.cpp)
 target_compile_definitions(Apriori PRIVATE TEST_APRIORI)
 target_link_libraries(Apriori cpp_ml_library)
+
+add_executable(Eclat tests/association/EclatTest.cpp)
+target_compile_definitions(Eclat PRIVATE TEST_ECLAT)
+target_link_libraries(Eclat cpp_ml_library)
 
 # Register individual tests
 add_test(NAME LogisticRegressionTest COMMAND LogisticRegressionTest)
@@ -96,6 +101,7 @@ add_test(NAME HierarchicalClustering COMMAND HierarchicalClustering)
 add_test(NAME SupportVectorRegression COMMAND SupportVectorRegression)
 add_test(NAME NeuralNetwork COMMAND NeuralNetwork)
 add_test(NAME Apriori COMMAND Apriori)
+add_test(NAME Eclat COMMAND Eclat)
 
 
 # Add example executables if BUILD_EXAMPLES is ON
@@ -137,6 +143,9 @@ if(BUILD_EXAMPLES)
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_NEURAL_NETWORK)
         elseif(EXAMPLE_NAME STREQUAL "AprioriExample")
             target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_APRIORI)
+        elseif(EXAMPLE_NAME STREQUAL "EclatExample")
+            target_compile_definitions(${EXAMPLE_TARGET} PRIVATE TEST_ECLAT)
+
         endif()
     endforeach()
 endif()

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kerneltype_143',['KernelType',['../classSupportVectorRegression.html#a825c248f58094c3f0bc53197135ad2a3',1,'SupportVectorRegression']]]
+  ['kerneltype_136',['KernelType',['../classSupportVectorRegression.html#a825c248f58094c3f0bc53197135ad2a3',1,'SupportVectorRegression']]]
 ];

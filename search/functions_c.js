@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['neuralnetwork_121',['NeuralNetwork',['../classNeuralNetwork.html#ab19f9075155d3e785d6d8ce944ffb6ff',1,'NeuralNetwork']]],
-  ['neuron_122',['Neuron',['../classNeuron.html#a8b8e6bf928236abb284044edc4764436',1,'Neuron']]]
+  ['randomforestclassifier_118',['RandomForestClassifier',['../classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27',1,'RandomForestClassifier']]],
+  ['randomforestregressor_119',['RandomForestRegressor',['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor']]],
+  ['run_120',['run',['../classEclat.html#a7e9e045a12391bd89096b9b4dbb59b12',1,'Eclat']]]
 ];

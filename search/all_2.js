@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['c_2b_2b_20machine_20learning_20library_3',['C++ Machine Learning Library',['../index.html',1,'']]],
-  ['calchiddengradients_4',['calcHiddenGradients',['../classNeuron.html#aa5a48ad29e30e75b06a48977e7b0ec5d',1,'Neuron']]],
-  ['calcoutputgradients_5',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]],
-  ['connection_6',['Connection',['../structConnection.html',1,'']]]
+  ['decisiontreeclassifier_5',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html',1,'DecisionTreeClassifier'],['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier::DecisionTreeClassifier()']]],
+  ['decisiontreeclassifier_2ehpp_6',['DecisionTreeClassifier.hpp',['../DecisionTreeClassifier_8hpp.html',1,'']]],
+  ['decisiontreeregressor_7',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html',1,'DecisionTreeRegressor'],['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor::DecisionTreeRegressor()']]],
+  ['decisiontreeregressor_2ehpp_8',['DecisionTreeRegressor.hpp',['../DecisionTreeRegressor_8hpp.html',1,'']]],
+  ['deltaweight_9',['deltaWeight',['../structConnection.html#a9f74bf311cc02e9f2e17ca28baf74fab',1,'Connection']]]
 ];

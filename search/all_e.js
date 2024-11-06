@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['randomforestclassifier_45',['RandomForestClassifier',['../classRandomForestClassifier.html',1,'RandomForestClassifier'],['../classRandomForestClassifier.html#a9f6e8e3c60eb207150972b30cfd97d27',1,'RandomForestClassifier::RandomForestClassifier()']]],
-  ['randomforestclassifier_2ehpp_46',['RandomForestClassifier.hpp',['../RandomForestClassifier_8hpp.html',1,'']]],
-  ['randomforestregressor_47',['RandomForestRegressor',['../classRandomForestRegressor.html',1,'RandomForestRegressor'],['../classRandomForestRegressor.html#ae67328e44ddc982bac968c99f9011079',1,'RandomForestRegressor::RandomForestRegressor()']]],
-  ['randomforestregressor_2ehpp_48',['RandomForestRegressor.hpp',['../RandomForestRegressor_8hpp.html',1,'']]],
-  ['run_49',['run',['../classApriori.html#a6c3974e6c1e21350b327b6cc017ae912',1,'Apriori::run()'],['../classEclat.html#a7e9e045a12391bd89096b9b4dbb59b12',1,'Eclat::run()']]]
+  ['train_50',['train',['../classLogisticRegression.html#a283fe25b1aeb187ca44db48fd13897d8',1,'LogisticRegression::train()'],['../classMultilinearRegression.html#a26ba63a697eb38840da44221097fc007',1,'MultilinearRegression::train()'],['../classPolynomialRegression.html#a6147d1aea6b067cac8ced70ed64db26f',1,'PolynomialRegression::train()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['apriori_65',['Apriori',['../classApriori.html',1,'']]]
+  ['connection_62',['Connection',['../structConnection.html',1,'']]]
 ];

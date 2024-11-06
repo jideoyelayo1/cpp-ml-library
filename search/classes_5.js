@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['kmeans_71',['KMeans',['../classKMeans.html',1,'']]],
-  ['knnclassifier_72',['KNNClassifier',['../classKNNClassifier.html',1,'']]],
-  ['knnregressor_73',['KNNRegressor',['../classKNNRegressor.html',1,'']]]
+  ['logistic_70',['Logistic',['../classLogistic.html',1,'']]],
+  ['logisticregression_71',['LogisticRegression',['../classLogisticRegression.html',1,'']]]
 ];

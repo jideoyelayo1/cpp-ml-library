@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['itemset_5fto_5fstring_115',['itemset_to_string',['../classApriori.html#a81a3dce7993bfb2bc01b42f943148439',1,'Apriori']]]
+  ['logisticregression_112',['LogisticRegression',['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression']]]
 ];

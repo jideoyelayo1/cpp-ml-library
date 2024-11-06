@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['linkage_34',['Linkage',['../classHierarchicalClustering.html#a500501194837d440d3e840904e398a57',1,'HierarchicalClustering']]],
-  ['logistic_35',['Logistic',['../classLogistic.html',1,'']]],
-  ['logisticregression_36',['LogisticRegression',['../classLogisticRegression.html',1,'LogisticRegression'],['../classLogisticRegression.html#a144c9d5eb9a45a2611fc85eced9aade4',1,'LogisticRegression::LogisticRegression()']]],
-  ['logisticregression_2ehpp_37',['LogisticRegression.hpp',['../LogisticRegression_8hpp.html',1,'']]]
+  ['neuralnetwork_36',['NeuralNetwork',['../classNeuralNetwork.html',1,'NeuralNetwork'],['../classNeuralNetwork.html#ab19f9075155d3e785d6d8ce944ffb6ff',1,'NeuralNetwork::NeuralNetwork()']]],
+  ['neuralnetwork_2ehpp_37',['NeuralNetwork.hpp',['../NeuralNetwork_8hpp.html',1,'']]],
+  ['neuron_38',['Neuron',['../classNeuron.html',1,'Neuron'],['../classNeuron.html#a8b8e6bf928236abb284044edc4764436',1,'Neuron::Neuron()']]]
 ];

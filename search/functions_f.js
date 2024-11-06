@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setoutputval_128',['setOutputVal',['../classNeuron.html#a219bfcc8c9cd5cc634fef77bccb72d84',1,'Neuron']]],
-  ['supportvectorregression_129',['SupportVectorRegression',['../classSupportVectorRegression.html#a95640af865cd840d987b3dcd1642ff50',1,'SupportVectorRegression']]]
+  ['updateinputweights_124',['updateInputWeights',['../classNeuron.html#aa081e71c3862d4a18365dfd6f452a3a1',1,'Neuron']]]
 ];

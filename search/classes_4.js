@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hierarchicalclustering_71',['HierarchicalClustering',['../classHierarchicalClustering.html',1,'']]]
+  ['hierarchicalclustering_72',['HierarchicalClustering',['../classHierarchicalClustering.html',1,'']]]
 ];

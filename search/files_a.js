@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['supportvectorregression_2ehpp_97',['SupportVectorRegression.hpp',['../SupportVectorRegression_8hpp.html',1,'']]]
+  ['supportvectorregression_2ehpp_99',['SupportVectorRegression.hpp',['../SupportVectorRegression_8hpp.html',1,'']]]
 ];

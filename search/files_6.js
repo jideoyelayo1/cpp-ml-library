@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neuralnetwork_2ehpp_91',['NeuralNetwork.hpp',['../NeuralNetwork_8hpp.html',1,'']]]
+  ['multilinearregression_2ehpp_92',['MultiLinearRegression.hpp',['../MultiLinearRegression_8hpp.html',1,'']]]
 ];

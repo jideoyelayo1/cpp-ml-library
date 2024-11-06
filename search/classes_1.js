@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connection_66',['Connection',['../structConnection.html',1,'']]]
+  ['connection_67',['Connection',['../structConnection.html',1,'']]]
 ];

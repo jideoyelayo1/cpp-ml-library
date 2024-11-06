@@ -10,8 +10,7 @@
 
 ```plaintext
 cpp-ml-library/
-├── include/                # Header files
-├── src/                    # Source files
+├── ml_library_include/     # Header files
 ├── tests/                  # Unit tests
 ├── examples/               # Example usage files
 ├── docs/                   # Documentation files
@@ -58,25 +57,25 @@ To use this library in your C++ project, include the master header file:
 The following machine learning algorithms are planned, inspired by concepts and techniques taught in the Udemy course:
 
 1. **Regression**
-   - [x] Polynomial Regression
-   - [x] Multi-Linear Regression
-   - [x] Logistic Regression
-   - [x] Decision Tree Regression
-   - [x] Random Forest Regression
-   - [x] K-Nearest Neighbors
+   - [x] Polynomial Regression (PolynomialRegression)
+   - [x] Multi-Linear Regression (MultilinearRegression)
+   - [x] Logistic Regression (LogisticRegression)
+   - [x] Decision Tree Regression (DecisionTreeRegressor)
+   - [x] Random Forest Regression (RandomForestRegressor)
+   - [x] K-Nearest Neighbors (KNNRegressor)
 
 
 2. **Classification**
-   - [x] Decision Tree Classifier
-   - [x] Random Forest Classifier
-   - [x] K-Nearest Neighbors
+   - [x] Decision Tree Classifier (DecisionTreeClassifier)
+   - [x] Random Forest Classifier (RandomForestClassifier)
+   - [x] K-Nearest Neighbors (KNNClassifier)
 
 3. **Clustering**
-   - [x] K-Means Clustering
-   - [x] Hierarchical clustering
+   - [x] K-Means Clustering (KMeans)
+   - [x] Hierarchical clustering (HierarchicalClustering)
 
 4. **Neural Networks**
-   - [x] Neural Network (NN)
+   - [x] Neural Network (NeuralNetwork)
    - [ ] Artificial Neural Network (ANN)
    - [ ] Convolutional Neural Network (CNN)
 
@@ -85,27 +84,29 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [x] Eclat
 
 6. **Support Vector Machine**
-   - [ ] Support Vector Regression (SVR)
+   - [ ] Support Vector Regression (SupportVectorRegression)
 
 ## Algorithm Implementation Progress
 
 | Algorithm Category       | Algorithm                    | Implemented | Tests | Examples |
 |--------------------------|------------------------------|-------------|-------|----------|
-| **Regression**           | Polynomial Regression        | [x]         | [ ]   | [x]      |
-|                          | Logistic Regression      | [x]         | [ ]   | [x]      |
-|                          | Multi-Linear Regression      | [x]         | [ ]   | [x]      |
-|                          | Decision Tree Regression     | [ ]         | [ ]   | [ ]      |
-|                          | Random Forest Regression     | [ ]         | [ ]   | [ ]      |
-| **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
-|                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
-|                          | K-Nearest Neighbors          | [x]         | [ ]   | [ ]      |
-| **Clustering**           | K-Means Clustering           | [x]         | [ ]   | [ ]      |
-| **Neural Networks**      | Neural Network (NN)          | [x]         | [x]   | [x]      |
+| **Regression**           | Polynomial Regression (PolynomialRegression)        | [x]         | [ ]   | [x]      |
+|                          | Logistic Regression (LogisticRegression)     | [x]         | [ ]   | [x]      |
+|                          | Multi-Linear Regression (MultilinearRegression)      | [x]         | [ ]   | [x]      |
+|                          | Decision Tree Regression (DecisionTreeRegressor)     | [ ]         | [ ]   | [ ]      |
+|                          | Random Forest Regression (RandomForestRegressor)     | [ ]         | [ ]   | [ ]      |
+|                          | K-Nearest Neighbors (KNNRegressor)          | [x]         | [ ]   | [ ]      |
+| **Classification**       | Decision Tree Classifier (DecisionTreeClassifier)    | [ ]         | [ ]   | [ ]      |
+|                          | Random Forest Classifier (RandomForestClassifier)    | [ ]         | [ ]   | [ ]      |
+|                          | K-Nearest Neighbors (KNNClassifier)          | [x]         | [ ]   | [ ]      |
+| **Clustering**           | K-Means Clustering (KMeans)           | [x]         | [ ]   | [ ]      |
+|                          | Hierarchical clustering (HierarchicalClustering)          | [x]         | [ ]   | [ ]      |
+| **Neural Networks**      | Neural Network (NeuralNetwork)          | [x]         | [x]   | [x]      |
 |                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
 |                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
 | **Association Rule Learning** | Apriori                | [x]         | [x]   | [x]      |
 |                          | Eclat                        | [x]         | [x]   | [x]      |
-| **Support Vector Machine** | Support Vector Regression (SVR) | [ ]    | [ ]   | [ ]      |
+| **Support Vector Machine** | Support Vector Regression (SupportVectorRegression) | [ ]    | [ ]   | [ ]      |
 
 
 

@@ -388,6 +388,11 @@ MARKDOWN_ID_STYLE      = DOXYGEN
 
 AUTOLINK_SUPPORT       = YES
 
+EXTENSION_MAPPING = md=markdown
+MARKDOWN_SUPPORT = YES
+OUTPUT_DIRECTORY = docs/doxygen
+
+
 # If you use STL classes (i.e. std::string, std::vector, etc.) but do not want
 # to include (a tag file for) the STL sources as input, then you should set this
 # tag to YES in order to let doxygen match functions declarations and

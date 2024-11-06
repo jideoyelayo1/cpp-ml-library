@@ -8,8 +8,8 @@ int main() {
     // Sample dataset with three distinct groups
     std::vector<std::vector<double>> data = {
         {1.0, 2.0}, {1.5, 1.8}, {1.0, 0.6},    // Group 1
-        {5.0, 10.0}, {5.5, 10.8}, {5.0, 10.6},    // Group 1
-        {25.0, 72.0}, {24.5, 71.8}, {26.0, 70.6},    // Group 1
+        {5.0, 10.0}, {5.5, 10.8}, {5.0, 10.6},    // Group 2
+        {25.0, 72.0}, {24.5, 71.8}, {26.0, 70.6},    // Group 3
     };
 
     // Initialize HierarchicalClustering with 3 clusters

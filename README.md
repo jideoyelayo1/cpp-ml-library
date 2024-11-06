@@ -63,17 +63,17 @@ The following machine learning algorithms are planned, inspired by concepts and 
    - [x] Logistic Regression
    - [x] Decision Tree Regression
    - [x] Random Forest Regression
-   - [ ] K-Nearest Neighbors
+   - [x] K-Nearest Neighbors
 
 
 2. **Classification**
    - [x] Decision Tree Classifier
    - [x] Random Forest Classifier
-   - [ ] K-Nearest Neighbors
+   - [x] K-Nearest Neighbors
 
 3. **Clustering**
-   - [ ] K-Means Clustering
-   - [ ] Hierarchical clustering
+   - [x] K-Means Clustering
+   - [x] Hierarchical clustering
 
 4. **Neural Networks**
    - [x] Neural Network (NN)
@@ -100,7 +100,7 @@ The following machine learning algorithms are planned, inspired by concepts and 
 |                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
 |                          | K-Nearest Neighbors          | [x]         | [ ]   | [ ]      |
 | **Clustering**           | K-Means Clustering           | [x]         | [ ]   | [ ]      |
-| **Neural Networks**      | Neural Network (NN)          | [x]         | [ ]   | [ ]      |
+| **Neural Networks**      | Neural Network (NN)          | [x]         | [x]   | [x]      |
 |                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
 |                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
 | **Association Rule Learning** | Apriori                | [x]         | [x]   | [x]      |

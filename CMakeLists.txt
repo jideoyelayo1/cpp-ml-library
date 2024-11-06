@@ -11,7 +11,7 @@ option(BUILD_EXAMPLES "Build examples" ON)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ml_library_include)
 
 # Source files
-# file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp") # Not using currently.
+file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 
 # Define the library target
 add_library(cpp_ml_library STATIC ${SOURCES})

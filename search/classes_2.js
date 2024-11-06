@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['eclat_65',['Eclat',['../classEclat.html',1,'']]]
+  ['decisiontreeclassifier_67',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html',1,'']]],
+  ['decisiontreeregressor_68',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html',1,'']]]
 ];

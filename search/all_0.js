@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['backprop_0',['backProp',['../classNeuralNetwork.html#a2c7571d542db31954dcbb44d2856f8c7',1,'NeuralNetwork']]]
+  ['apriori_0',['Apriori',['../classApriori.html',1,'Apriori'],['../classApriori.html#a89d476f34198b6bb1d10b72715f1ac97',1,'Apriori::Apriori()']]],
+  ['apriori_2ehpp_1',['Apriori.hpp',['../Apriori_8hpp.html',1,'']]]
 ];

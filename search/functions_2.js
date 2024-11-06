@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['decisiontreeclassifier_95',['DecisionTreeClassifier',['../classDecisionTreeClassifier.html#a37df8072a6d19209da45f60609463cd9',1,'DecisionTreeClassifier']]],
-  ['decisiontreeregressor_96',['DecisionTreeRegressor',['../classDecisionTreeRegressor.html#aa4ca7dcc9c325e9bf81b740e81fc12dd',1,'DecisionTreeRegressor']]]
+  ['calchiddengradients_99',['calcHiddenGradients',['../classNeuron.html#aa5a48ad29e30e75b06a48977e7b0ec5d',1,'Neuron']]],
+  ['calcoutputgradients_100',['calcOutputGradients',['../classNeuron.html#aed841fbec8dd00df77fc802c6934f903',1,'Neuron']]]
 ];

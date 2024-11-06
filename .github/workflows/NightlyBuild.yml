@@ -1,0 +1,25 @@
+name: Nightly Build
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Run every night at 2:00 AM UTC
+
+jobs:
+  nightly-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Project
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Release ..
+        cmake --build .
+
+    - name: Run Tests
+      run: |
+        cd build
+        ctest --output-on-failure

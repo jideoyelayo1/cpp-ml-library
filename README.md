@@ -50,7 +50,7 @@ make install
 To use this library in your C++ project, include the master header file:
 
 ```cpp
-#include "ml/ml.h"
+#include "ml_library_include/ml.h"
 ```
 
 ## Implemented Algorithms
@@ -135,7 +135,7 @@ int main() {
 
 ## Documentation
 
-The documentation for this project is generated using Doxygen and is available online at [GitHub Pages](https://jideoyelayo1.github.io/cpp-ml-library/). The documentation provides details on each class, function, and algorithm.
+The documentation for this project is generated using Doxygen and is available online at [GitHub Pages](https://jideoyelayo.com/cpp-ml-library/). The documentation provides details on each class, function, and algorithm.
 
 ## Contributing
 

@@ -16,8 +16,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3 
 
-    - name: Install Doxygen
-      run: sudo apt-get install -y doxygen
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget
+
+    - name: Install Latest Doxygen
+      run: |
+        wget -O doxygen.tar.gz https://doxygen.nl/files/doxygen-1.9.8.linux.bin.tar.gz
+        tar -xzf doxygen.tar.gz
+        sudo mv doxygen-1.9.8/bin/* /usr/local/bin/
+        doxygen --version
+
+    - name: Create Output Directory
+      run: mkdir -p docs/doxygen
 
     - name: Generate Documentation
       run: doxygen Doxyfile

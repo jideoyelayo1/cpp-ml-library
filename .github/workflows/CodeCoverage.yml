@@ -1,0 +1,33 @@
+name: Code Coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build with Coverage Flags
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_CXX_FLAGS="--coverage" -DCMAKE_BUILD_TYPE=Debug ..
+        cmake --build .
+
+    - name: Run Tests and Generate Coverage Report
+      run: |
+        cd build
+        ctest
+        gcovr -r .. --html -o coverage.html --html-details
+
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: build/coverage.html

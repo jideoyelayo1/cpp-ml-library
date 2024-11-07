@@ -1,0 +1,29 @@
+name: Memory Leak Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  memory-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: sudo apt-get install -y cmake
+
+    - name: Build with AddressSanitizer
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_CXX_FLAGS="-fsanitize=address" -DCMAKE_BUILD_TYPE=Debug ..
+        cmake --build .
+
+    - name: Run Tests with AddressSanitizer
+      run: |
+        cd build
+        ctest --output-on-failure

@@ -16,8 +16,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3 
 
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget
+
     - name: Install Doxygen
       run: sudo apt-get install -y doxygen
+
+    - name: Create Output Directory
+      run: mkdir -p docs/doxygen
 
     - name: Generate Documentation
       run: doxygen Doxyfile

@@ -1,0 +1,26 @@
+# .github/labeler.yml
+
+# Label PRs touching C++ source files
+cpp:
+  - 'src/**/*.cpp'
+  - 'ml_library_include/**/*.h'
+  - 'ml_library_include/**/*.hpp'
+
+# Label PRs touching documentation
+docs:
+  - 'docs/**/*'
+  - '**/*.md'
+
+# Label PRs touching tests
+tests:
+  - 'tests/**/*'
+
+# Label PRs touching examples
+examples:
+  - 'examples/**/*'
+
+# Label PRs touching GitHub workflows
+ci:
+  - '.github/workflows/**/*'
+
+

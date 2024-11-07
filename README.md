@@ -94,17 +94,17 @@ The following machine learning algorithms are planned, inspired by concepts and 
 | **Regression**           | Polynomial Regression        | [x]         | [ ]   | [x]      |
 |                          | Logistic Regression      | [x]         | [ ]   | [x]      |
 |                          | Multi-Linear Regression      | [x]         | [ ]   | [x]      |
-|                          | Decision Tree Regression     | [ ]         | [ ]   | [ ]      |
-|                          | Random Forest Regression     | [ ]         | [ ]   | [ ]      |
-| **Classification**       | Decision Tree Classifier     | [ ]         | [ ]   | [ ]      |
-|                          | Random Forest Classifier     | [ ]         | [ ]   | [ ]      |
+|                          | Decision Tree Regression     | [x]         | [ ]   | [ ]      |
+|                          | Random Forest Regression     | [x]         | [ ]   | [ ]      |
+| **Classification**       | Decision Tree Classifier     | [x]         | [ ]   | [ ]      |
+|                          | Random Forest Classifier     | [x]         | [ ]   | [ ]      |
 |                          | K-Nearest Neighbors          | [x]         | [ ]   | [ ]      |
 | **Clustering**           | K-Means Clustering           | [x]         | [ ]   | [ ]      |
 | **Neural Networks**      | Neural Network (NN)          | [x]         | [x]   | [x]      |
 |                          | Artificial Neural Network    | [ ]         | [ ]   | [ ]      |
 |                          | Convolutional Neural Network | [ ]         | [ ]   | [ ]      |
-| **Association Rule Learning** | Apriori                | [x]         | [x]   | [x]      |
-|                          | Eclat                        | [x]         | [x]   | [x]      |
+| **Association Rule Learning** | Apriori                | [x]         | [ ]   | [x]      |
+|                          | Eclat                        | [x]         | [ ]   | [x]      |
 | **Support Vector Machine** | Support Vector Regression (SVR) | [ ]    | [ ]   | [ ]      |
 
 

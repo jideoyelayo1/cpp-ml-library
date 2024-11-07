@@ -110,6 +110,7 @@ The following machine learning algorithms are planned, inspired by concepts and 
 
 
 
+
 ## Examples
 
 Each algorithm will include example usage. Examples are located in the `examples/` directory.

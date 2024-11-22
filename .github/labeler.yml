@@ -1,26 +1,132 @@
-# .github/labeler.yml
-
-# Label PRs touching C++ source files
+# Labels for C++ source files
 cpp:
-  - 'src/**/*.cpp'
-  - 'ml_library_include/**/*.h'
-  - 'ml_library_include/**/*.hpp'
+  - "src/**/*.cpp"
+  - "ml_library_include/**/*.hpp"
+  - "ml_library_include/**/*.h"
 
-# Label PRs touching documentation
+# Labels for headers and include files
+headers:
+  - "ml_library_include/**/*.hpp"
+  - "ml_library_include/**/*.h"
+
+# Labels for Doxygen-specific documentation
+doxygen:
+  - "Doxyfile"
+  - "docs/**/*.dox"
+  - "docs/doxygen/**/*"
+
+# Labels for general documentation
 docs:
-  - 'docs/**/*'
-  - '**/*.md'
+  - "docs/**/*"
+  - "**/*.md"
+  - "README.md"
+  - "LICENSE"
 
-# Label PRs touching tests
+# Labels for test files
 tests:
-  - 'tests/**/*'
+  - "tests/**/*.cpp"
+  - "tests/**/*.hpp"
+  - "tests/data/**/*"
 
-# Label PRs touching examples
+# Labels for examples
 examples:
-  - 'examples/**/*'
+  - "examples/**/*.cpp"
 
-# Label PRs touching GitHub workflows
+# Labels for build-related files
+build:
+  - "CMakeLists.txt"
+  - "build/**/*"
+
+# Labels for GitHub workflows
 ci:
-  - '.github/workflows/**/*'
+  - ".github/workflows/**/*"
 
+# Machine Learning Type Labels
 
+## Association Rule Learning
+association-rule-learning:
+  - "src/association/**/*"
+  - "ml_library_include/ml/association/**/*"
+  - "examples/*AprioriExample.cpp"
+  - "examples/*EclatExample.cpp"
+
+## Clustering
+clustering:
+  - "src/clustering/**/*"
+  - "ml_library_include/ml/clustering/**/*"
+  - "examples/*HierarchicalClusteringExample.cpp"
+  - "examples/*KMeansExample.cpp"
+
+## Neural Networks
+neural-networks:
+  - "src/neural_network/**/*"
+  - "ml_library_include/ml/neural_network/**/*"
+  - "examples/*NeuralNetworkExample.cpp"
+
+## Regression
+regression:
+  - "src/regression/**/*"
+  - "ml_library_include/ml/regression/**/*"
+  - "examples/*Regression*.cpp"
+  - "examples/*PolynomialRegressionExample.cpp"
+  - "examples/*SupportVectorRegressionExample.cpp"
+  - "examples/*MultilinearRegressionExample.cpp"
+
+## Decision Trees
+decision-trees:
+  - "src/tree/**/*"
+  - "ml_library_include/ml/tree/**/*"
+  - "examples/*DecisionTreeExample.cpp"
+  - "examples/*RandomForestExample.cpp"
+
+# Labels for performance optimization
+performance:
+  - "src/performance/**/*"
+  - "**/optimization/**/*"
+
+# Labels for dependencies or third-party files
+dependencies:
+  - "third_party/**/*"
+  - "vendor/**/*"
+  - "**/external/**/*"
+
+# Labels for style and formatting
+style:
+  - ".clang-format"
+  - ".editorconfig"
+  - "src/**/*.cpp"
+  - "ml_library_include/**/*.hpp"
+
+# Labels for configuration files
+config:
+  - ".clang-format"
+  - ".editorconfig"
+  - "CMakeLists.txt"
+
+# Labels for refactoring
+refactor:
+  - "**/refactor/**/*"
+
+# Labels for bug fixes
+bug:
+  - "**/bug/**/*"
+  - "**/fix/**/*"
+
+# Labels for new features
+feature:
+  - "**/feature/**/*"
+  - "src/feature/**/*"
+
+# Labels for experimental features
+experimental:
+  - "src/experimental/**/*"
+  - "tests/experimental/**/*"
+
+# Labels for data files
+data:
+  - "tests/data/**/*"
+
+# Labels for logging-related files
+logging:
+  - "**/logging/**/*"
+  - "src/logging/**/*"
